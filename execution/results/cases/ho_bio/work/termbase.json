@@ -1,0 +1,61 @@
+{
+ "entries": [
+  {
+   "preferred": "major adverse cardiovascular events",
+   "variants": [
+    "major cardiovascular adverse events",
+    "MACCE"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "MACE",
+   "note": "",
+   "source": "glossary.tsv"
+  },
+  {
+   "preferred": "chronic kidney disease",
+   "variants": [
+    "chronic renal disease"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "CKD",
+   "note": "",
+   "source": "glossary.tsv"
+  },
+  {
+   "preferred": "randomised controlled trial",
+   "variants": [
+    "randomized controlled trial",
+    "randomized trial"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "RCT",
+   "note": "",
+   "source": "glossary.tsv"
+  }
+ ],
+ "sources": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\glossary.tsv",
+   "entries": 3,
+   "sha256": "801eb01442a9c6249028ab3966d5d63bf3fb9c630d752fb3b4cc007bcb36e208"
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": [
+  {
+   "abbr": "CKD",
+   "long": "Chronic kidney disease",
+   "doc": "d1",
+   "offset": 12
+  },
+  {
+   "abbr": "HRs",
+   "long": "hazard ratios",
+   "doc": "d1",
+   "offset": 295
+  }
+ ]
+}

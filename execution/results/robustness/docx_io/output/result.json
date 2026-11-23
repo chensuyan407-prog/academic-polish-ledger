@@ -1,0 +1,114 @@
+{
+ "case_id": "docx",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "Introduction\n\nThe method has been used widely. It is simple.",
+ "change_log": [
+  {
+   "sid": "p1.s1",
+   "original": "The method have been used widely.",
+   "revised": "The method has been used widely.",
+   "changes": [
+    {
+     "from": "have",
+     "to": "has",
+     "type": "agreement",
+     "reason": "singular subject"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s2",
+   "original": "It's simple.",
+   "revised": "It is simple.",
+   "changes": [
+    {
+     "from": "It's",
+     "to": "It is",
+     "type": "register",
+     "reason": "no contractions"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "draft.docx",
+   "role": "manuscript",
+   "sha256": "5dc8048675d78e5537d35c4f725a9697d52194b30f4e36ccdda26c8387321b69",
+   "fmt": "docx",
+   "read_info": {
+    "encoding": "docx-xml",
+    "repairs": [
+     "run-level formatting not preserved"
+    ]
+   }
+  }
+ ],
+ "uncertainty": [
+  "draft.docx: run-level formatting not preserved"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.docx",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.docx",
+  "polished.md",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 2,
+  "segments_in_scope": 3,
+  "change_types": {
+   "agreement": 1,
+   "register": 1
+  },
+  "verdicts": {
+   "pass": 2
+  }
+ },
+ "checks": {
+  "segments_in_scope": 3,
+  "edited_units": 2,
+  "reviewed": 3,
+  "not_reviewed": 0,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "agreement": 1,
+   "register": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:22.409484+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

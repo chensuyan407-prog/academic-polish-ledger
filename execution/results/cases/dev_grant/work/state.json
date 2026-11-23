@@ -1,0 +1,115 @@
+{
+ "version": "0.1.0",
+ "case_id": "dev-grant-zh2en",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_grant\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_grant\\input\\task.md",
+ "contract": {
+  "english_text": "English version for an international grant proposal",
+  "bilingual_table": "sentence-aligned Chinese/English",
+  "translation_notes": "decisions and changes"
+ },
+ "fields": [
+  "english_text",
+  "bilingual_table",
+  "translation_notes"
+ ],
+ "mode": "translate_zh_en",
+ "genre": "grant",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "inline:source_text",
+   "path": null,
+   "fmt": "txt",
+   "text": "本项目拟以钠离子电池硬碳负极为研究对象，揭示其储钠机制。前期研究表明，硬碳的首次库伦效率仅为75%左右，严重制约了其实际应用[3]。申请人团队在前期工作中发现，引入适量的硫掺杂可以将可逆容量提高到约320 mAh g-1（图1）。然而，掺杂对首次库伦效率的影响尚不清楚。本项目将重点研究缺陷结构与储钠行为之间的关系，有望为高性能负极材料的设计提供理论依据。",
+   "sha256": "0beeec50a726e8cabad318e8be5fd9633fc1895daf75520a634db8ed0d46ab87",
+   "read_info": {
+    "encoding": "json-string",
+    "repairs": []
+   },
+   "lang": "zh",
+   "n_sentences": 5,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 28,
+   "kind": "sentence",
+   "para": 1,
+   "text": "本项目拟以钠离子电池硬碳负极为研究对象，揭示其储钠机制。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 28,
+   "end": 66,
+   "kind": "sentence",
+   "para": 1,
+   "text": "前期研究表明，硬碳的首次库伦效率仅为75%左右，严重制约了其实际应用[3]。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s3",
+   "start": 66,
+   "end": 115,
+   "kind": "sentence",
+   "para": 1,
+   "text": "申请人团队在前期工作中发现，引入适量的硫掺杂可以将可逆容量提高到约320 mAh g-1（图1）。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s4",
+   "start": 115,
+   "end": 135,
+   "kind": "sentence",
+   "para": 1,
+   "text": "然而，掺杂对首次库伦效率的影响尚不清楚。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s5",
+   "start": 135,
+   "end": 178,
+   "kind": "sentence",
+   "para": 1,
+   "text": "本项目将重点研究缺陷结构与储钠行为之间的关系，有望为高性能负极材料的设计提供理论依据。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p1.s2",
+    "p1.s3",
+    "p1.s4",
+    "p1.s5"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [],
+ "materials": [],
+ "style_notes": [],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work",
+ "init_at": "2026-11-23T05:02:06.834133+00:00"
+}

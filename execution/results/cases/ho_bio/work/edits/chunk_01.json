@@ -1,0 +1,110 @@
+{
+ "chunk": 1,
+ "status": "done",
+ "edits": [
+  {
+   "sid": "p1.s1",
+   "revised": "Background: Chronic kidney disease (CKD) is associated with increased cardiovascular risk, but the role of serum uric acid remains unclear.",
+   "changes": [
+    {
+     "from": "associated to",
+     "to": "associated with",
+     "type": "preposition",
+     "reason": "fixed collocation 'associated with'"
+    },
+    {
+     "from": "remain",
+     "to": "remains",
+     "type": "agreement",
+     "reason": "singular subject 'the role'"
+    }
+   ]
+  },
+  {
+   "sid": "p2.s1",
+   "revised": "Methods: We enrolled 1,248 patients with stage 3–4 CKD from 2015 to 2019.",
+   "changes": [
+    {
+     "from": "3-4",
+     "to": "3–4",
+     "type": "format",
+     "reason": "en dash for ranges"
+    },
+    {
+     "from": "chronic kidney disease",
+     "to": "CKD",
+     "type": "abbreviation",
+     "reason": "abbreviation already defined in Background"
+    }
+   ]
+  },
+  {
+   "sid": "p2.s2",
+   "revised": "Patients were followed for a median of 4.2 years (IQR 3.1–5.0).",
+   "changes": [
+    {
+     "from": "3.1-5.0",
+     "to": "3.1–5.0",
+     "type": "format",
+     "reason": "en dash for ranges"
+    }
+   ]
+  },
+  {
+   "sid": "p2.s3",
+   "revised": "Cox regression was used to estimate hazard ratios (HRs) after adjustment for age, sex and eGFR.",
+   "changes": [
+    {
+     "from": "were",
+     "to": "was",
+     "type": "agreement",
+     "reason": "singular subject 'Cox regression'"
+    },
+    {
+     "from": "adjusting",
+     "to": "adjustment",
+     "type": "style",
+     "reason": "nominal form is usual in clinical abstracts"
+    }
+   ],
+   "confirm": "eGFR is not expanded in the abstract; most journals require 'estimated glomerular filtration rate (eGFR)' at first use"
+  },
+  {
+   "sid": "p3.s1",
+   "revised": "Results: Higher uric acid was associated with major adverse cardiovascular events (MACE) (HR 1.32, 95% CI 1.11–1.57; p = 0.002).",
+   "changes": [
+    {
+     "from": "events (HR",
+     "to": "events (MACE) (HR",
+     "type": "abbreviation",
+     "reason": "termbase abbreviation introduced at first use"
+    },
+    {
+     "from": "1.11-1.57",
+     "to": "1.11–1.57",
+     "type": "format",
+     "reason": "en dash for ranges"
+    }
+   ]
+  },
+  {
+   "sid": "p4.s1",
+   "revised": "Conclusions: Elevated uric acid may be an independent risk factor for cardiovascular events in CKD, and randomised controlled trials are needed.",
+   "changes": [
+    {
+     "from": "risk factor of",
+     "to": "risk factor for",
+     "type": "collocation",
+     "reason": "'risk factor for'"
+    },
+    {
+     "from": "randomized trials is",
+     "to": "randomised controlled trials are",
+     "type": "terminology",
+     "reason": "termbase term in British spelling; plural verb"
+    }
+   ],
+   "confirm": "termbase uses 'randomised controlled trial'; the authors wrote 'randomized trials' - confirm that controlled trials are meant"
+  }
+ ]
+}

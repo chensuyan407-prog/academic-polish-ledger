@@ -1,0 +1,36 @@
+[
+ {
+  "sid": "p1.s1",
+  "original": "The method have been used widely.",
+  "revised": "The method has been used widely.",
+  "changes": [
+   {
+    "from": "have",
+    "to": "has",
+    "type": "agreement",
+    "reason": "singular subject"
+   }
+  ],
+  "verdict": "pass",
+  "findings": [],
+  "confirm": null,
+  "edit_file": "chunk_01.json"
+ },
+ {
+  "sid": "p1.s2",
+  "original": "It's simple.",
+  "revised": "It is simple.",
+  "changes": [
+   {
+    "from": "It's",
+    "to": "It is",
+    "type": "register",
+    "reason": "no contractions"
+   }
+  ],
+  "verdict": "pass",
+  "findings": [],
+  "confirm": null,
+  "edit_file": "chunk_01.json"
+ }
+]

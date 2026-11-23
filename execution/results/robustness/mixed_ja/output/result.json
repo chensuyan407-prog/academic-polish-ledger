@@ -1,0 +1,74 @@
+{
+ "case_id": "ja",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "The film thickness was 20 nm. この結果は再現性が高いことを示している。 The device was stable.",
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "manuscript.txt",
+   "role": "manuscript",
+   "sha256": "aa16e1143a4e5f6bf8105e9bc8c1029f9120e66ac012b42701c713d56a1f4c22",
+   "fmt": "txt",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  }
+ ],
+ "uncertainty": [
+  "manuscript.txt: Japanese/Korean sentences present - lexicon checks cover zh/en only; only numbers, citations, references and math are checked there"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.txt",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.txt",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 0,
+  "segments_in_scope": 2,
+  "change_types": {},
+  "verdicts": {}
+ },
+ "checks": {
+  "segments_in_scope": 2,
+  "edited_units": 0,
+  "reviewed": 2,
+  "not_reviewed": 0,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:22.126069+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

@@ -1,0 +1,289 @@
+[
+ {
+  "sid": "h1",
+  "doc": "d1",
+  "offset": [
+   0,
+   8
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [
+    "2.3"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   10,
+   38
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [
+    "确认"
+   ],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [
+    "确认"
+   ],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s2",
+  "doc": "d1",
+  "offset": [
+   38,
+   62
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "图2"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "图2"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s3",
+  "doc": "d1",
+  "offset": [
+   62,
+   112
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "50 nm",
+    "30 nm"
+   ],
+   "citations": [
+    "[12]"
+   ],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "可能"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "50 nm",
+    "30 nm"
+   ],
+   "citations": [
+    "[12]"
+   ],
+   "references": [
+    "图2"
+   ],
+   "math": [],
+   "hedges": [
+    "可能"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": [
+   "I03:accepted"
+  ]
+ },
+ {
+  "sid": "p1.s4",
+  "doc": "d1",
+  "offset": [
+   112,
+   166
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "600 °C"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "大部分"
+   ],
+   "causal": [],
+   "conditions": [
+    "当煅烧温度高于600 ℃时"
+   ]
+  },
+  "revised": {
+   "numbers": [
+    "600 °C"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "大部分"
+   ],
+   "causal": [],
+   "conditions": [
+    "当煅烧温度高于600 ℃时"
+   ]
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s5",
+  "doc": "d1",
+  "offset": [
+   166,
+   206
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "表3"
+   ],
+   "math": [],
+   "hedges": [
+    "表明"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "表3"
+   ],
+   "math": [],
+   "hedges": [
+    "表明"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s6",
+  "doc": "d1",
+  "offset": [
+   206,
+   232
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [
+    "完全"
+   ],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": [
+   "I06:accepted",
+   "I14:accepted"
+  ]
+ }
+]

@@ -1,0 +1,148 @@
+{
+ "version": "0.1.0",
+ "case_id": "dev-tex-methods",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\task.md",
+ "contract": [
+  "revised_tex",
+  "edit_list",
+  "issues_for_author"
+ ],
+ "fields": [
+  "revised_tex",
+  "edit_list",
+  "issues_for_author"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "methods.tex",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\methods.tex",
+   "fmt": "tex",
+   "text": "\\section{Methods}\n\\label{sec:methods}\nThe model were trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$. As shown in Fig.~\\ref{fig:arch}, the network consist of three convolutional block. Data augmentation, e.g random cropping and flipping, was applied to all the training images.\n\nWe find that the accuracy is significantly higher than the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggest the attention module may improve feature extraction. The training takes approximately 6 hours on a single GPU, and no early stopping were used.\n\\begin{equation}\nL = -\\sum_i y_i \\log \\hat{y}_i\n\\end{equation}\n% TODO: add hyperparameter table\nWhere $y_i$ is the ground-truth label and $\\hat{y}_i$ the predicted probability.\n",
+   "sha256": "95fcfa1aa0a741939bcfd7c976a4727ed7df3f08440829cd468b98e5d3d7eb58",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 6,
+   "n_headings": 1
+  }
+ ],
+ "segments": [
+  {
+   "sid": "h1",
+   "start": 9,
+   "end": 16,
+   "kind": "heading",
+   "para": null,
+   "text": "Methods",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s1",
+   "start": 38,
+   "end": 155,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The model were trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 156,
+   "end": 238,
+   "kind": "sentence",
+   "para": 1,
+   "text": "As shown in Fig.~\\ref{fig:arch}, the network consist of three convolutional block.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s3",
+   "start": 239,
+   "end": 331,
+   "kind": "sentence",
+   "para": 1,
+   "text": "Data augmentation, e.g random cropping and flipping, was applied to all the training images.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s1",
+   "start": 333,
+   "end": 502,
+   "kind": "sentence",
+   "para": 2,
+   "text": "We find that the accuracy is significantly higher than the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggest the attention module may improve feature extraction.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s2",
+   "start": 503,
+   "end": 593,
+   "kind": "sentence",
+   "para": 2,
+   "text": "The training takes approximately 6 hours on a single GPU, and no early stopping were used.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p3.s1",
+   "start": 690,
+   "end": 770,
+   "kind": "sentence",
+   "para": 3,
+   "text": "Where $y_i$ is the ground-truth label and $\\hat{y}_i$ the predicted probability.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "h1",
+    "p1.s1",
+    "p1.s2",
+    "p1.s3",
+    "p2.s1",
+    "p2.s2",
+    "p3.s1"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\methods.tex",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [
+  "style: journal, American English"
+ ],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work",
+ "init_at": "2026-11-23T05:02:07.140722+00:00"
+}

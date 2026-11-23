@@ -1,0 +1,52 @@
+{
+ "summary": {
+  "segments_in_scope": 5,
+  "edited_units": 5,
+  "reviewed": 5,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 1,
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 1,
+  "change_types": {
+   "translation": 5
+  },
+  "by_code": {
+   "I05": 1
+  }
+ },
+ "units": [
+  {
+   "sids": [
+    "p1.s4"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I10",
+     "severity": "accepted",
+     "detail": "negation count changed 1 -> 0: ['不'] -> []",
+     "accepted": "“尚不清楚” rendered as 'remains unclear' (negation carried by the prefix un-)",
+     "severity_original": "warn"
+    }
+   ]
+  },
+  {
+   "sids": [
+    "p1.s5"
+   ],
+   "verdict": "warn",
+   "findings": [
+    {
+     "code": "I05",
+     "severity": "warn",
+     "detail": "hedge level changed across languages (1 -> 2): ['有望'] -> ['is expected to']"
+    }
+   ]
+  }
+ ],
+ "document": [],
+ "termbase_conflicts": []
+}

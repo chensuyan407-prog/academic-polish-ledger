@@ -1,0 +1,206 @@
+{
+ "case_id": "fresh-response",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_response": "**Comment 2.1:** The authors should explain why the capacity drops after 200 cycles.\n\n**Response:** We thank the reviewer for this helpful comment. We attribute the capacity drop mainly to particle cracking, as shown in the new Fig. S5. We have added a discussion in Section 3.4. However, we respectfully disagree that electrolyte decomposition is the main reason, because the impedance increased by only 12% after 200 cycles (Table S2).\n",
+ "change_records": [
+  {
+   "sid": "p2.s1",
+   "original": "**Response:** Thanks for the comment.",
+   "revised": "**Response:** We thank the reviewer for this helpful comment.",
+   "changes": [
+    {
+     "from": "Thanks for the comment",
+     "to": "We thank the reviewer for this helpful comment",
+     "type": "register",
+     "reason": "conventional polite opening of a reviewer response"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s2",
+   "original": "We think the capacity drop is mainly caused by the cracking of particles, as shown in the new Fig. S5.",
+   "revised": "We attribute the capacity drop mainly to particle cracking, as shown in the new Fig. S5.",
+   "changes": [
+    {
+     "from": "We think the capacity drop is mainly caused by the cracking of particles",
+     "to": "We attribute the capacity drop mainly to particle cracking",
+     "type": "register",
+     "reason": "'We think' is informal; 'attribute ... to' keeps the causal claim and 'mainly'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I12:accepted"
+   ]
+  },
+  {
+   "sid": "p2.s3",
+   "original": "We have add a discussion in Section 3.4.",
+   "revised": "We have added a discussion in Section 3.4.",
+   "changes": [
+    {
+     "from": "add",
+     "to": "added",
+     "type": "tense",
+     "reason": "present perfect needs the past participle"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s4",
+   "original": "However, we don't agree that the electrolyte decomposition is the main reason, because the impedance only increase by 12% after 200 cycles (Table S2).",
+   "revised": "However, we respectfully disagree that electrolyte decomposition is the main reason, because the impedance increased by only 12% after 200 cycles (Table S2).",
+   "changes": [
+    {
+     "from": "we don't agree",
+     "to": "we respectfully disagree",
+     "type": "register",
+     "reason": "polite and formal; disagreement kept, not conceded"
+    },
+    {
+     "from": "the electrolyte decomposition",
+     "to": "electrolyte decomposition",
+     "type": "article",
+     "reason": "generic process"
+    },
+    {
+     "from": "only increase",
+     "to": "increased by only",
+     "type": "grammar",
+     "reason": "past tense, agreement; 'only' placed before the quantity it limits"
+    },
+    {
+     "from": "by 12%",
+     "to": "12%",
+     "type": "reorder",
+     "reason": "'by' moved with 'only'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I10:accepted"
+   ]
+  }
+ ],
+ "author_queries": [
+  {
+   "sid": "p2.s2",
+   "issue": "the response attributes the drop 'mainly' to cracking; confirm Fig. S5 supports this and that Section 3.4 states the same"
+  },
+  {
+   "sid": "p2.s2",
+   "issue": "flag I12 accepted by the editor: 'is caused by' -> 'attribute ... to' keeps the authors' causal interpretation; no new causal claim (original flag: causal wording removed: ['caused'] -> none)"
+  },
+  {
+   "sid": "p2.s4",
+   "issue": "flag I10 accepted by the editor: 'don't agree' -> 'disagree': negation carried by the prefix dis-, meaning unchanged (original flag: negation count changed 1 -> 0: [\"don't\"] -> [])"
+  },
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['S2', 'S5']",
+   "source": "D03"
+  }
+ ],
+ "mode": "polish",
+ "genre": "response",
+ "sources": [
+  {
+   "name": "response_draft.md",
+   "role": "manuscript",
+   "sha256": "e730735bedfe5948acf7d8083a4bd5c68393da1a15f4a4fa29a83d82fe69ee9c",
+   "fmt": "md",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  }
+ ],
+ "uncertainty": [],
+ "needs_confirmation": [
+  {
+   "sid": "p2.s2",
+   "issue": "the response attributes the drop 'mainly' to cracking; confirm Fig. S5 supports this and that Section 3.4 states the same"
+  },
+  {
+   "sid": "p2.s2",
+   "issue": "flag I12 accepted by the editor: 'is caused by' -> 'attribute ... to' keeps the authors' causal interpretation; no new causal claim (original flag: causal wording removed: ['caused'] -> none)"
+  },
+  {
+   "sid": "p2.s4",
+   "issue": "flag I10 accepted by the editor: 'don't agree' -> 'disagree': negation carried by the prefix dis-, meaning unchanged (original flag: negation count changed 1 -> 0: [\"don't\"] -> [])"
+  },
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['S2', 'S5']",
+   "source": "D03"
+  }
+ ],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 4,
+  "segments_in_scope": 5,
+  "change_types": {
+   "register": 3,
+   "tense": 1,
+   "article": 1,
+   "grammar": 1,
+   "reorder": 1
+  },
+  "verdicts": {
+   "pass": 4
+  }
+ },
+ "checks": {
+  "segments_in_scope": 5,
+  "edited_units": 4,
+  "reviewed": 5,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 2,
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 2,
+  "change_types": {
+   "register": 3,
+   "tense": 1,
+   "article": 1,
+   "grammar": 1,
+   "reorder": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:01:59.369235+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

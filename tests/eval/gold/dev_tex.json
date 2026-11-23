@@ -1,0 +1,22 @@
+{"chunk": 1, "status": "done",
+ "edits": [
+  {"sid": "p1.s1", "revised": "The model was trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$.",
+   "changes": [{"from": "were", "to": "was", "type": "agreement", "reason": "singular subject 'model'"}]},
+  {"sid": "p1.s2", "revised": "As shown in Fig.~\\ref{fig:arch}, the network consists of three convolutional blocks.",
+   "changes": [{"from": "consist", "to": "consists", "type": "agreement", "reason": "singular subject 'network'"},
+               {"from": "block", "to": "blocks", "type": "number-agreement", "reason": "plural after 'three'"}]},
+  {"sid": "p1.s3", "revised": "Data augmentation, e.g., random cropping and flipping, was applied to all training images.",
+   "changes": [{"from": "e.g", "to": "e.g.,", "type": "punctuation", "reason": "abbreviation needs full stop and comma"},
+               {"from": "all the training", "to": "all training", "type": "concision", "reason": "article not needed"}]},
+  {"sid": "p2.s1", "revised": "We found that the accuracy is significantly higher than that of the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggests that the attention module may improve feature extraction.",
+   "changes": [{"from": "find", "to": "found", "type": "tense", "reason": "past tense for completed experiments"},
+               {"from": "the baseline", "to": "that of the baseline", "type": "clarity", "reason": "compare accuracy with accuracy"},
+               {"from": "suggest the", "to": "suggests that the", "type": "agreement", "reason": "relative clause refers to the whole finding (singular); 'that' added for clarity"}]},
+  {"sid": "p2.s2", "revised": "Training took approximately 6 hours on a single GPU, and no early stopping was used.",
+   "changes": [{"from": "The training takes", "to": "Training took", "type": "tense", "reason": "past tense for the completed procedure; generic noun without article"},
+               {"from": "were", "to": "was", "type": "agreement", "reason": "'early stopping' is singular"}]},
+  {"sid": "p3.s1", "revised": "where $y_i$ is the ground-truth label and $\\hat{y}_i$ is the predicted probability.",
+   "changes": [{"from": "Where", "to": "where", "type": "format", "reason": "continuation of the sentence ending with the equation"},
+               {"from": "and $\\hat{y}_i$ the", "to": "and $\\hat{y}_i$ is the", "type": "grammar", "reason": "verb added for parallel structure"}]}
+ ],
+ "fields": {"issues_for_author": {"kind": "needs_confirmation"}}}

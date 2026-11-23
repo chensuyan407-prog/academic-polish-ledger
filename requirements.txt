@@ -1,0 +1,2 @@
+# optional: PDF manuscripts only
+pymupdf>=1.23

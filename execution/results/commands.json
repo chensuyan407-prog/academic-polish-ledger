@@ -1,0 +1,1378 @@
+[
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\dev_en\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\dev_en\\output",
+   "--work",
+   "execution\\results\\cases\\dev_en\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.162,
+  "stdout_tail": "case_id: dev-en-perovskite   mode: polish   genre: journal   contract fields: ['polished_text', 'change_log', 'terminology', 'needs_confirmation']\nmanuscript d1: manuscript.md fmt=md lang=en sentences=11 headings=2 encoding=utf-8-sig\ntermbase: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\termbase.csv\ntermbase entries: 3  conflicts: 0  abbreviations defined in text: 2\nstyle/constraint: target_style: journal article, American English, 'we' allowed\nlint hints: 14   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_en\\work",
+   "--out",
+   "execution\\results\\cases\\dev_en\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.171,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 10 edited / 13 in scope; verdicts {'pass': 10}; flags {'accepted': 1, 'warn': 1}\nwarn [doc] D03: termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\output (10 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\dev_grant\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\dev_grant\\output",
+   "--work",
+   "execution\\results\\cases\\dev_grant\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.136,
+  "stdout_tail": "case_id: dev-grant-zh2en   mode: translate_zh_en   genre: grant   contract fields: ['english_text', 'bilingual_table', 'translation_notes']\nmanuscript d1: inline:source_text fmt=txt lang=zh sentences=5 headings=0 encoding=json-string\ntermbase entries: 4  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_grant\\work",
+   "--out",
+   "execution\\results\\cases\\dev_grant\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.16,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 5 edited / 5 in scope; verdicts {'pass': 4, 'warn': 1}; flags {'accepted': 1, 'warn': 1}\nwarn [p1.s5] I05: hedge level changed across languages (1 -> 2): ['有望'] -> ['is expected to']\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\output (13 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\dev_tex\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\dev_tex\\output",
+   "--work",
+   "execution\\results\\cases\\dev_tex\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.133,
+  "stdout_tail": "case_id: dev-tex-methods   mode: polish   genre: journal   contract fields: ['revised_tex', 'edit_list', 'issues_for_author']\nmanuscript d1: methods.tex fmt=tex lang=en sentences=6 headings=1 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nstyle/constraint: style: journal, American English\nlint hints: 6   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_tex\\work",
+   "--out",
+   "execution\\results\\cases\\dev_tex\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.16,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'info': 1}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\dev_zh\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\dev_zh\\output",
+   "--work",
+   "execution\\results\\cases\\dev_zh\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.137,
+  "stdout_tail": "case_id: dev-zh-thesis   mode: polish   genre: thesis   contract fields: ['润色全文', '修改说明', '术语表', '待确认事项']\nmanuscript d1: chapter2_3.txt fmt=txt lang=zh sentences=6 headings=1 encoding=utf-8-sig\ntermbase: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\术语表.csv\ntermbase entries: 3  conflicts: 0  abbreviations defined in text: 1\nstyle/constraint: genre: 学位论文（硕士）\nstyle/constraint: requirements: 规范学术中文，统一术语，第一人称改为“本文”，不改变数据和结论强度\nlint hints: 11   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_zh\\work",
+   "--out",
+   "execution\\results\\cases\\dev_zh\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.157,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'accepted': 3}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.17,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.172,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.169,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.163,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.164,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.171,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.169,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.164,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.164,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.167,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.163,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.157,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.151,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.156,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.149,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.152,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.148,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.149,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.148,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.159,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.15,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.154,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.153,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.156,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.156,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.154,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.157,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.153,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.156,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.159,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.157,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.16,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.159,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.168,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.168,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.162,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.168,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.16,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\ho_bio\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\ho_bio\\output",
+   "--work",
+   "execution\\results\\cases\\ho_bio\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.148,
+  "stdout_tail": "case_id: ho-bio-abstract   mode: polish   genre: journal   contract fields: ['revised_abstract', 'edit_log', 'term_list', 'open_questions']\nmanuscript d1: abstract.txt fmt=txt lang=en sentences=8 headings=0 encoding=utf-8-sig\ntermbase: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\glossary.tsv\ntermbase entries: 3  conflicts: 0  abbreviations defined in text: 2\nstyle/constraint: journal: clinical nephrology journal, British English\nlint hints: 6   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\ho_bio\\work",
+   "--out",
+   "execution\\results\\cases\\ho_bio\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.154,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 6 edited / 8 in scope; verdicts {'pass': 6}; flags {'info': 1}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "tests\\cases\\ho_grant_zh\\input\\case.json",
+   "--out",
+   "execution\\results\\cases\\ho_grant_zh\\output",
+   "--work",
+   "execution\\results\\cases\\ho_grant_zh\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.139,
+  "stdout_tail": "case_id: ho-grant-zh   mode: polish   genre: grant   contract fields: ['润色稿', '修改清单', '需人工确认']\nmanuscript d1: inline:原文 fmt=txt lang=zh sentences=5 headings=0 encoding=json-string\ntermbase entries: 1  conflicts: 0  abbreviations defined in text: 0\nstyle/constraint: 文体: 国家自然科学基金申请书（立项依据）\nlint hints: 5   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\ho_grant_zh\\work",
+   "--out",
+   "execution\\results\\cases\\ho_grant_zh\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.159,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 4 edited / 5 in scope; verdicts {'warn': 2, 'pass': 2}; flags {'warn': 2, 'accepted': 3}\nwarn [p1.s1] I09: novelty/priority claim removed: ['全新'] -> []\nwarn [p1.s3] R03: heavy rewrite (60% of tokens changed) without a restructure/sentence-split type\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.176,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.185,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.183,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.168,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.178,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.173,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.175,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.176,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.175,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.178,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.168,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.154,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.172,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.172,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.173,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.158,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.152,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 1,
+  "seconds": 0.17,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.153,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.148,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\_mut_tmp\\work",
+   "--out",
+   "execution\\results\\_mut_tmp\\output",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.151,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\missing_case\\output",
+   "--work",
+   "execution\\results\\robustness\\missing_case\\work"
+  ],
+  "exit": 2,
+  "seconds": 0.096,
+  "stdout_tail": "case_id: unknown   mode: polish   genre: journal   contract fields: ['polished_text', 'change_log']\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 0 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work\\chunks\nNOTE: case.json not found at C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json\nNOTE: no output_contract in case.json; default fields used\nnext: read (no chunks), write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\empty_manuscript\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\empty_manuscript\\output",
+   "--work",
+   "execution\\results\\robustness\\empty_manuscript\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.102,
+  "stdout_tail": "case_id: empty   mode: polish   genre: journal   contract fields: ['polished_text']\nmanuscript d1: manuscript.txt fmt=txt lang=other sentences=0 headings=0 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 0 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\work\\chunks\nnext: read (no chunks), write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\empty_manuscript\\work",
+   "--out",
+   "execution\\results\\robustness\\empty_manuscript\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.116,
+  "stdout_tail": "status: partial - no edits submitted\nunits: 0 edited / 0 in scope; verdicts {}; flags {}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\mojibake\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\mojibake\\output",
+   "--work",
+   "execution\\results\\robustness\\mojibake\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.131,
+  "stdout_tail": "case_id: moj   mode: polish   genre: journal   contract fields: ['polished_text']\nmanuscript d1: manuscript.txt fmt=txt lang=en sentences=1 headings=0 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\chunks\nNOTE: manuscript.txt: reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\mojibake\\work",
+   "--out",
+   "execution\\results\\robustness\\mojibake\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.149,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 0 edited / 1 in scope; verdicts {}; flags {}\nNOTE: manuscript.txt: reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\gb18030\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\gb18030\\output",
+   "--work",
+   "execution\\results\\robustness\\gb18030\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.155,
+  "stdout_tail": "case_id: gbk   mode: polish   genre: journal   contract fields: ['润色全文']\nmanuscript d1: 稿件.txt fmt=txt lang=zh sentences=2 headings=0 encoding=gb18030\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\gb18030\\work",
+   "--out",
+   "execution\\results\\robustness\\gb18030\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.179,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 0 edited / 2 in scope; verdicts {}; flags {}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\termbase_conflict\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\termbase_conflict\\output",
+   "--work",
+   "execution\\results\\robustness\\termbase_conflict\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.172,
+  "stdout_tail": "case_id: tbc   mode: polish   genre: journal   contract fields: ['polished_text', 'needs_confirmation']\nmanuscript d1: manuscript.md fmt=md lang=en sentences=2 headings=0 encoding=utf-8-sig\ntermbase: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\terms.csv\ntermbase entries: 2  conflicts: 1  abbreviations defined in text: 0\n  TERMBASE CONFLICT variant_is_preferred_elsewhere: density-functional theory -> ['DFT method', 'density functional theory']  (do not enforce; list in needs_confirmation)\nlint hints: 1   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\termbase_conflict\\work",
+   "--out",
+   "execution\\results\\robustness\\termbase_conflict\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.168,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 0 edited / 2 in scope; verdicts {}; flags {'info': 1}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\output (10 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\long_input\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\long_input\\output",
+   "--work",
+   "execution\\results\\robustness\\long_input\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.366,
+  "stdout_tail": "case_id: long   mode: polish   genre: journal   contract fields: ['polished_text', 'change_log']\nmanuscript d1: manuscript.txt fmt=txt lang=en sentences=600 headings=0 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 20 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\long_input\\work",
+   "--out",
+   "execution\\results\\robustness\\long_input\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.434,
+  "stdout_tail": "status: partial - 570/600 segments not reviewed\nunits: 1 edited / 600 in scope; verdicts {'pass': 1}; flags {}\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\long_input\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\bad_edits\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\bad_edits\\output",
+   "--work",
+   "execution\\results\\robustness\\bad_edits\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.129,
+  "stdout_tail": "case_id: bad   mode: polish   genre: journal   contract fields: ['polished_text']\nmanuscript d1: manuscript.txt fmt=txt lang=en sentences=2 headings=0 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 1   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\work\\chunks\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\bad_edits\\work",
+   "--out",
+   "execution\\results\\robustness\\bad_edits\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.134,
+  "stdout_tail": "status: partial - 2/2 segments not reviewed\nunits: 0 edited / 2 in scope; verdicts {}; flags {}\nNOTE: chunk_01.json: invalid JSON (Expecting property name enclosed in double quotes: line 1 column 60 (char 59)) - file ignored\nNOTE: edit in extra.json refers to unknown sid ['p9.s9'] - ignored\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\bad_edits\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\mixed_ja\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\mixed_ja\\output",
+   "--work",
+   "execution\\results\\robustness\\mixed_ja\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.125,
+  "stdout_tail": "case_id: ja   mode: polish   genre: journal   contract fields: ['polished_text']\nmanuscript d1: manuscript.txt fmt=txt lang=ja sentences=2 headings=0 encoding=utf-8-sig\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 0   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\chunks\nNOTE: manuscript.txt: Japanese/Korean sentences present - lexicon checks cover zh/en only; only numbers, citations, references and math are checked there\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\mixed_ja\\work",
+   "--out",
+   "execution\\results\\robustness\\mixed_ja\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.138,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 0 edited / 2 in scope; verdicts {}; flags {}\nNOTE: manuscript.txt: Japanese/Korean sentences present - lexicon checks cover zh/en only; only numbers, citations, references and math are checked there\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\docx_io\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\docx_io\\output",
+   "--work",
+   "execution\\results\\robustness\\docx_io\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.14,
+  "stdout_tail": "case_id: docx   mode: polish   genre: journal   contract fields: ['polished_text', 'change_log']\nmanuscript d1: draft.docx fmt=docx lang=en sentences=2 headings=1 encoding=docx-xml\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 2   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\chunks\nNOTE: draft.docx: run-level formatting not preserved\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\docx_io\\work",
+   "--out",
+   "execution\\results\\robustness\\docx_io\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.139,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 2 edited / 3 in scope; verdicts {'pass': 2}; flags {}\nNOTE: draft.docx: run-level formatting not preserved\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\output (11 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_init.py",
+   "--case",
+   "execution\\results\\robustness\\pdf_only\\input\\case.json",
+   "--out",
+   "execution\\results\\robustness\\pdf_only\\output",
+   "--work",
+   "execution\\results\\robustness\\pdf_only\\work"
+  ],
+  "exit": 0,
+  "seconds": 0.219,
+  "stdout_tail": "case_id: pdf   mode: polish   genre: journal   contract fields: ['polished_text']\nmanuscript d1: draft.pdf fmt=pdf lang=en sentences=1 headings=0 encoding=None\ntermbase entries: 0  conflicts: 0  abbreviations defined in text: 0\nlint hints: 1   chunks: 1 x <= 30 segments -> C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\chunks\nNOTE: draft.pdf: text extracted from PDF layout; line breaks and hyphenation reconstructed\nnext: read C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\chunks\\chunk_01.md, write edits into C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\edits/chunk_NN.json, then run ap_build.py --work C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work --out C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\output\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\robustness\\pdf_only\\work",
+   "--out",
+   "execution\\results\\robustness\\pdf_only\\output"
+  ],
+  "exit": 0,
+  "seconds": 0.144,
+  "stdout_tail": "status: success - all segments reviewed, no unresolved fail\nunits: 0 edited / 1 in scope; verdicts {}; flags {'warn': 1}\nwarn [p1.s1] R04: kept unchanged although EN12 (subject-verb agreement (plural subject, singular verb)?) matches \"The samples was\"\nNOTE: draft.pdf: text extracted from PDF layout; line breaks and hyphenation reconstructed\noutputs: C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\output (10 files)\n",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_en\\work",
+   "--out",
+   "execution\\results\\robustness\\det_1",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.165,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_build.py",
+   "--work",
+   "execution\\results\\cases\\dev_en\\work",
+   "--out",
+   "execution\\results\\robustness\\det_2",
+   "--quiet"
+  ],
+  "exit": 0,
+  "seconds": 0.167,
+  "stdout_tail": "",
+  "stderr_tail": ""
+ },
+ {
+  "argv": [
+   "submission\\scripts\\ap_check.py",
+   "--orig",
+   "execution\\results\\robustness\\audit_rewrite\\original.md",
+   "--rev",
+   "execution\\results\\robustness\\audit_rewrite\\rewrite.md",
+   "--termbase",
+   "tests\\cases\\dev_en\\input\\termbase.csv",
+   "--json",
+   "execution\\results\\robustness\\audit_rewrite\\audit.json"
+  ],
+  "exit": 0,
+  "seconds": 0.154,
+  "stdout_tail": "l: citation markers changed: missing [], added ['[2]']\n   I14 warn: direction words changed: up [] down [] -> up ['rising'] down []\n[p2.s2] fail\n   I01 fail: numbers changed: missing [26.0, 3.8], added [60.0]\n   I02 fail: citation markers changed: missing ['[2]'], added ['[5]']\n   I11 fail: majority quantifier added: [] -> ['many']\n[p2.s3] fail\n   I10 fail: negation count changed 1 -> 0: [\"don't\"] -> []\n   I12 fail: causal wording introduced: ['prevents']\n[p2.s4] fail\n   I01 fail: numbers changed: missing [60.0], added []\n   I02 fail: citation markers changed: missing ['[5]'], added []\n   I07 fail: approximator/bound changed (precision of a number): ['exceeds'] -> []\n   I11 fail: partial quantifier removed: ['several'] -> []\n   I12 warn: inferential connective added: ['therefore']\n   I13 fail: condition dropped: ['when'] -> none\n   I14 warn: direction words changed: up ['accelerated', 'exceeds'] down [] -> up [] down []\n[p2.s5] fail\n   I03 fail: figure/table/equation references changed: missing [], added ['table:1']\n   I05 fail: hedge removed or weakened (claim strengthened): ['could'] -> none\n   I13 fail: condition dropped: ['if'] -> none\n[p2.s6] warn\n   A01 warn: sentence deleted (or merged)\n[doc] D03 warn: termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'\n{\"changed_pairs\": 11, \"severity\": {\"warn\": 7, \"fail\": 20}, \"codes\": {\"I14\": 3, \"I02\": 4, \"I06\": 1, \"I05\": 2, \"I03\": 2, \"I07\": 2, \"A01\": 2, \"I01\": 3, \"I11\": 2, \"I10\": 1, \"I12\": 2, \"I13\": 2}}\n",
+  "stderr_tail": ""
+ }
+]

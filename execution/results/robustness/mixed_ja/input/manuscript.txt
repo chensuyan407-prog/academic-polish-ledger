@@ -1,0 +1,1 @@
+The film thickness was 20 nm. この結果は再現性が高いことを示している。 The device was stable.

@@ -1,0 +1,73 @@
+{
+ "version": "0.1.0",
+ "case_id": "pdf",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "polished_text"
+ ],
+ "fields": [
+  "polished_text"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "draft.pdf",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\input\\draft.pdf",
+   "fmt": "pdf",
+   "text": "The samples was heated to 500 K for 2 h.",
+   "sha256": "b34489f40156b71b965bca70b2664d08ab65bffa3745876aa6680aec012eeee0",
+   "read_info": {
+    "pages": 1,
+    "extractor": "pymupdf",
+    "repairs": [
+     "text extracted from PDF layout; line breaks and hyphenation reconstructed"
+    ]
+   },
+   "lang": "en",
+   "n_sentences": 1,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 40,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The samples was heated to 500 K for 2 h.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\input\\draft.pdf",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [
+  "draft.pdf: text extracted from PDF layout; line breaks and hyphenation reconstructed"
+ ],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work",
+ "init_at": "2026-11-23T05:02:22.782015+00:00"
+}

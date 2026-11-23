@@ -1,0 +1,42 @@
+{
+ "entries": [
+  {
+   "preferred": "density functional theory",
+   "variants": [],
+   "zh": "",
+   "en": "",
+   "abbr": "",
+   "note": "",
+   "source": "terms.csv"
+  },
+  {
+   "preferred": "DFT method",
+   "variants": [
+    "density-functional theory"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "",
+   "note": "",
+   "source": "terms.csv"
+  }
+ ],
+ "sources": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\terms.csv",
+   "entries": 2,
+   "sha256": "a7e08ad853379992749e0426ca8702d94b722ad31181bebbf0cdb8ebcb809c1a"
+  }
+ ],
+ "conflicts": [
+  {
+   "type": "variant_is_preferred_elsewhere",
+   "term": "density-functional theory",
+   "entries": [
+    "DFT method",
+    "density functional theory"
+   ]
+  }
+ ],
+ "abbreviations_in_text": []
+}

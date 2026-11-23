@@ -1,0 +1,41 @@
+{
+ "_doc": "Language errors the author planted in the dev originals (what a good polish must fix). Used to measure (a) whether ap_init's candidate finder surfaces a hint on that sentence (lint recall) and (b) whether the gold edit fixed it (gold covers it). 'match' = a substring of the original that carries the error.",
+ "dev_en": [
+  {"sid": "p1.s1", "match": "With the rapid development of", "type": "chinglish"},
+  {"sid": "p1.s1", "match": "more and more", "type": "chinglish"},
+  {"sid": "p1.s2", "match": "PSC are", "type": "agreement"},
+  {"sid": "p1.s3", "match": "hole transporting layer", "type": "terminology"},
+  {"sid": "p1.s4", "match": "device reach", "type": "agreement"},
+  {"sid": "p1.s4", "match": "photoelectric conversion efficiency", "type": "terminology"},
+  {"sid": "p1.s5", "match": "results suggests", "type": "agreement"},
+  {"sid": "p2.s1", "match": "Perovskite photovoltaic cell", "type": "terminology"},
+  {"sid": "p2.s1", "match": "a huge progress", "type": "register"},
+  {"sid": "p2.s3", "match": "But the", "type": "register"},
+  {"sid": "p2.s3", "match": "don't", "type": "register"},
+  {"sid": "p2.s4", "match": "Several study", "type": "number-agreement"},
+  {"sid": "p2.s5", "match": "A HTL", "type": "article"},
+  {"sid": "p2.s6", "match": "it's", "type": "spelling"}
+ ],
+ "dev_zh": [
+  {"sid": "p1.s1", "match": "通过X光衍射（XRD）分析，使", "type": "grammar"},
+  {"sid": "p1.s1", "match": "X光衍射", "type": "terminology"},
+  {"sid": "p1.s2", "match": "扫描电镜", "type": "terminology"},
+  {"sid": "p1.s2", "match": "进行观察", "type": "concision"},
+  {"sid": "p1.s3", "match": "从图中可以看出", "type": "concision"},
+  {"sid": "p1.s3", "match": "氧缺陷", "type": "terminology"},
+  {"sid": "p1.s4", "match": "我们", "type": "register"},
+  {"sid": "p1.s4", "match": "进行了系统的分析", "type": "concision"},
+  {"sid": "p1.s5", "match": "）,", "type": "punctuation"},
+  {"sid": "p1.s6", "match": "非常简单", "type": "register"},
+  {"sid": "p1.s6", "match": "完全解决", "type": "register"}
+ ],
+ "dev_tex": [
+  {"sid": "p1.s1", "match": "model were", "type": "agreement"},
+  {"sid": "p1.s2", "match": "network consist", "type": "agreement"},
+  {"sid": "p1.s2", "match": "three convolutional block", "type": "number-agreement"},
+  {"sid": "p1.s3", "match": "e.g", "type": "punctuation"},
+  {"sid": "p2.s1", "match": "which suggest", "type": "agreement"},
+  {"sid": "p2.s2", "match": "no early stopping were", "type": "agreement"},
+  {"sid": "p3.s1", "match": "Where", "type": "format"}
+ ]
+}

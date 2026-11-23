@@ -1,0 +1,1 @@
+Language-edit this structured abstract for a clinical journal (British English). Correct grammar and wording; keep all statistics, confidence intervals, p values, sample sizes and the strength of the conclusions. List every edit with a reason.

@@ -1,0 +1,7 @@
+{
+ "case_id": "ja",
+ "manuscript": "manuscript.txt",
+ "output_contract": [
+  "polished_text"
+ ]
+}

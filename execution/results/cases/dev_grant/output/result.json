@@ -1,0 +1,269 @@
+{
+ "case_id": "dev-grant-zh2en",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "english_text": "This project focuses on hard carbon anodes for sodium-ion batteries (SIBs) and aims to elucidate their sodium storage mechanism. Previous studies have indicated that the initial Coulombic efficiency (ICE) of hard carbon is only about 75%, which severely limits its practical application [3]. In our previous work, we found that moderate sulfur doping can increase the reversible capacity to approximately 320 mAh g-1 (Fig. 1). However, the effect of doping on the ICE remains unclear. This project will focus on the relationship between defect structure and sodium storage behavior, which is expected to provide a theoretical basis for the design of high-performance anode materials.",
+ "bilingual_table": [
+  {
+   "sid": "p1.s1",
+   "original": "本项目拟以钠离子电池硬碳负极为研究对象，揭示其储钠机制。",
+   "revised": "This project focuses on hard carbon anodes for sodium-ion batteries (SIBs) and aims to elucidate their sodium storage mechanism."
+  },
+  {
+   "sid": "p1.s2",
+   "original": "前期研究表明，硬碳的首次库伦效率仅为75%左右，严重制约了其实际应用[3]。",
+   "revised": "Previous studies have indicated that the initial Coulombic efficiency (ICE) of hard carbon is only about 75%, which severely limits its practical application [3]."
+  },
+  {
+   "sid": "p1.s3",
+   "original": "申请人团队在前期工作中发现，引入适量的硫掺杂可以将可逆容量提高到约320 mAh g-1（图1）。",
+   "revised": "In our previous work, we found that moderate sulfur doping can increase the reversible capacity to approximately 320 mAh g-1 (Fig. 1)."
+  },
+  {
+   "sid": "p1.s4",
+   "original": "然而，掺杂对首次库伦效率的影响尚不清楚。",
+   "revised": "However, the effect of doping on the ICE remains unclear."
+  },
+  {
+   "sid": "p1.s5",
+   "original": "本项目将重点研究缺陷结构与储钠行为之间的关系，有望为高性能负极材料的设计提供理论依据。",
+   "revised": "This project will focus on the relationship between defect structure and sodium storage behavior, which is expected to provide a theoretical basis for the design of high-performance anode materials."
+  }
+ ],
+ "translation_notes": [
+  {
+   "sid": "p1.s1",
+   "original": "本项目拟以钠离子电池硬碳负极为研究对象，揭示其储钠机制。",
+   "revised": "This project focuses on hard carbon anodes for sodium-ion batteries (SIBs) and aims to elucidate their sodium storage mechanism.",
+   "changes": [
+    {
+     "from": "本项目拟以……为研究对象",
+     "to": "This project focuses on",
+     "type": "translation",
+     "reason": "avoid literal 'take ... as the research object'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s2",
+   "original": "前期研究表明，硬碳的首次库伦效率仅为75%左右，严重制约了其实际应用[3]。",
+   "revised": "Previous studies have indicated that the initial Coulombic efficiency (ICE) of hard carbon is only about 75%, which severely limits its practical application [3].",
+   "changes": [
+    {
+     "from": "表明",
+     "to": "have indicated",
+     "type": "translation",
+     "reason": "moderate reporting verb kept"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s3",
+   "original": "申请人团队在前期工作中发现，引入适量的硫掺杂可以将可逆容量提高到约320 mAh g-1（图1）。",
+   "revised": "In our previous work, we found that moderate sulfur doping can increase the reversible capacity to approximately 320 mAh g-1 (Fig. 1).",
+   "changes": [
+    {
+     "from": "申请人团队在前期工作中发现",
+     "to": "In our previous work, we found",
+     "type": "translation",
+     "reason": "grant convention: applicant team as first person plural"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s4",
+   "original": "然而，掺杂对首次库伦效率的影响尚不清楚。",
+   "revised": "However, the effect of doping on the ICE remains unclear.",
+   "changes": [
+    {
+     "from": "尚不清楚",
+     "to": "remains unclear",
+     "type": "translation",
+     "reason": "natural English; negation kept as 'unclear'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I10:accepted"
+   ]
+  },
+  {
+   "sid": "p1.s5",
+   "original": "本项目将重点研究缺陷结构与储钠行为之间的关系，有望为高性能负极材料的设计提供理论依据。",
+   "revised": "This project will focus on the relationship between defect structure and sodium storage behavior, which is expected to provide a theoretical basis for the design of high-performance anode materials.",
+   "changes": [
+    {
+     "from": "有望",
+     "to": "is expected to",
+     "type": "translation",
+     "reason": "hedge kept"
+    }
+   ],
+   "verdict": "warn",
+   "flags": [
+    "I05:warn"
+   ]
+  }
+ ],
+ "mode": "translate_zh_en",
+ "genre": "grant",
+ "sources": [
+  {
+   "name": "inline:source_text",
+   "role": "manuscript",
+   "sha256": "0beeec50a726e8cabad318e8be5fd9633fc1895daf75520a634db8ed0d46ab87",
+   "fmt": "txt",
+   "read_info": {
+    "encoding": "json-string",
+    "repairs": []
+   }
+  },
+  {
+   "name": "case.json:glossary[0].zh",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[0].en",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[1].zh",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[1].en",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[1].abbr",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[2].zh",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[2].en",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[2].abbr",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[2].variants",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[3].zh",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary[3].en",
+   "role": "termbase",
+   "entries": 0,
+   "sha256": null
+  },
+  {
+   "name": "case.json:glossary",
+   "role": "termbase",
+   "entries": 4,
+   "sha256": null
+  }
+ ],
+ "uncertainty": [],
+ "needs_confirmation": [
+  {
+   "sid": "p1.s4",
+   "issue": "flag I10 accepted by the editor: “尚不清楚” rendered as 'remains unclear' (negation carried by the prefix un-) (original flag: negation count changed 1 -> 0: ['不'] -> [])"
+  }
+ ],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.txt",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "bilingual.csv",
+  "bilingual.md",
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.txt",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 5,
+  "segments_in_scope": 5,
+  "change_types": {
+   "translation": 5
+  },
+  "verdicts": {
+   "pass": 4,
+   "warn": 1
+  }
+ },
+ "checks": {
+  "segments_in_scope": 5,
+  "edited_units": 5,
+  "reviewed": 5,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 1,
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 1,
+  "change_types": {
+   "translation": 5
+  },
+  "by_code": {
+   "I05": 1
+  }
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:07.042081+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

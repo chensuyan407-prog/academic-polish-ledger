@@ -1,0 +1,166 @@
+{
+ "version": "0.1.0",
+ "case_id": "ho-bio-abstract",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\task.md",
+ "contract": {
+  "revised_abstract": "language-edited abstract, same structure",
+  "edit_log": "every edit with reason",
+  "term_list": "terminology used",
+  "open_questions": "points for the authors"
+ },
+ "fields": [
+  "revised_abstract",
+  "edit_log",
+  "term_list",
+  "open_questions"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "abstract.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\abstract.txt",
+   "fmt": "txt",
+   "text": "Background: Chronic kidney disease (CKD) is associated to increased cardiovascular risk, but the role of serum uric acid remain unclear.\n\nMethods: We enrolled 1,248 patients with stage 3-4 chronic kidney disease from 2015 to 2019. Patients were followed for a median of 4.2 years (IQR 3.1-5.0). Cox regression were used to estimate hazard ratios (HRs) after adjusting for age, sex and eGFR.\n\nResults: Higher uric acid was associated with major adverse cardiovascular events (HR 1.32, 95% CI 1.11-1.57; p = 0.002). The association was not significant in patients younger than 50 years. Allopurinol use did not modify the risk.\n\nConclusions: Elevated uric acid may be an independent risk factor of cardiovascular events in CKD, and randomized trials is needed.\n",
+   "sha256": "80174769c13b9738f4efad0ac9526e035748c43b8e35990574749b9ed55a265e",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 8,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 136,
+   "kind": "sentence",
+   "para": 1,
+   "text": "Background: Chronic kidney disease (CKD) is associated to increased cardiovascular risk, but the role of serum uric acid remain unclear.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s1",
+   "start": 138,
+   "end": 230,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Methods: We enrolled 1,248 patients with stage 3-4 chronic kidney disease from 2015 to 2019.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s2",
+   "start": 231,
+   "end": 294,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Patients were followed for a median of 4.2 years (IQR 3.1-5.0).",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s3",
+   "start": 295,
+   "end": 390,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Cox regression were used to estimate hazard ratios (HRs) after adjusting for age, sex and eGFR.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p3.s1",
+   "start": 392,
+   "end": 513,
+   "kind": "sentence",
+   "para": 3,
+   "text": "Results: Higher uric acid was associated with major adverse cardiovascular events (HR 1.32, 95% CI 1.11-1.57; p = 0.002).",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p3.s2",
+   "start": 514,
+   "end": 584,
+   "kind": "sentence",
+   "para": 3,
+   "text": "The association was not significant in patients younger than 50 years.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p3.s3",
+   "start": 585,
+   "end": 625,
+   "kind": "sentence",
+   "para": 3,
+   "text": "Allopurinol use did not modify the risk.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p4.s1",
+   "start": 627,
+   "end": 758,
+   "kind": "sentence",
+   "para": 4,
+   "text": "Conclusions: Elevated uric acid may be an independent risk factor of cardiovascular events in CKD, and randomized trials is needed.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p2.s1",
+    "p2.s2",
+    "p2.s3",
+    "p3.s1",
+    "p3.s2",
+    "p3.s3",
+    "p4.s1"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\abstract.txt",
+   "role": "manuscript"
+  },
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\glossary.tsv",
+   "role": "termbase"
+  }
+ ],
+ "materials": [],
+ "style_notes": [
+  "journal: clinical nephrology journal, British English"
+ ],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work",
+ "init_at": "2026-11-23T05:02:14.904014+00:00"
+}

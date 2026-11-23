@@ -1,0 +1,34 @@
+{
+ "summary": {
+  "segments_in_scope": 1,
+  "edited_units": 0,
+  "reviewed": 1,
+  "not_reviewed": 0,
+  "severity": {
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {
+   "R04": 1
+  }
+ },
+ "units": [
+  {
+   "sids": [
+    "p1.s1"
+   ],
+   "verdict": "warn",
+   "findings": [
+    {
+     "code": "R04",
+     "severity": "warn",
+     "detail": "kept unchanged although EN12 (subject-verb agreement (plural subject, singular verb)?) matches \"The samples was\""
+    }
+   ]
+  }
+ ],
+ "document": [],
+ "termbase_conflicts": []
+}

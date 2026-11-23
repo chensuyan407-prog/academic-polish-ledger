@@ -1,0 +1,75 @@
+{
+ "summary": {
+  "segments_in_scope": 5,
+  "edited_units": 4,
+  "reviewed": 5,
+  "not_reviewed": 0,
+  "severity": {
+   "warn": 2,
+   "accepted": 3
+  },
+  "fail": 0,
+  "accepted_overrides": 3,
+  "change_types": {
+   "concision": 1,
+   "register": 3,
+   "collocation": 1,
+   "terminology": 1
+  },
+  "by_code": {
+   "I09": 1,
+   "R03": 1
+  }
+ },
+ "units": [
+  {
+   "sids": [
+    "p1.s1"
+   ],
+   "verdict": "warn",
+   "findings": [
+    {
+     "code": "I09",
+     "severity": "warn",
+     "detail": "novelty/priority claim removed: ['全新'] -> []"
+    }
+   ]
+  },
+  {
+   "sids": [
+    "p1.s3"
+   ],
+   "verdict": "warn",
+   "findings": [
+    {
+     "code": "I06",
+     "severity": "accepted",
+     "detail": "booster removed (claim softened): ['彻底'] -> []",
+     "accepted": "删除“彻底”是有意削弱，依据是本段第4句",
+     "severity_original": "warn"
+    },
+    {
+     "code": "I09",
+     "severity": "accepted",
+     "detail": "novelty/priority claim removed: ['国际领先'] -> []",
+     "accepted": "删除“国际领先”，改为比较性陈述",
+     "severity_original": "warn"
+    },
+    {
+     "code": "I14",
+     "severity": "accepted",
+     "detail": "direction words changed: up [] down [] -> up [] down ['抑制']",
+     "accepted": "“解决”改为“抑制”为同向表述",
+     "severity_original": "warn"
+    },
+    {
+     "code": "R03",
+     "severity": "warn",
+     "detail": "heavy rewrite (60% of tokens changed) without a restructure/sentence-split type"
+    }
+   ]
+  }
+ ],
+ "document": [],
+ "termbase_conflicts": []
+}

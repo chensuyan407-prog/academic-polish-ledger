@@ -1,0 +1,31 @@
+{
+ "version": "0.1.0",
+ "case_id": "unknown",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json",
+ "task_path": null,
+ "contract": {
+  "polished_text": "polished full text",
+  "change_log": "sentence-level change records"
+ },
+ "fields": [
+  "polished_text",
+  "change_log"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [],
+ "segments": [],
+ "chunks": [],
+ "files": [],
+ "materials": [],
+ "style_notes": [],
+ "problems": [
+  "case.json not found at C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json",
+  "no output_contract in case.json; default fields used"
+ ],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work",
+ "init_at": "2026-11-23T05:02:19.571431+00:00"
+}

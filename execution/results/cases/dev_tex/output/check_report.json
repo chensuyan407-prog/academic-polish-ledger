@@ -1,0 +1,33 @@
+{
+ "summary": {
+  "segments_in_scope": 7,
+  "edited_units": 6,
+  "reviewed": 7,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "agreement": 4,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "concision": 1,
+   "tense": 2,
+   "clarity": 1,
+   "format": 1,
+   "grammar": 1
+  },
+  "by_code": {}
+ },
+ "units": [],
+ "document": [
+  {
+   "code": "D03",
+   "severity": "info",
+   "detail": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['TODO']"
+  }
+ ],
+ "termbase_conflicts": []
+}

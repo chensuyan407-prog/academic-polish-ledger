@@ -1,0 +1,88 @@
+{
+ "version": "0.1.0",
+ "case_id": "tbc",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\case.json",
+ "task_path": null,
+ "contract": {
+  "polished_text": "",
+  "needs_confirmation": ""
+ },
+ "fields": [
+  "polished_text",
+  "needs_confirmation"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.md",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\manuscript.md",
+   "fmt": "md",
+   "text": "We used density-functional theory for all calculations. The DFT results agree with experiment.\n",
+   "sha256": "4e5ade47c675a2474ad1bf0d7f8f1e22009e63f08a068bd5860c3f9678d9597e",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 2,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 55,
+   "kind": "sentence",
+   "para": 1,
+   "text": "We used density-functional theory for all calculations.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 56,
+   "end": 94,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The DFT results agree with experiment.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p1.s2"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\manuscript.md",
+   "role": "manuscript"
+  },
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\terms.csv",
+   "role": "termbase"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work",
+ "init_at": "2026-11-23T05:02:20.538216+00:00"
+}

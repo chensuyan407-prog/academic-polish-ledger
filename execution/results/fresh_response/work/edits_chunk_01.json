@@ -1,0 +1,17 @@
+{"chunk": 1, "status": "done",
+ "edits": [
+  {"sid": "p2.s1", "revised": "**Response:** We thank the reviewer for this helpful comment.",
+   "changes": [{"from": "Thanks for the comment", "to": "We thank the reviewer for this helpful comment", "type": "register", "reason": "conventional polite opening of a reviewer response"}]},
+  {"sid": "p2.s2", "revised": "We attribute the capacity drop mainly to particle cracking, as shown in the new Fig. S5.",
+   "changes": [{"from": "We think the capacity drop is mainly caused by the cracking of particles", "to": "We attribute the capacity drop mainly to particle cracking", "type": "register", "reason": "'We think' is informal; 'attribute ... to' keeps the causal claim and 'mainly'"}],
+   "accept": {"I12": "'is caused by' -> 'attribute ... to' keeps the authors' causal interpretation; no new causal claim"}},
+  {"sid": "p2.s3", "revised": "We have added a discussion in Section 3.4.",
+   "changes": [{"from": "add", "to": "added", "type": "tense", "reason": "present perfect needs the past participle"}]},
+  {"sid": "p2.s4", "revised": "However, we respectfully disagree that electrolyte decomposition is the main reason, because the impedance increased by only 12% after 200 cycles (Table S2).",
+   "changes": [{"from": "we don't agree", "to": "we respectfully disagree", "type": "register", "reason": "polite and formal; disagreement kept, not conceded"},
+               {"from": "the electrolyte decomposition", "to": "electrolyte decomposition", "type": "article", "reason": "generic process"},
+               {"from": "only increase", "to": "increased by only", "type": "grammar", "reason": "past tense, agreement; 'only' placed before the quantity it limits"},
+               {"from": "by 12%", "to": "12%", "type": "reorder", "reason": "'by' moved with 'only'"}],
+   "accept": {"I10": "'don't agree' -> 'disagree': negation carried by the prefix dis-, meaning unchanged"}}
+ ],
+ "needs_confirmation": [{"sid": "p2.s2", "issue": "the response attributes the drop 'mainly' to cracking; confirm Fig. S5 supports this and that Section 3.4 states the same"}]}

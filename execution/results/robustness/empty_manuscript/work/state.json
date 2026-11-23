@@ -1,0 +1,49 @@
+{
+ "version": "0.1.0",
+ "case_id": "empty",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "polished_text"
+ ],
+ "fields": [
+  "polished_text"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\input\\manuscript.txt",
+   "fmt": "txt",
+   "text": "",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "other",
+   "n_sentences": 0,
+   "n_headings": 0
+  }
+ ],
+ "segments": [],
+ "chunks": [],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\input\\manuscript.txt",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\empty_manuscript\\work",
+ "init_at": "2026-11-23T05:02:19.668619+00:00"
+}

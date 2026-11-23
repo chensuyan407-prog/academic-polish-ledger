@@ -1,0 +1,252 @@
+{
+ "pairs": [
+  {
+   "orig_sid": "p1.s1",
+   "rev_sid": "p1.s1",
+   "orig": "With the rapid development of renewable energy, perovskite solar cells (PSCs) have attracted more and more attention.",
+   "rev": "Perovskite solar cells (PSCs) are a leading renewable energy technology, yet their long-term stability is limited by moisture and heat.",
+   "findings": [
+    {
+     "code": "I14",
+     "severity": "warn",
+     "detail": "direction words changed: up ['more', 'more'] down [] -> up [] down []"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p1.s2",
+   "rev_sid": "p1.s4",
+   "orig": "However, the long-term stability of PSC are still limited by moisture and heat.",
+   "rev": "These results demonstrate that interfacial fluorination is an effective strategy for stable devices [4, 7].",
+   "findings": [
+    {
+     "code": "I02",
+     "severity": "fail",
+     "detail": "citation markers changed: missing [], added ['[4,7]']"
+    },
+    {
+     "code": "I06",
+     "severity": "fail",
+     "detail": "booster/certainty wording added: [] -> ['demonstrate']"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p1.s3",
+   "rev_sid": "p1.s2",
+   "orig": "In this work, we report a fluorinated hole transporting layer that may suppress the ion migration at the interface.",
+   "rev": "We report a fluorinated hole transport layer that suppresses ion migration at the interface.",
+   "findings": [
+    {
+     "code": "I05",
+     "severity": "fail",
+     "detail": "hedge removed or weakened (claim strengthened): ['may'] -> none"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p1.s4",
+   "rev_sid": "p1.s3",
+   "orig": "The champion device reach a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial photoelectric conversion efficiency after 1000 h at 85 °C (Fig. 3b).",
+   "rev": "The champion device reaches a power conversion efficiency (PCE) of 23.4% and retains 90% of its initial efficiency after 1000 h at 85 °C.",
+   "findings": [
+    {
+     "code": "I03",
+     "severity": "fail",
+     "detail": "figure/table/equation references changed: missing ['fig:3b'], added []"
+    },
+    {
+     "code": "I07",
+     "severity": "fail",
+     "detail": "approximator/bound changed (precision of a number): ['about'] -> []"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p1.s5",
+   "rev_sid": null,
+   "orig": "These results suggests that interfacial fluorination is a promising strategy for stable devices [4, 7].",
+   "rev": null,
+   "findings": [
+    {
+     "code": "A01",
+     "severity": "warn",
+     "detail": "sentence deleted (or merged)"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s1",
+   "rev_sid": "p2.s1",
+   "orig": "Perovskite photovoltaic cell have shown a huge progress in the past decade [1-3].",
+   "rev": "Perovskite solar cells have made remarkable progress over the past decade [1-3], with efficiencies rising from 3.8% to 26% [2].",
+   "findings": [
+    {
+     "code": "I01",
+     "severity": "fail",
+     "detail": "numbers changed: missing [], added [26.0, 3.8]"
+    },
+    {
+     "code": "I02",
+     "severity": "fail",
+     "detail": "citation markers changed: missing [], added ['[2]']"
+    },
+    {
+     "code": "I14",
+     "severity": "warn",
+     "detail": "direction words changed: up [] down [] -> up ['rising'] down []"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s2",
+   "rev_sid": "p2.s3",
+   "orig": "Their efficiencies increased from 3.8% to above 26% [2].",
+   "rev": "Many studies attribute this degradation to iodide ion migration, which accelerates above 60 °C [5].",
+   "findings": [
+    {
+     "code": "I01",
+     "severity": "fail",
+     "detail": "numbers changed: missing [26.0, 3.8], added [60.0]"
+    },
+    {
+     "code": "I02",
+     "severity": "fail",
+     "detail": "citation markers changed: missing ['[2]'], added ['[5]']"
+    },
+    {
+     "code": "I11",
+     "severity": "fail",
+     "detail": "majority quantifier added: [] -> ['many']"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s3",
+   "rev_sid": "p2.s2",
+   "orig": "But the degradation under operating conditions don't allow commercial application.",
+   "rev": "However, degradation under operating conditions still prevents commercialization.",
+   "findings": [
+    {
+     "code": "I10",
+     "severity": "fail",
+     "detail": "negation count changed 1 -> 0: [\"don't\"] -> []"
+    },
+    {
+     "code": "I12",
+     "severity": "fail",
+     "detail": "causal wording introduced: ['prevents']"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s4",
+   "rev_sid": "p2.s4",
+   "orig": "Several study have attributed the degradation to the migration of iodide ions, which is accelerated when temperature exceeds 60 °C [5].",
+   "rev": "An HTL with low ion permeability will therefore extend device lifetime.",
+   "findings": [
+    {
+     "code": "I01",
+     "severity": "fail",
+     "detail": "numbers changed: missing [60.0], added []"
+    },
+    {
+     "code": "I02",
+     "severity": "fail",
+     "detail": "citation markers changed: missing ['[5]'], added []"
+    },
+    {
+     "code": "I07",
+     "severity": "fail",
+     "detail": "approximator/bound changed (precision of a number): ['exceeds'] -> []"
+    },
+    {
+     "code": "I11",
+     "severity": "fail",
+     "detail": "partial quantifier removed: ['several'] -> []"
+    },
+    {
+     "code": "I12",
+     "severity": "warn",
+     "detail": "inferential connective added: ['therefore']"
+    },
+    {
+     "code": "I13",
+     "severity": "fail",
+     "detail": "condition dropped: ['when'] -> none"
+    },
+    {
+     "code": "I14",
+     "severity": "warn",
+     "detail": "direction words changed: up ['accelerated', 'exceeds'] down [] -> up [] down []"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s5",
+   "rev_sid": "p2.s5",
+   "orig": "A HTL with low ion permeability could therefore extend the device lifetime, if its energy level is matched with the perovskite.",
+   "rev": "Here, we design a fluorinated polymer and investigate its effect on the stability of PSCs (Table 1).",
+   "findings": [
+    {
+     "code": "I03",
+     "severity": "fail",
+     "detail": "figure/table/equation references changed: missing [], added ['table:1']"
+    },
+    {
+     "code": "I05",
+     "severity": "fail",
+     "detail": "hedge removed or weakened (claim strengthened): ['could'] -> none"
+    },
+    {
+     "code": "I13",
+     "severity": "fail",
+     "detail": "condition dropped: ['if'] -> none"
+    }
+   ]
+  },
+  {
+   "orig_sid": "p2.s6",
+   "rev_sid": null,
+   "orig": "Here, we design a fluorinated polymer and investigate it's effect on the stability of PSCs (Table 1).",
+   "rev": null,
+   "findings": [
+    {
+     "code": "A01",
+     "severity": "warn",
+     "detail": "sentence deleted (or merged)"
+    }
+   ]
+  }
+ ],
+ "doc": [
+  {
+   "code": "D03",
+   "severity": "warn",
+   "detail": "termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'",
+   "term": "HTL"
+  }
+ ],
+ "termbase_conflicts": [],
+ "summary": {
+  "changed_pairs": 11,
+  "severity": {
+   "warn": 7,
+   "fail": 20
+  },
+  "codes": {
+   "I14": 3,
+   "I02": 4,
+   "I06": 1,
+   "I05": 2,
+   "I03": 2,
+   "I07": 2,
+   "A01": 2,
+   "I01": 3,
+   "I11": 2,
+   "I10": 1,
+   "I12": 2,
+   "I13": 2
+  }
+ }
+}

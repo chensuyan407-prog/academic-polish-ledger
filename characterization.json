@@ -1,0 +1,105 @@
+{
+ "deviations_from_paper": [
+  {
+   "target": "planted defects caught at fail level (dev set, rules tuned on it)",
+   "metric": "absolute_error",
+   "actual_value": 1.0,
+   "reference_value": 1.0,
+   "score": 1.0,
+   "explanation": "42 bad edits with plausible change records in 4 cases (EN Markdown, ZH thesis, LaTeX, ZH->EN grant); baselines: numbers+citations only 0.238, record coverage only 0.071, no checks 0",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.1
+  },
+  {
+   "target": "planted defects caught at fail level (held-out, at code freeze)",
+   "metric": "absolute_error",
+   "actual_value": 0.7222,
+   "reference_value": 1.0,
+   "score": 0.0741,
+   "explanation": "18 defects in 2 cases written after the freeze; misses: H05 causal fired=I12:warn; H10 condition fired=; J04 condition fired=I01:fail,R03:warn; J05 hedge fired=R03:warn; J10 promotional_not_removed fired=R04:warn",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.3
+  },
+  {
+   "target": "planted defects caught at fail level (held-out, after post-freeze lexicon fix)",
+   "metric": "absolute_error",
+   "actual_value": 0.9444,
+   "reference_value": 1.0,
+   "score": 0.4444,
+   "explanation": "same cases after the fix, no longer a clean held-out measure; remaining: J10 promotional_not_removed fired=I09:warn,R04:warn",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.1
+  },
+  {
+   "target": "planted defects caught incl. warnings (held-out, at freeze)",
+   "metric": "absolute_error",
+   "actual_value": 0.8333,
+   "reference_value": 1.0,
+   "score": 0.1667,
+   "explanation": "warn = shown to the agent but not blocking",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.2
+  },
+  {
+   "target": "benign edits not failed (held-out, at freeze)",
+   "metric": "absolute_error",
+   "actual_value": 0.75,
+   "reference_value": 1.0,
+   "score": 0.0,
+   "explanation": "J09 benign_paraphrase_negation fired=I05:warn,I10:fail,I14:warn,R03:warn",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.25
+  },
+  {
+   "target": "benign edits not failed (held-out, after fix)",
+   "metric": "absolute_error",
+   "actual_value": 1.0,
+   "reference_value": 1.0,
+   "score": 1.0,
+   "explanation": "4 benign edits (number format, equivalent modal, promo removed, negation paraphrase)",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.0
+  },
+  {
+   "target": "clean gold edits without unresolved fail (all cases)",
+   "metric": "absolute_error",
+   "actual_value": 1.0,
+   "reference_value": 1.0,
+   "score": 1.0,
+   "explanation": "37 gold edits; 8 flags needed an explicit accept with reason",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.0
+  },
+  {
+   "target": "candidate finder recall on planted language errors (dev)",
+   "metric": "absolute_error",
+   "actual_value": 0.9375,
+   "reference_value": 1.0,
+   "score": 0.6875,
+   "explanation": "32 planted errors",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.2
+  },
+  {
+   "target": "candidate finder recall on planted language errors (held-out, after fix)",
+   "metric": "absolute_error",
+   "actual_value": 0.7692,
+   "reference_value": 1.0,
+   "score": 0.2308,
+   "explanation": "13 planted errors; at freeze 0.308",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.3
+  },
+  {
+   "target": "robustness checks passed",
+   "metric": "absolute_error",
+   "actual_value": 1.0,
+   "reference_value": 1.0,
+   "score": 1.0,
+   "explanation": "missing_case_json, empty_manuscript, mojibake_repair, gb18030_input, termbase_conflict, long_input, broken_edits_json, unknown_sid, mixed_japanese, docx_io, pdf_only_input, deterministic_rebuild, audit_full_rewrite",
+   "evidence_artifact": "metrics",
+   "tolerance": 0.0
+  }
+ ],
+ "notes": "Self-evaluation on author-written cases with author gold edits and planted defects; the platform's three fixed cases and any model run are not part of it. Scores use the protocol's absolute_error formula max(0, 1 - deviation/tolerance) against the ideal value 1.0."
+}

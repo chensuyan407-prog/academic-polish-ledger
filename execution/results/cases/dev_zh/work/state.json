@@ -1,0 +1,155 @@
+{
+ "version": "0.1.0",
+ "case_id": "dev-zh-thesis",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\task.md",
+ "contract": {
+  "润色全文": "润色后的完整段落",
+  "修改说明": "逐句修改：原文、改文、类型、理由",
+  "术语表": "统一后的术语",
+  "待确认事项": "需要作者确认的内容"
+ },
+ "fields": [
+  "润色全文",
+  "修改说明",
+  "术语表",
+  "待确认事项"
+ ],
+ "mode": "polish",
+ "genre": "thesis",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "chapter2_3.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\chapter2_3.txt",
+   "fmt": "txt",
+   "text": "2.3 样品表征\n\n通过X光衍射（XRD）分析，使样品的晶体结构得到了确认。样品的形貌采用扫描电镜进行观察，结果如图2所示。从图中可以看出，掺杂后颗粒尺寸由约50 nm减小到30 nm左右，这可能与氧缺陷的形成有关[12]。我们对不同温度下煅烧的样品进行了系统的分析，发现当煅烧温度高于600 ℃时，大部分样品出现了明显的团聚现象。XPS结果表明，Ce3+的比例随掺杂量增加而升高（表3）,说明氧空位浓度提高了。该方法非常简单，并且完全解决了传统方法中团聚的问题。\n",
+   "sha256": "b4a7da9293c29c391630244fbfb7fbe19d23c54f94d65d0584e775077f4abbd7",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "zh",
+   "n_sentences": 6,
+   "n_headings": 1
+  }
+ ],
+ "segments": [
+  {
+   "sid": "h1",
+   "start": 0,
+   "end": 8,
+   "kind": "heading",
+   "para": null,
+   "text": "2.3 样品表征",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s1",
+   "start": 10,
+   "end": 38,
+   "kind": "sentence",
+   "para": 1,
+   "text": "通过X光衍射（XRD）分析，使样品的晶体结构得到了确认。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 38,
+   "end": 62,
+   "kind": "sentence",
+   "para": 1,
+   "text": "样品的形貌采用扫描电镜进行观察，结果如图2所示。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s3",
+   "start": 62,
+   "end": 112,
+   "kind": "sentence",
+   "para": 1,
+   "text": "从图中可以看出，掺杂后颗粒尺寸由约50 nm减小到30 nm左右，这可能与氧缺陷的形成有关[12]。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s4",
+   "start": 112,
+   "end": 166,
+   "kind": "sentence",
+   "para": 1,
+   "text": "我们对不同温度下煅烧的样品进行了系统的分析，发现当煅烧温度高于600 ℃时，大部分样品出现了明显的团聚现象。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s5",
+   "start": 166,
+   "end": 206,
+   "kind": "sentence",
+   "para": 1,
+   "text": "XPS结果表明，Ce3+的比例随掺杂量增加而升高（表3）,说明氧空位浓度提高了。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s6",
+   "start": 206,
+   "end": 232,
+   "kind": "sentence",
+   "para": 1,
+   "text": "该方法非常简单，并且完全解决了传统方法中团聚的问题。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "h1",
+    "p1.s1",
+    "p1.s2",
+    "p1.s3",
+    "p1.s4",
+    "p1.s5",
+    "p1.s6"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\chapter2_3.txt",
+   "role": "manuscript"
+  },
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\术语表.csv",
+   "role": "termbase"
+  }
+ ],
+ "materials": [],
+ "style_notes": [
+  "genre: 学位论文（硕士）",
+  "requirements: 规范学术中文，统一术语，第一人称改为“本文”，不改变数据和结论强度"
+ ],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work",
+ "init_at": "2026-11-23T05:02:07.446068+00:00"
+}

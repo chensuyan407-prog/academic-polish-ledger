@@ -1,0 +1,217 @@
+[
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   0,
+   28
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "拟"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "aims to"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s2",
+  "doc": "d1",
+  "offset": [
+   28,
+   66
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "75 %"
+   ],
+   "citations": [
+    "[3]"
+   ],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "表明"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "仅"
+   ],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "75 %"
+   ],
+   "citations": [
+    "[3]"
+   ],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "indicated"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "only"
+   ],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s3",
+  "doc": "d1",
+  "offset": [
+   66,
+   115
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "320",
+    "1"
+   ],
+   "citations": [],
+   "references": [
+    "图1"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "320",
+    "1"
+   ],
+   "citations": [],
+   "references": [
+    "fig:1"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s4",
+  "doc": "d1",
+  "offset": [
+   115,
+   135
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "不"
+   ],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": [
+   "I10:accepted"
+  ]
+ },
+ {
+  "sid": "p1.s5",
+  "doc": "d1",
+  "offset": [
+   135,
+   178
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "有望"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "is expected to"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": false,
+  "meaning_flags": [
+   "I05:warn"
+  ]
+ }
+]

@@ -1,0 +1,9 @@
+{
+ "case_id": "tbc",
+ "manuscript": "manuscript.md",
+ "termbase": "terms.csv",
+ "output_contract": {
+  "polished_text": "",
+  "needs_confirmation": ""
+ }
+}

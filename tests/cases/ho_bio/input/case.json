@@ -1,0 +1,2 @@
+{"case_id": "ho-bio-abstract", "document": "abstract.txt", "glossary": "glossary.tsv", "journal": "clinical nephrology journal, British English",
+ "output_contract": {"revised_abstract": "language-edited abstract, same structure", "edit_log": "every edit with reason", "term_list": "terminology used", "open_questions": "points for the authors"}}

@@ -1,0 +1,321 @@
+{
+ "case_id": "dev-zh-thesis",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "润色全文": "2.3 样品表征\n\nX射线衍射（XRD）分析确认了样品的晶体结构。采用扫描电子显微镜（SEM）观察样品形貌，结果如图2所示。由图2可见，掺杂后颗粒尺寸由约50 nm减小到约30 nm，这可能与氧空位的形成有关[12]。本文系统分析了在不同温度下煅烧的样品，发现当煅烧温度高于600 ℃时，大部分样品出现明显团聚。XPS结果表明，Ce3+的比例随掺杂量增加而升高（表3），说明氧空位浓度提高。该方法操作简便，并且有效抑制了传统方法中的团聚问题。\n",
+ "修改说明": [
+  {
+   "sid": "p1.s1",
+   "original": "通过X光衍射（XRD）分析，使样品的晶体结构得到了确认。",
+   "revised": "X射线衍射（XRD）分析确认了样品的晶体结构。",
+   "changes": [
+    {
+     "from": "通过X光衍射（XRD）分析，使样品的晶体结构得到了确认",
+     "to": "X射线衍射（XRD）分析确认了样品的晶体结构",
+     "type": "grammar",
+     "reason": "“通过……使……”导致主语缺失，改为以分析方法作主语"
+    },
+    {
+     "from": "X光衍射",
+     "to": "X射线衍射",
+     "type": "terminology",
+     "reason": "术语表标准写法"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s2",
+   "original": "样品的形貌采用扫描电镜进行观察，结果如图2所示。",
+   "revised": "采用扫描电子显微镜（SEM）观察样品形貌，结果如图2所示。",
+   "changes": [
+    {
+     "from": "样品的形貌采用扫描电镜进行观察",
+     "to": "采用扫描电子显微镜（SEM）观察样品形貌",
+     "type": "concision",
+     "reason": "去掉“进行”名词化；语序调整为方法在前"
+    },
+    {
+     "from": "扫描电镜",
+     "to": "扫描电子显微镜（SEM）",
+     "type": "terminology",
+     "reason": "术语表标准写法，首次出现给出缩写"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s3",
+   "original": "从图中可以看出，掺杂后颗粒尺寸由约50 nm减小到30 nm左右，这可能与氧缺陷的形成有关[12]。",
+   "revised": "由图2可见，掺杂后颗粒尺寸由约50 nm减小到约30 nm，这可能与氧空位的形成有关[12]。",
+   "changes": [
+    {
+     "from": "从图中可以看出",
+     "to": "由图2可见",
+     "type": "concision",
+     "reason": "口语化引导语改为书面语，并明确图号"
+    },
+    {
+     "from": "30 nm左右",
+     "to": "约30 nm",
+     "type": "concision",
+     "reason": "与前一数值的概数写法统一；概数词数量不变"
+    },
+    {
+     "from": "氧缺陷",
+     "to": "氧空位",
+     "type": "terminology",
+     "reason": "术语表标准写法"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I03:accepted"
+   ]
+  },
+  {
+   "sid": "p1.s4",
+   "original": "我们对不同温度下煅烧的样品进行了系统的分析，发现当煅烧温度高于600 ℃时，大部分样品出现了明显的团聚现象。",
+   "revised": "本文系统分析了在不同温度下煅烧的样品，发现当煅烧温度高于600 ℃时，大部分样品出现明显团聚。",
+   "changes": [
+    {
+     "from": "我们对不同温度下煅烧的样品进行了系统的分析",
+     "to": "本文系统分析了在不同温度下煅烧的样品",
+     "type": "register",
+     "reason": "学位论文用“本文”替代第一人称；去掉“进行了……的分析”名词化"
+    },
+    {
+     "from": "出现了明显的团聚现象",
+     "to": "出现明显团聚",
+     "type": "concision",
+     "reason": "“团聚现象”冗余"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s5",
+   "original": "XPS结果表明，Ce3+的比例随掺杂量增加而升高（表3）,说明氧空位浓度提高了。",
+   "revised": "XPS结果表明，Ce3+的比例随掺杂量增加而升高（表3），说明氧空位浓度提高。",
+   "changes": [
+    {
+     "from": "）,",
+     "to": "），",
+     "type": "punctuation",
+     "reason": "中文语境使用全角逗号"
+    },
+    {
+     "from": "提高了",
+     "to": "提高",
+     "type": "concision",
+     "reason": "删去句末冗余“了”"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s6",
+   "original": "该方法非常简单，并且完全解决了传统方法中团聚的问题。",
+   "revised": "该方法操作简便，并且有效抑制了传统方法中的团聚问题。",
+   "changes": [
+    {
+     "from": "非常简单",
+     "to": "操作简便",
+     "type": "register",
+     "reason": "口语化表述改为书面语"
+    },
+    {
+     "from": "完全解决了传统方法中团聚的问题",
+     "to": "有效抑制了传统方法中的团聚问题",
+     "type": "register",
+     "reason": "绝对化表述；上一句仅报告大部分样品的团聚情况，材料不支持“完全解决”"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I06:accepted",
+    "I14:accepted"
+   ]
+  }
+ ],
+ "术语表": [
+  {
+   "preferred": "氧空位",
+   "abbr": "",
+   "variants": [
+    "氧缺陷",
+    "氧空穴"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "术语表.csv",
+   "count_in_revised": 2,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "X射线衍射",
+   "abbr": "XRD",
+   "variants": [
+    "X光衍射"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "术语表.csv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "扫描电子显微镜",
+   "abbr": "SEM",
+   "variants": [
+    "扫描电镜"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "术语表.csv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  }
+ ],
+ "待确认事项": [
+  {
+   "sid": "p1.s5",
+   "issue": "XPS 缩写在本节首次出现时未给出全称（X射线光电子能谱），请确认前文是否已定义"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "“完全解决”改为“有效抑制”削弱了原结论，请作者确认"
+  },
+  {
+   "sid": "p1.s3",
+   "issue": "flag I03 accepted by the editor: “从图中”指的就是上一句的图2，补出图号不改变指向 (original flag: figure/table/equation references changed: missing [], added ['fig:2'])"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "flag I06 accepted by the editor: 删除绝对化“完全”是有意削弱，依据是同节第4句“大部分样品出现明显团聚” (original flag: booster removed (claim softened): ['完全'] -> [])"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "flag I14 accepted by the editor: “解决”改为“抑制”属同向表述，未翻转方向 (original flag: direction words changed: up [] down [] -> up [] down ['抑制'])"
+  }
+ ],
+ "mode": "polish",
+ "genre": "thesis",
+ "sources": [
+  {
+   "name": "chapter2_3.txt",
+   "role": "manuscript",
+   "sha256": "b4a7da9293c29c391630244fbfb7fbe19d23c54f94d65d0584e775077f4abbd7",
+   "fmt": "txt",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  },
+  {
+   "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\术语表.csv",
+   "role": "termbase",
+   "entries": 3,
+   "sha256": "9ccf1b2f4f70079a961399b92924c93fbced3bfc1c6d0c215d350d54c078961e"
+  }
+ ],
+ "uncertainty": [],
+ "needs_confirmation": [
+  {
+   "sid": "p1.s5",
+   "issue": "XPS 缩写在本节首次出现时未给出全称（X射线光电子能谱），请确认前文是否已定义"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "“完全解决”改为“有效抑制”削弱了原结论，请作者确认"
+  },
+  {
+   "sid": "p1.s3",
+   "issue": "flag I03 accepted by the editor: “从图中”指的就是上一句的图2，补出图号不改变指向 (original flag: figure/table/equation references changed: missing [], added ['fig:2'])"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "flag I06 accepted by the editor: 删除绝对化“完全”是有意削弱，依据是同节第4句“大部分样品出现明显团聚” (original flag: booster removed (claim softened): ['完全'] -> [])"
+  },
+  {
+   "sid": "p1.s6",
+   "issue": "flag I14 accepted by the editor: “解决”改为“抑制”属同向表述，未翻转方向 (original flag: direction words changed: up [] down [] -> up [] down ['抑制'])"
+  }
+ ],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.txt",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.txt",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 6,
+  "segments_in_scope": 7,
+  "change_types": {
+   "grammar": 1,
+   "terminology": 3,
+   "concision": 5,
+   "register": 3,
+   "punctuation": 1
+  },
+  "verdicts": {
+   "pass": 6
+  }
+ },
+ "checks": {
+  "segments_in_scope": 7,
+  "edited_units": 6,
+  "reviewed": 7,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 3
+  },
+  "fail": 0,
+  "accepted_overrides": 3,
+  "change_types": {
+   "grammar": 1,
+   "terminology": 3,
+   "concision": 5,
+   "register": 3,
+   "punctuation": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:07.651175+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

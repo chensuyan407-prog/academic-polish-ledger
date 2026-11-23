@@ -1,0 +1,5 @@
+﻿preferred,abbr,variants_to_avoid,zh,en,source,count_in_revised,variant_counts_in_revised,enforced,conflict,note
+major adverse cardiovascular events,MACE,major cardiovascular adverse events;MACCE,,,glossary.tsv,1,"{""major cardiovascular adverse events"": 0, ""MACCE"": 0}",True,False,
+chronic kidney disease,CKD,chronic renal disease,,,glossary.tsv,1,"{""chronic renal disease"": 0}",True,False,
+randomised controlled trial,RCT,randomized controlled trial;randomized trial,,,glossary.tsv,1,"{""randomized controlled trial"": 0, ""randomized trial"": 0}",True,False,
+hazard ratios,HRs,,,,text,1,{},False,False,abbreviation defined in the original text

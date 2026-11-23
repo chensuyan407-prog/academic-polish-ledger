@@ -1,0 +1,29 @@
+[
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   0,
+   40
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [
+    "500 K",
+    "2 h"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ }
+]

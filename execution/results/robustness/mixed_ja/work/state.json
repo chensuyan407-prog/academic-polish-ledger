@@ -1,0 +1,84 @@
+{
+ "version": "0.1.0",
+ "case_id": "ja",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "polished_text"
+ ],
+ "fields": [
+  "polished_text"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\input\\manuscript.txt",
+   "fmt": "txt",
+   "text": "The film thickness was 20 nm. この結果は再現性が高いことを示している。 The device was stable.",
+   "sha256": "aa16e1143a4e5f6bf8105e9bc8c1029f9120e66ac012b42701c713d56a1f4c22",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "ja",
+   "n_sentences": 2,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 50,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The film thickness was 20 nm. この結果は再現性が高いことを示している。",
+   "lang": "ja",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 51,
+   "end": 73,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The device was stable.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p1.s2"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\input\\manuscript.txt",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [
+  "manuscript.txt: Japanese/Korean sentences present - lexicon checks cover zh/en only; only numbers, citations, references and math are checked there"
+ ],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mixed_ja\\work",
+ "init_at": "2026-11-23T05:02:21.947770+00:00"
+}

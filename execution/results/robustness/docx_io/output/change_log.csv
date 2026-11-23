@@ -1,0 +1,3 @@
+﻿sid,original_sentence,revised_sentence,from,to,type,reason,verdict,flags
+p1.s1,The method have been used widely.,The method has been used widely.,have,has,agreement,singular subject,pass,
+p1.s2,It's simple.,It is simple.,It's,It is,register,no contractions,pass,

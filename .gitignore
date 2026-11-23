@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+tests/cases/*/work/
+tests/cases/*/output/
+execution/results/_mut_tmp/

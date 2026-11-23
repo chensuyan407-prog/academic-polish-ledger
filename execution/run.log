@@ -1,0 +1,192 @@
+# reproduce.py run at 2026-11-23T05:02:23.610492Z
+$ python tests/run_eval.py --set all
+{
+ "dev": {
+  "cases": [
+   "dev_en",
+   "dev_grant",
+   "dev_tex",
+   "dev_zh"
+  ],
+  "defects": 42,
+  "benign_edits": 0,
+  "benign_passed": 0,
+  "benign_failed": [],
+  "detected_fail": 1.0,
+  "detected_fail_or_warn": 1.0,
+  "sentence_or_doc_failed": 1.0,
+  "baseline_no_checks": 0.0,
+  "baseline_numbers_citations_only": 0.23809523809523808,
+  "baseline_record_coverage_only": 0.07142857142857142,
+  "by_kind": {
+   "approximator": "3/3",
+   "causal": "1/1",
+   "citation": "4/4",
+   "condition": "2/2",
+   "direction": "2/2",
+   "fake_record": "1/1",
+   "hedge": "5/5",
+   "math": "1/1",
+   "negation": "3/3",
+   "number": "4/4",
+   "promotional": "1/1",
+   "quantifier": "4/4",
+   "significance": "1/1",
+   "term": "3/3",
+   "undocumented": "1/1",
+   "unit": "1/1",
+   "untranslated": "1/1",
+   "xref": "4/4"
+  },
+  "missed": [],
+  "clean_units": 27,
+  "clean_units_fail_after_review": 0,
+  "clean_flags_needing_accept": 5,
+  "clean_warn": 2,
+  "planted_language_errors": 32,
+  "candidate_finder_recall": 0.9375,
+  "gold_fixed_planted_errors": 1.0
+ },
+ "holdout": {
+  "cases": [
+   "ho_bio",
+   "ho_grant_zh"
+  ],
+  "defects": 18,
+  "benign_edits": 4,
+  "benign_passed": 4,
+  "benign_failed": [],
+  "detected_fail": 0.9444444444444444,
+  "detected_fail_or_warn": 1.0,
+  "sentence_or_doc_failed": 0.9444444444444444,
+  "baseline_no_checks": 0.0,
+  "baseline_numbers_citations_only": 0.2777777777777778,
+  "baseline_record_coverage_only": 0.05555555555555555,
+  "by_kind": {
+   "approximator": "1/1",
+   "booster": "1/1",
+   "causal": "1/1",
+   "citation": "1/1",
+   "condition": "2/2",
+   "hedge": "2/2",
+   "negation": "1/1",
+   "number": "2/2",
+   "promotional_not_removed": "0/1",
+   "quantifier": "1/1",
+   "significance": "1/1",
+   "term": "2/2",
+   "unit": "1/1",
+   "xref": "1/1"
+  },
+  "missed": [
+   "J10 promotional_not_removed fired=I09:warn,R04:warn"
+  ],
+  "clean_units": 10,
+  "clean_units_fail_after_review": 0,
+  "clean_flags_needing_accept": 3,
+  "clean_warn": 2,
+  "planted_language_errors": 13,
+  "candidate_finder_recall": 0.7692307692307693,
+  "gold_fixed_planted_errors": 1.0
+ }
+}
+{
+ "missing_case_json": true,
+ "empty_manuscript": true,
+ "mojibake_repair": true,
+ "gb18030_input": true,
+ "termbase_conflict": true,
+ "long_input": true,
+ "broken_edits_json": true,
+ "unknown_sid": true,
+ "mixed_japanese": true,
+ "docx_io": true,
+ "pdf_only_input": true,
+ "deterministic_rebuild": true,
+ "audit_full_rewrite": true
+}
+wall 17.18
+
+
+[exit 0]
+
+# frozen files vs tests/FREEZE_holdout.sha256
+scripts/ap_build.py: unchanged since freeze
+scripts/ap_check.py: CHANGED after freeze (post-freeze fix)
+scripts/ap_common.py: CHANGED after freeze (post-freeze fix)
+scripts/ap_init.py: CHANGED after freeze (post-freeze fix)
+scripts/ap_lint.py: unchanged since freeze
+rules/lexicon.json: CHANGED after freeze (post-freeze fix)
+rules/style_rules.json: CHANGED after freeze (post-freeze fix)
+
+# 98 script invocations (argv, exit, seconds, stdout tail) are in execution/results/commands.json
+$ python submission\scripts\ap_init.py --case tests\cases\dev_en\input\case.json --out execution\results\cases\dev_en\output --work execution\results\cases\dev_en\work
+<= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks
+next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output
+
+[exit 0, 0.162 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\cases\dev_en\work --out execution\results\cases\dev_en\output
+status: success - all segments reviewed, no unresolved fail
+units: 10 edited / 13 in scope; verdicts {'pass': 10}; flags {'accepted': 1, 'warn': 1}
+warn [doc] D03: termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output (10 files)
+
+[exit 0, 0.171 s]
+
+$ python submission\scripts\ap_init.py --case tests\cases\dev_grant\input\case.json --out execution\results\cases\dev_grant\output --work execution\results\cases\dev_grant\work
+-> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks
+next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output
+
+[exit 0, 0.136 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\cases\dev_grant\work --out execution\results\cases\dev_grant\output
+status: success - all segments reviewed, no unresolved fail
+units: 5 edited / 5 in scope; verdicts {'pass': 4, 'warn': 1}; flags {'accepted': 1, 'warn': 1}
+warn [p1.s5] I05: hedge level changed across languages (1 -> 2): ['有望'] -> ['is expected to']
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output (13 files)
+
+[exit 0, 0.16 s]
+
+$ python submission\scripts\ap_init.py --case tests\cases\dev_tex\input\case.json --out execution\results\cases\dev_tex\output --work execution\results\cases\dev_tex\work
+ segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks
+next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output
+
+[exit 0, 0.133 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\cases\dev_tex\work --out execution\results\cases\dev_tex\output
+status: success - all segments reviewed, no unresolved fail
+units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'info': 1}
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output (11 files)
+
+[exit 0, 0.16 s]
+
+$ python submission\scripts\ap_init.py --case tests\cases\dev_zh\input\case.json --out execution\results\cases\dev_zh\output --work execution\results\cases\dev_zh\work
+<= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks
+next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output
+
+[exit 0, 0.137 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\cases\dev_zh\work --out execution\results\cases\dev_zh\output
+status: success - all segments reviewed, no unresolved fail
+units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'accepted': 3}
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output (11 files)
+
+[exit 0, 0.157 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 1, 0.17 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 1, 0.172 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 1, 0.169 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 1, 0.163 s]
+

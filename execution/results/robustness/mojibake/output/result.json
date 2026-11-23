@@ -1,0 +1,76 @@
+{
+ "case_id": "moj",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "The sample’s band gap is about 2.3 eV at 300 °C — see Fig. 2.\n",
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "manuscript.txt",
+   "role": "manuscript",
+   "sha256": "5b1edee204f801bfe0bda45f7d79eef121efbf321512fa62c23dc0004c5e63cd",
+   "fmt": "txt",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [
+     "reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words"
+    ],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  }
+ ],
+ "uncertainty": [
+  "manuscript.txt: reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.txt",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.txt",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 0,
+  "segments_in_scope": 1,
+  "change_types": {},
+  "verdicts": {}
+ },
+ "checks": {
+  "segments_in_scope": 1,
+  "edited_units": 0,
+  "reviewed": 1,
+  "not_reviewed": 0,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:20.081550+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

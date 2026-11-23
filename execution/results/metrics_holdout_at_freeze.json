@@ -1,0 +1,105 @@
+{
+ "sets": {
+  "holdout": {
+   "cases": [
+    "ho_bio",
+    "ho_grant_zh"
+   ],
+   "clean": {
+    "ho_bio": {
+     "status": "success",
+     "status_reason": "all segments reviewed, no unresolved fail",
+     "build_exit": 0,
+     "segments": 8,
+     "edited_units": 6,
+     "fail": 0,
+     "warn": 0,
+     "accepted_fail": 0,
+     "accepted_warn": 0,
+     "accepted_codes": [],
+     "warn_codes": [],
+     "unit_verdicts": {},
+     "seconds": 0.31,
+     "contract_fields_filled": [
+      "revised_abstract",
+      "edit_log",
+      "term_list",
+      "open_questions"
+     ]
+    },
+    "ho_grant_zh": {
+     "status": "success",
+     "status_reason": "all segments reviewed, no unresolved fail",
+     "build_exit": 0,
+     "segments": 5,
+     "edited_units": 4,
+     "fail": 0,
+     "warn": 1,
+     "accepted_fail": 0,
+     "accepted_warn": 3,
+     "accepted_codes": [
+      "I06",
+      "I09",
+      "I14"
+     ],
+     "warn_codes": [
+      "R03"
+     ],
+     "unit_verdicts": {
+      "p1.s3": "warn"
+     },
+     "seconds": 0.27,
+     "contract_fields_filled": [
+      "润色稿",
+      "修改清单",
+      "需人工确认"
+     ]
+    }
+   },
+   "defects": 18,
+   "benign_edits": 4,
+   "benign_passed": 3,
+   "benign_failed": [
+    "J09 benign_paraphrase_negation fired=I05:warn,I10:fail,I14:warn,R03:warn"
+   ],
+   "detected_fail": 0.7222222222222222,
+   "detected_fail_or_warn": 0.8333333333333334,
+   "sentence_or_doc_failed": 0.7777777777777778,
+   "baseline_no_checks": 0.0,
+   "baseline_numbers_citations_only": 0.2777777777777778,
+   "baseline_record_coverage_only": 0.05555555555555555,
+   "by_kind": {
+    "approximator": "1/1",
+    "booster": "1/1",
+    "causal": "0/1",
+    "citation": "1/1",
+    "condition": "0/2",
+    "hedge": "1/2",
+    "negation": "1/1",
+    "number": "2/2",
+    "promotional_not_removed": "0/1",
+    "quantifier": "1/1",
+    "significance": "1/1",
+    "term": "2/2",
+    "unit": "1/1",
+    "xref": "1/1"
+   },
+   "missed": [
+    "H05 causal fired=I12:warn",
+    "H10 condition fired=",
+    "J04 condition fired=I01:fail,R03:warn",
+    "J05 hedge fired=R03:warn",
+    "J10 promotional_not_removed fired=R04:warn"
+   ],
+   "clean_units": 10,
+   "clean_units_fail_after_review": 0,
+   "clean_flags_needing_accept": 3,
+   "clean_warn": 1,
+   "planted_language_errors": 13,
+   "candidate_finder_recall": 0.3076923076923077,
+   "gold_fixed_planted_errors": 1.0
+  }
+ },
+ "notes": "author-written cases; not the platform's fixed cases; no model was run - the edits are the author's gold edits and hand-made defects",
+ "wall_seconds": 4.06
+}

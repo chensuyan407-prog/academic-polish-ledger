@@ -1,0 +1,6 @@
+﻿preferred,abbr,variants_to_avoid,zh,en,source,count_in_revised,variant_counts_in_revised,enforced,conflict,note
+perovskite solar cell,PSC,perovskite solar battery;perovskite photovoltaic cell,,,termbase.csv,2,"{""perovskite solar battery"": 0, ""perovskite photovoltaic cell"": 0}",True,False,device
+power conversion efficiency,PCE,photoelectric conversion efficiency;conversion efficiency,,,termbase.csv,1,"{""photoelectric conversion efficiency"": 0, ""conversion efficiency"": 1}",True,False,metric
+hole transport layer,HTL,hole transporting layer,,,termbase.csv,1,"{""hole transporting layer"": 0}",True,False,
+ion migration,,ionic migration,,,agent,1,"{""ionic migration"": 0}",True,False,agent term
+perovskite solar cells,PSCs,,,,text,3,{},False,False,abbreviation defined in the original text

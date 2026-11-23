@@ -1,0 +1,19 @@
+{
+ "summary": {
+  "segments_in_scope": 3,
+  "edited_units": 2,
+  "reviewed": 3,
+  "not_reviewed": 0,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "agreement": 1,
+   "register": 1
+  },
+  "by_code": {}
+ },
+ "units": [],
+ "document": [],
+ "termbase_conflicts": []
+}

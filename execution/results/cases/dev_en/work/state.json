@@ -1,0 +1,226 @@
+{
+ "version": "0.1.0",
+ "case_id": "dev-en-perovskite",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\task.md",
+ "contract": {
+  "polished_text": "polished full text in the original format",
+  "change_log": "sentence-level changes: original, revised, type, reason",
+  "terminology": "term table used",
+  "needs_confirmation": "items the author must confirm"
+ },
+ "fields": [
+  "polished_text",
+  "change_log",
+  "terminology",
+  "needs_confirmation"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.md",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\manuscript.md",
+   "fmt": "md",
+   "text": "# Abstract\n\nWith the rapid development of renewable energy, perovskite solar cells (PSCs) have attracted more and more attention. However, the long-term stability of PSC are still limited by moisture and heat. In this work, we report a fluorinated hole transporting layer that may suppress the ion migration at the interface. The champion device reach a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial photoelectric conversion efficiency after 1000 h at 85 °C (Fig. 3b). These results suggests that interfacial fluorination is a promising strategy for stable devices [4, 7].\n\n# Introduction\n\nPerovskite photovoltaic cell have shown a huge progress in the past decade [1-3]. Their efficiencies increased from 3.8% to above 26% [2]. But the degradation under operating conditions don't allow commercial application. Several study have attributed the degradation to the migration of iodide ions, which is accelerated when temperature exceeds 60 °C [5]. A HTL with low ion permeability could therefore extend the device lifetime, if its energy level is matched with the perovskite. Here, we design a fluorinated polymer and investigate it's effect on the stability of PSCs (Table 1).\n",
+   "sha256": "a8e8d76a1f1e4b9268502e5f3d543c3e2bcb7064423f9eef271b7aba96a34477",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 11,
+   "n_headings": 2
+  }
+ ],
+ "segments": [
+  {
+   "sid": "h1",
+   "start": 2,
+   "end": 10,
+   "kind": "heading",
+   "para": null,
+   "text": "Abstract",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s1",
+   "start": 12,
+   "end": 129,
+   "kind": "sentence",
+   "para": 1,
+   "text": "With the rapid development of renewable energy, perovskite solar cells (PSCs) have attracted more and more attention.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 130,
+   "end": 209,
+   "kind": "sentence",
+   "para": 1,
+   "text": "However, the long-term stability of PSC are still limited by moisture and heat.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s3",
+   "start": 210,
+   "end": 325,
+   "kind": "sentence",
+   "para": 1,
+   "text": "In this work, we report a fluorinated hole transporting layer that may suppress the ion migration at the interface.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s4",
+   "start": 326,
+   "end": 502,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The champion device reach a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial photoelectric conversion efficiency after 1000 h at 85 °C (Fig. 3b).",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s5",
+   "start": 503,
+   "end": 606,
+   "kind": "sentence",
+   "para": 1,
+   "text": "These results suggests that interfacial fluorination is a promising strategy for stable devices [4, 7].",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "h2",
+   "start": 610,
+   "end": 622,
+   "kind": "heading",
+   "para": null,
+   "text": "Introduction",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s1",
+   "start": 624,
+   "end": 705,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Perovskite photovoltaic cell have shown a huge progress in the past decade [1-3].",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s2",
+   "start": 706,
+   "end": 762,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Their efficiencies increased from 3.8% to above 26% [2].",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s3",
+   "start": 763,
+   "end": 845,
+   "kind": "sentence",
+   "para": 2,
+   "text": "But the degradation under operating conditions don't allow commercial application.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s4",
+   "start": 846,
+   "end": 981,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Several study have attributed the degradation to the migration of iodide ions, which is accelerated when temperature exceeds 60 °C [5].",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s5",
+   "start": 982,
+   "end": 1109,
+   "kind": "sentence",
+   "para": 2,
+   "text": "A HTL with low ion permeability could therefore extend the device lifetime, if its energy level is matched with the perovskite.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s6",
+   "start": 1110,
+   "end": 1211,
+   "kind": "sentence",
+   "para": 2,
+   "text": "Here, we design a fluorinated polymer and investigate it's effect on the stability of PSCs (Table 1).",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "h1",
+    "p1.s1",
+    "p1.s2",
+    "p1.s3",
+    "p1.s4",
+    "p1.s5",
+    "h2",
+    "p2.s1",
+    "p2.s2",
+    "p2.s3",
+    "p2.s4",
+    "p2.s5",
+    "p2.s6"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\manuscript.md",
+   "role": "manuscript"
+  },
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\termbase.csv",
+   "role": "termbase"
+  }
+ ],
+ "materials": [],
+ "style_notes": [
+  "target_style: journal article, American English, 'we' allowed"
+ ],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work",
+ "init_at": "2026-11-23T05:02:06.505301+00:00"
+}

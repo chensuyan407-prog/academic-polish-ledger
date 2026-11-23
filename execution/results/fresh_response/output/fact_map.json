@@ -1,0 +1,207 @@
+[
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   0,
+   84
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [
+    "2.1",
+    "200"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s1",
+  "doc": "d1",
+  "offset": [
+   86,
+   123
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s2",
+  "doc": "d1",
+  "offset": [
+   124,
+   226
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "fig:s5"
+   ],
+   "math": [],
+   "hedges": [
+    "mainly"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [
+    "caused"
+   ],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "fig:s5"
+   ],
+   "math": [],
+   "hedges": [
+    "mainly"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": [
+   "I12:accepted"
+  ]
+ },
+ {
+  "sid": "p2.s3",
+  "doc": "d1",
+  "offset": [
+   227,
+   267
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "sec:3.4"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [
+    "sec:3.4"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s4",
+  "doc": "d1",
+  "offset": [
+   268,
+   418
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "12 %",
+    "200"
+   ],
+   "citations": [],
+   "references": [
+    "table:s2"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "don't"
+   ],
+   "quantifiers": [
+    "only"
+   ],
+   "causal": [
+    "because"
+   ],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "12 %",
+    "200"
+   ],
+   "citations": [],
+   "references": [
+    "table:s2"
+   ],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "only"
+   ],
+   "causal": [
+    "because"
+   ],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": [
+   "I10:accepted"
+  ]
+ }
+]

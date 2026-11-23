@@ -1,0 +1,74 @@
+{
+ "version": "0.1.0",
+ "case_id": "moj",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "polished_text"
+ ],
+ "fields": [
+  "polished_text"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\input\\manuscript.txt",
+   "fmt": "txt",
+   "text": "The sample’s band gap is about 2.3 eV at 300 °C — see Fig. 2.\n",
+   "sha256": "5b1edee204f801bfe0bda45f7d79eef121efbf321512fa62c23dc0004c5e63cd",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [
+     "reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words"
+    ],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 1,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 61,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The sample’s band gap is about 2.3 eV at 300 °C — see Fig. 2.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\input\\manuscript.txt",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [
+  "manuscript.txt: reversed UTF-8 read as CP1252 in 3 places (3 -> 0 suspicious sequences); check those words"
+ ],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work",
+ "init_at": "2026-11-23T05:02:19.891115+00:00"
+}

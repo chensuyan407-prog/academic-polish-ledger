@@ -1,0 +1,1 @@
+Polish the English of the abstract and introduction for submission to a materials-science journal. Fix grammar, terminology consistency and register. Keep every number, unit, citation and figure reference; do not strengthen or weaken any claim. Return the polished text and a sentence-by-sentence change list.

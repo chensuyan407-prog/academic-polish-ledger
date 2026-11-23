@@ -1,0 +1,32 @@
+{
+ "entries": [
+  {
+   "preferred": "锂金属负极",
+   "variants": [
+    "金属锂负极",
+    "锂负极"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "",
+   "note": "",
+   "source": "inline"
+  }
+ ],
+ "sources": [
+  {
+   "path": "case.json:术语表[0].标准术语",
+   "entries": 0
+  },
+  {
+   "path": "case.json:术语表[0].不推荐写法",
+   "entries": 0
+  },
+  {
+   "path": "case.json:术语表",
+   "entries": 1
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": []
+}

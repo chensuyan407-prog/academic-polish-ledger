@@ -1,0 +1,233 @@
+{
+ "case_id": "dev-tex-methods",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "revised_tex": "\\section{Methods}\n\\label{sec:methods}\nThe model was trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$. As shown in Fig.~\\ref{fig:arch}, the network consists of three convolutional blocks. Data augmentation, e.g., random cropping and flipping, was applied to all training images.\n\nWe found that the accuracy is significantly higher than that of the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggests that the attention module may improve feature extraction. Training took approximately 6 hours on a single GPU, and no early stopping was used.\n\\begin{equation}\nL = -\\sum_i y_i \\log \\hat{y}_i\n\\end{equation}\n% TODO: add hyperparameter table\nwhere $y_i$ is the ground-truth label and $\\hat{y}_i$ is the predicted probability.\n",
+ "edit_list": [
+  {
+   "sid": "p1.s1",
+   "original": "The model were trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$.",
+   "revised": "The model was trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$.",
+   "changes": [
+    {
+     "from": "were",
+     "to": "was",
+     "type": "agreement",
+     "reason": "singular subject 'model'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s2",
+   "original": "As shown in Fig.~\\ref{fig:arch}, the network consist of three convolutional block.",
+   "revised": "As shown in Fig.~\\ref{fig:arch}, the network consists of three convolutional blocks.",
+   "changes": [
+    {
+     "from": "consist",
+     "to": "consists",
+     "type": "agreement",
+     "reason": "singular subject 'network'"
+    },
+    {
+     "from": "block",
+     "to": "blocks",
+     "type": "number-agreement",
+     "reason": "plural after 'three'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s3",
+   "original": "Data augmentation, e.g random cropping and flipping, was applied to all the training images.",
+   "revised": "Data augmentation, e.g., random cropping and flipping, was applied to all training images.",
+   "changes": [
+    {
+     "from": "e.g",
+     "to": "e.g.,",
+     "type": "punctuation",
+     "reason": "abbreviation needs full stop and comma"
+    },
+    {
+     "from": "all the training",
+     "to": "all training",
+     "type": "concision",
+     "reason": "article not needed"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s1",
+   "original": "We find that the accuracy is significantly higher than the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggest the attention module may improve feature extraction.",
+   "revised": "We found that the accuracy is significantly higher than that of the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggests that the attention module may improve feature extraction.",
+   "changes": [
+    {
+     "from": "find",
+     "to": "found",
+     "type": "tense",
+     "reason": "past tense for completed experiments"
+    },
+    {
+     "from": "the baseline",
+     "to": "that of the baseline",
+     "type": "clarity",
+     "reason": "compare accuracy with accuracy"
+    },
+    {
+     "from": "suggest the",
+     "to": "suggests that the",
+     "type": "agreement",
+     "reason": "relative clause refers to the whole finding (singular); 'that' added for clarity"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s2",
+   "original": "The training takes approximately 6 hours on a single GPU, and no early stopping were used.",
+   "revised": "Training took approximately 6 hours on a single GPU, and no early stopping was used.",
+   "changes": [
+    {
+     "from": "The training takes",
+     "to": "Training took",
+     "type": "tense",
+     "reason": "past tense for the completed procedure; generic noun without article"
+    },
+    {
+     "from": "were",
+     "to": "was",
+     "type": "agreement",
+     "reason": "'early stopping' is singular"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p3.s1",
+   "original": "Where $y_i$ is the ground-truth label and $\\hat{y}_i$ the predicted probability.",
+   "revised": "where $y_i$ is the ground-truth label and $\\hat{y}_i$ is the predicted probability.",
+   "changes": [
+    {
+     "from": "Where",
+     "to": "where",
+     "type": "format",
+     "reason": "continuation of the sentence ending with the equation"
+    },
+    {
+     "from": "and $\\hat{y}_i$ the",
+     "to": "and $\\hat{y}_i$ is the",
+     "type": "grammar",
+     "reason": "verb added for parallel structure"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  }
+ ],
+ "issues_for_author": [
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['TODO']",
+   "source": "D03"
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "methods.tex",
+   "role": "manuscript",
+   "sha256": "95fcfa1aa0a741939bcfd7c976a4727ed7df3f08440829cd468b98e5d3d7eb58",
+   "fmt": "tex",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  }
+ ],
+ "uncertainty": [],
+ "needs_confirmation": [
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['TODO']",
+   "source": "D03"
+  }
+ ],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.tex",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.tex",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 6,
+  "segments_in_scope": 7,
+  "change_types": {
+   "agreement": 4,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "concision": 1,
+   "tense": 2,
+   "clarity": 1,
+   "format": 1,
+   "grammar": 1
+  },
+  "verdicts": {
+   "pass": 6
+  }
+ },
+ "checks": {
+  "segments_in_scope": 7,
+  "edited_units": 6,
+  "reviewed": 7,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "agreement": 4,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "concision": 1,
+   "tense": 2,
+   "clarity": 1,
+   "format": 1,
+   "grammar": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:07.347577+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+[
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   0,
+   55
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "all"
+   ],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s2",
+  "doc": "d1",
+  "offset": [
+   56,
+   94
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ }
+]

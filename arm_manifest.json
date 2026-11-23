@@ -1,0 +1,315 @@
+{
+ "arm_version": "1.1",
+ "paper": {
+  "title": "写作02｜学术语言润色 — academic-polish-ledger Skill",
+  "challenge_id": "product-arena-02-7051d92d"
+ },
+ "entrypoint": "src/reproduce.py",
+ "environment": {
+  "dependencies": "requirements.txt",
+  "python_version": ">=3.8",
+  "gpu_required": false,
+  "extra_packages": [
+   "PyMuPDF>=1.23 (optional, PDF manuscripts only)"
+  ]
+ },
+ "execution": {
+  "log_path": "execution/run.log",
+  "exit_code": 0,
+  "ran_at": "2026-11-23T05:02:23.629051Z",
+  "wall_time_s": 17.33,
+  "ran_by": "agent",
+  "artifacts": [
+   {
+    "id": "metrics",
+    "path": "execution/results/metrics.json",
+    "type": "metric",
+    "format": "json",
+    "checksum_sha256": "f2309a3ef944df9446d576dfded4fa9d901378bb7d72e15ef79c81c9583b37fb"
+   },
+   {
+    "id": "eval_rows",
+    "path": "execution/results/eval_rows.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "012a9ecb0d027ca1414be5098a320a17fe444151ea83a00bd1ea304e95887b6e"
+   },
+   {
+    "id": "metrics_holdout_at_freeze",
+    "path": "execution/results/metrics_holdout_at_freeze.json",
+    "type": "metric",
+    "format": "json",
+    "checksum_sha256": "784f561ae9313d74b79d49eacd0897cebee2372afbdbd52772ef5199bb70f78d"
+   },
+   {
+    "id": "eval_rows_holdout_at_freeze",
+    "path": "execution/results/eval_rows_holdout_at_freeze.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "90b09b8beefe05ee352e73f9e920e9f3fcebddc67a3df478c859be7d095bde04"
+   },
+   {
+    "id": "commands",
+    "path": "execution/results/commands.json",
+    "type": "log",
+    "format": "json",
+    "checksum_sha256": "9077c11939563c98264ef99a96b8857fe3d91a6b4c258ef10b2e4a23b106812f"
+   },
+   {
+    "id": "dev_en_result",
+    "path": "execution/results/cases/dev_en/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "0365eaa39f5a291616cc4aeb6decca09cc8565b3f411cbb8f859f6aff6116c86"
+   },
+   {
+    "id": "dev_en_polished",
+    "path": "execution/results/cases/dev_en/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "d1140754540aa627fb5e9ecbdea53c7ead9f4deab045e1c834c5652012751748"
+   },
+   {
+    "id": "dev_en_change_log",
+    "path": "execution/results/cases/dev_en/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "615494eeea005ffaf52630716296991ca85ac532855d09ca4dd991b7dece2754"
+   },
+   {
+    "id": "dev_en_diff_preview",
+    "path": "execution/results/cases/dev_en/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "dc36a4f77085d385030c77e461bec139021b7d49673d701a289c1c4ddee50427"
+   },
+   {
+    "id": "dev_zh_result",
+    "path": "execution/results/cases/dev_zh/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "2006090e9b81b63d23faaf35bac032a5ca168a0ad7108ba7f55e4662e5315dc2"
+   },
+   {
+    "id": "dev_zh_polished",
+    "path": "execution/results/cases/dev_zh/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "63cfb4f6ca4da56763958eeb978d538a4d9be1a4364500c6b881c9d55dc419d6"
+   },
+   {
+    "id": "dev_zh_change_log",
+    "path": "execution/results/cases/dev_zh/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "0cff8eeb7755af5692f5dba6d944e6ebfa1ae1d27ca100746be3cc4be1012d02"
+   },
+   {
+    "id": "dev_zh_diff_preview",
+    "path": "execution/results/cases/dev_zh/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "9195b23bee3650864c1ab29c6cc473a7ce2385d1d39651b878a202724b815cf4"
+   },
+   {
+    "id": "dev_tex_result",
+    "path": "execution/results/cases/dev_tex/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "c75b7aecd9989122ae231083ff641d68770c6571f1597e268c21f75d94261b3b"
+   },
+   {
+    "id": "dev_tex_polished",
+    "path": "execution/results/cases/dev_tex/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "eef99ec8cf865458c10af6f8858c32e3567555deedc69baff9a171b603ac7112"
+   },
+   {
+    "id": "dev_tex_change_log",
+    "path": "execution/results/cases/dev_tex/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "6f339e00ad5dae6c5c6f0450fd0b30c44ec3427b77712018ee75e360d1d52dc3"
+   },
+   {
+    "id": "dev_tex_diff_preview",
+    "path": "execution/results/cases/dev_tex/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "d401853870c5a232a3cb1f5f39876a86da8a41ffee259dfd87a53f576b541ee4"
+   },
+   {
+    "id": "dev_grant_result",
+    "path": "execution/results/cases/dev_grant/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "ba8a5c2c8ebdb67cc6e8f7eb21c8a4e2992bed695bae0e044ad2981ef84a003f"
+   },
+   {
+    "id": "dev_grant_polished",
+    "path": "execution/results/cases/dev_grant/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "593336ae710d710f3866b9ca7421122c3fc0743fc075bdfdcb8348c943e5cfe1"
+   },
+   {
+    "id": "dev_grant_change_log",
+    "path": "execution/results/cases/dev_grant/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "4438e59aaab77380b6422fcdbc202d1f811e8e0c05c9c90539a2e04e56a1e944"
+   },
+   {
+    "id": "dev_grant_diff_preview",
+    "path": "execution/results/cases/dev_grant/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "ec8d88651c42f994369e6935cca29b934fc9c21f7be87d7c340922d265f557e9"
+   },
+   {
+    "id": "ho_bio_result",
+    "path": "execution/results/cases/ho_bio/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "173ba68d2feb220176a741d5760b1aee4dcfe1dbb3d7b4faddf9d0fd0ec3123b"
+   },
+   {
+    "id": "ho_bio_polished",
+    "path": "execution/results/cases/ho_bio/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "3eca5b9cca2a4cb64771c77a86eef4bfb0339a13f86424b9a4192b970a3740bd"
+   },
+   {
+    "id": "ho_bio_change_log",
+    "path": "execution/results/cases/ho_bio/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "f248ff8340bde5efb9a635ca7987fc0337a23849099c3beae5ca9d5f43ef3a7c"
+   },
+   {
+    "id": "ho_bio_diff_preview",
+    "path": "execution/results/cases/ho_bio/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "0d8fc2569dd7fd5beaf38afcf8aaf06d4db624e04ebcd2e8cb4204329b0ac8b3"
+   },
+   {
+    "id": "ho_grant_zh_result",
+    "path": "execution/results/cases/ho_grant_zh/output/result.json",
+    "type": "data",
+    "format": "json",
+    "checksum_sha256": "a37e2234a6f150a1ca4a3484fee5f513cdc8a26b880c53c79b7cb43aa5be9d05"
+   },
+   {
+    "id": "ho_grant_zh_polished",
+    "path": "execution/results/cases/ho_grant_zh/output/polished.md",
+    "type": "data",
+    "format": "md",
+    "checksum_sha256": "23a6cdcb18d1b9dcc3fb70dd0b4c1bb6f34b67f93470cfa001d9cc0ce31a7bf0"
+   },
+   {
+    "id": "ho_grant_zh_change_log",
+    "path": "execution/results/cases/ho_grant_zh/output/change_log.md",
+    "type": "data",
+    "format": "markdown",
+    "checksum_sha256": "cdfdf4f9373773a44e0fe26ce6f175cdd6f5058c896d27583c07ac9ee599252e"
+   },
+   {
+    "id": "ho_grant_zh_diff_preview",
+    "path": "execution/results/cases/ho_grant_zh/output/diff.html",
+    "type": "figure",
+    "format": "html",
+    "checksum_sha256": "2553025239d7d9af09f89ce470437d9890277617f66d7f0cecc1f243ea6c5fd4"
+   }
+  ]
+ },
+ "expected_outputs": [
+  {
+   "name": "planted defects caught at fail level (dev set, rules tuned on it)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "planted defects caught at fail level (held-out, at code freeze)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "planted defects caught at fail level (held-out, after post-freeze lexicon fix)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "planted defects caught incl. warnings (held-out, at freeze)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "benign edits not failed (held-out, at freeze)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "benign edits not failed (held-out, after fix)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "clean gold edits without unresolved fail (all cases)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "candidate finder recall on planted language errors (dev)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "candidate finder recall on planted language errors (held-out, after fix)",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  },
+  {
+   "name": "robustness checks passed",
+   "type": "metric",
+   "produced_by": [
+    "metrics"
+   ],
+   "comparison_method": "numeric_tolerance"
+  }
+ ],
+ "handoff": {
+  "status": "partial",
+  "next_suggestion": "Run on the platform's three fixed cases with the DeepSeek harness (base vs Skill); extend lexicons for conditions/causal phrasing found there; add more discipline termbases.",
+  "hypothesis": "Sentence-level minimal edits with span-level change records, checked by deterministic meaning invariants (numbers, citations, references, hedge strength, negation, quantifiers, causality, conditions) and a termbase sweep, catch most claim-changing polish errors that a fluent rewrite hides, while keeping the output directly usable."
+ }
+}

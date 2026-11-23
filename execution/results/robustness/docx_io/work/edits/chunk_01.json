@@ -1,0 +1,30 @@
+{
+ "chunk": 1,
+ "status": "done",
+ "edits": [
+  {
+   "sid": "p1.s1",
+   "revised": "The method has been used widely.",
+   "changes": [
+    {
+     "from": "have",
+     "to": "has",
+     "type": "agreement",
+     "reason": "singular subject"
+    }
+   ]
+  },
+  {
+   "sid": "p1.s2",
+   "revised": "It is simple.",
+   "changes": [
+    {
+     "from": "It's",
+     "to": "It is",
+     "type": "register",
+     "reason": "no contractions"
+    }
+   ]
+  }
+ ]
+}

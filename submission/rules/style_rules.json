@@ -1,0 +1,445 @@
+{
+ "_doc": "Candidate-finder rules for ap_lint.py. They point the agent at likely problems; they are heuristics, not verdicts. Fields: id, lang (en|zh|any), pattern (Python regex, case-insensitive unless 'case': true), category (= change type to use if you fix it), message, hint. Rules with 'residual': true are re-run on the revised text by ap_build.py and reported as warnings if still present. 'genres' limits a rule to some genres (journal, thesis, grant, response, abstract); empty = all.",
+ "rules": [
+  {
+   "id": "EN01",
+   "lang": "en",
+   "pattern": "\\b(?:don't|doesn't|didn't|can't|won't|isn't|aren't|wasn't|weren't|hasn't|haven't|it's|that's|there's|let's|we're|they're|shouldn't|couldn't|wouldn't)\\b",
+   "category": "register",
+   "message": "contraction in academic prose",
+   "hint": "write the full form (do not, cannot, it is)",
+   "residual": true
+  },
+  {
+   "id": "EN02",
+   "lang": "en",
+   "pattern": "\\b(?:a lot of|lots of|a bunch of|kind of|sort of|pretty much|really|stuff|things like|huge|tons of|got|gets|getting|big deal|okay|ok)\\b",
+   "category": "register",
+   "message": "colloquial wording",
+   "hint": "use a precise academic equivalent (many / considerable / substantially) without changing the amount claimed",
+   "residual": true
+  },
+  {
+   "id": "EN03",
+   "lang": "en",
+   "pattern": "\\b(?:more and more|with the (?:rapid )?development of|plays? an? (?:important|vital|key|crucial) role|so as to|in order to|has been widely (?:used|applied)|has attracted (?:more and more|increasing|much) attention|make (?:\\w+ ){0,3}more \\w+|according to the (?:results|above)|and so on|as we all know|it is well known that|it is worth noting that|it should be noted that|nowadays)\\b",
+   "category": "chinglish",
+   "message": "formulaic / translated phrasing",
+   "hint": "rephrase concisely; keep the claim and its strength",
+   "residual": false
+  },
+  {
+   "id": "EN04",
+   "lang": "en",
+   "pattern": "\\b(?:researches|informations|equipments|evidences|softwares|datas|knowledges|feedbacks|advices|works on)\\b",
+   "category": "number-agreement",
+   "message": "uncountable noun used as plural",
+   "hint": "research / information / equipment / evidence / software / data / knowledge",
+   "residual": true
+  },
+  {
+   "id": "EN05",
+   "lang": "en",
+   "pattern": "\\b(?:despite of|associated to|risk factor of|correlated to|similar with|different with|discuss about|emphasi[sz]e on|research on (?:the )?\\w+ (?:is|are)|according to (?:my|our) knowledge|comprise of|consist in of|compared to with|in the other hand|on the contrary to)\\b",
+   "category": "preposition",
+   "message": "preposition / collocation error",
+   "hint": "despite / discuss / emphasise / to our knowledge / comprise (or consist of) / on the other hand",
+   "residual": true
+  },
+  {
+   "id": "EN06",
+   "lang": "en",
+   "pattern": "\\bsuch as\\b[^.;]{0,120}\\b(?:etc\\.?|and so on)",
+   "category": "concision",
+   "message": "'such as ... etc.' is redundant",
+   "hint": "drop 'etc.'",
+   "residual": true
+  },
+  {
+   "id": "EN07",
+   "lang": "en",
+   "pattern": "\\b(\\w+) \\1\\b",
+   "category": "spelling",
+   "message": "repeated word",
+   "hint": "delete the duplicate",
+   "residual": true
+  },
+  {
+   "id": "EN08",
+   "lang": "en",
+   "pattern": "\\ba (?![Uu]ni|[Uu]s[eu]|[Uu]tl|[Oo]ne|[Oo]nce|[Ee]u)[aeiouAEIOU]\\w+",
+   "category": "article",
+   "message": "'a' before a vowel sound?",
+   "hint": "'an' if the word starts with a vowel sound",
+   "residual": true
+  },
+  {
+   "id": "EN09",
+   "lang": "en",
+   "pattern": "\\ban (?![Hh]our|[Hh]onou?r|[Hh]eir|[Hh]onest|[Hh]erb)[b-df-hj-np-tv-z]\\w+",
+   "case": true,
+   "category": "article",
+   "message": "'an' before a consonant sound?",
+   "hint": "'a' unless the word is an acronym read letter by letter (an SEM, an MRI)",
+   "residual": true
+  },
+  {
+   "id": "EN10",
+   "lang": "en",
+   "pattern": "\\b(?:this|that|a|an|one|each|every) (?:results|data|samples|experiments|methods|models|cells|patients|measurements|studies|parameters)\\b",
+   "category": "number-agreement",
+   "message": "singular determiner with plural noun",
+   "hint": "these/those + plural, or singular noun",
+   "residual": true
+  },
+  {
+   "id": "EN11",
+   "lang": "en",
+   "pattern": "\\b(?:two|three|four|five|six|seven|eight|nine|ten|several|many|multiple|various|these|those|both|numerous|few)\\s+(?:[a-z]+\\s+)?(?!(?:of|and|or|the|a|an|times|data|research|types|kinds|percent|hundred|thousand|million|series|species|information|evidence)\\b)[a-z]{3,}(?<![su])\\b(?=\\s+(?:are|were|have|was|is|show|exhibit)\\b|[.,;:])",
+   "category": "number-agreement",
+   "message": "plural determiner with singular noun",
+   "hint": "use the plural noun",
+   "residual": true
+  },
+  {
+   "id": "EN12",
+   "lang": "en",
+   "pattern": "\\b(?:(?:the|these|those|our|such|their) (?:\\w+ )?(?:results|data|samples|values|findings|studies|experiments|measurements|devices|cells)|they) (?:is|was|has|shows|indicates|suggests|demonstrates|reveals|remains)\\b",
+   "category": "grammar",
+   "message": "subject-verb agreement (plural subject, singular verb)?",
+   "hint": "are / were / have / show (keep 'data is' only if the style guide allows it)",
+   "residual": true
+  },
+  {
+   "id": "EN13",
+   "lang": "en",
+   "pattern": "\\b(?:it|this|the (?:method|model|result|sample|material|network|system|device|layer|structure|film|algorithm|framework|approach|process|mechanism|study|experiment|analysis|regression|test|survey|cohort|trial|protocol|procedure))\\s+(?:are|were|have|show|indicate|suggest|consist|contain|include|require|exhibit|remain|provide|achieve|yield)\\b",
+   "category": "grammar",
+   "message": "subject-verb agreement (singular subject, plural verb)?",
+   "hint": "is / was / has / shows",
+   "residual": true
+  },
+  {
+   "id": "EN14",
+   "lang": "en",
+   "pattern": "\\b(?:obviously|clearly|undoubtedly|of course|needless to say|it is evident that)\\b",
+   "category": "register",
+   "message": "booster / absolute wording",
+   "hint": "remove or soften only if the source evidence does not support certainty; record the change - removing a booster weakens the claim",
+   "residual": false
+  },
+  {
+   "id": "EN15",
+   "lang": "en",
+   "pattern": "\\b(?:perfect(?:ly)?|unprecedented|groundbreaking|revolutionar\\w*|amazing|incredibl[ey]|tremendous(?:ly)?|extraordinar\\w*|world-leading)\\b",
+   "category": "register",
+   "message": "promotional wording",
+   "hint": "use neutral wording; do not change the measured result",
+   "residual": true
+  },
+  {
+   "id": "EN16",
+   "lang": "en",
+   "pattern": "\\b[Ii]\\b(?! \\.)(?=\\s+(?:think|believe|feel|found|propose|did|have|am|was|will))",
+   "case": true,
+   "category": "register",
+   "message": "first person singular",
+   "hint": "use 'we' or the passive, following the target style",
+   "residual": false,
+   "genres": [
+    "journal",
+    "abstract",
+    "grant"
+   ]
+  },
+  {
+   "id": "EN17",
+   "lang": "en",
+   "pattern": "\\d(?:nm|mm|cm|km|mg|kg|ml|mL|mM|µm|μm|K|Hz|kHz|MHz|GHz|eV|meV|keV|MPa|GPa|kPa|Pa|V|mV|mA|W|mW|kW|s|ms|h|min|°C)\\b",
+   "case": true,
+   "category": "format",
+   "message": "missing space between number and unit (SI style)",
+   "hint": "10 nm, 5 mg (no space for %, °)",
+   "residual": true
+  },
+  {
+   "id": "EN18",
+   "lang": "en",
+   "pattern": "\\b(?:e\\.g|i\\.e|et al|etc)(?![.\\w])",
+   "category": "punctuation",
+   "message": "abbreviation without its full stop",
+   "hint": "e.g., i.e., et al., etc.",
+   "residual": true
+  },
+  {
+   "id": "EN19",
+   "lang": "en",
+   "pattern": " [,.;:](?!\\d)|[,;:](?=[A-Za-z])|\\.(?=[A-Z][a-z])",
+   "case": true,
+   "category": "punctuation",
+   "message": "space before punctuation or missing space after it",
+   "hint": "one space after , ; : and none before",
+   "residual": true
+  },
+  {
+   "id": "EN20",
+   "lang": "en",
+   "pattern": "[，。；：？！（）]",
+   "category": "punctuation",
+   "message": "full-width punctuation in English text",
+   "hint": "half-width , . ; : ? ! ( )",
+   "residual": true
+  },
+  {
+   "id": "EN21",
+   "lang": "en",
+   "pattern": "\\b(?:very|quite|rather|extremely|highly) (?:\\w+)\\b",
+   "category": "concision",
+   "message": "intensifier",
+   "hint": "keep it if it carries meaning; never replace by a stronger claim",
+   "residual": false
+  },
+  {
+   "id": "EN22",
+   "lang": "en",
+   "pattern": "\\b(?:in this paper|in this study|in this work), (?:we|the authors) (?:will )?(?:make|do|carry out|conduct|perform) (?:a|an|the)? ?(?:study|research|analysis|investigation)\\b",
+   "category": "concision",
+   "message": "nominalised verb ('carry out an analysis')",
+   "hint": "use the verb ('we analyse')",
+   "residual": false
+  },
+  {
+   "id": "EN23",
+   "lang": "en",
+   "pattern": "\\b(?:can be (?:seen|found|observed) (?:that|from)|it can be (?:seen|concluded|found) that)\\b",
+   "category": "chinglish",
+   "message": "translated '可以看出'",
+   "hint": "'X shows that ...' / 'As shown in Fig. N, ...'",
+   "residual": false
+  },
+  {
+   "id": "EN24",
+   "lang": "en",
+   "pattern": "(?<![A-Za-z0-9.\\-])(\\d+(?:\\.\\d+)?)\\s*-\\s*(\\d+(?:\\.\\d+)?)(?![\\d\\-])",
+   "category": "format",
+   "message": "numeric range with hyphen",
+   "hint": "en dash (10–20 nm) per most journal styles; do not change the numbers",
+   "residual": false
+  },
+  {
+   "id": "EN25",
+   "lang": "en",
+   "pattern": "\\b(?:Firstly|Secondly|Thirdly|Lastly|Besides|What's more|Moreover|Furthermore|In addition|Additionally)\\b,",
+   "category": "chinglish",
+   "message": "connective (check for overuse)",
+   "hint": "keep only connectives that mark a real logical relation",
+   "residual": false
+  },
+  {
+   "id": "ZH01",
+   "lang": "zh",
+   "pattern": "很多|非常|特别|搞|弄|啥|咱们|我觉得|我认为|大家|挺|蛮|超级|一大堆",
+   "category": "register",
+   "message": "口语化表达",
+   "hint": "改为书面语（大量、显著、本文认为）；不改变数量或强度",
+   "residual": true
+  },
+  {
+   "id": "ZH02",
+   "lang": "zh",
+   "pattern": "国际领先|国内领先|世界一流|填补.{0,6}空白|重大突破|突破性|革命性|颠覆性|完美|前所未有|首创|全新",
+   "category": "register",
+   "message": "宣传化/夸大表述",
+   "hint": "改为中性描述；若为基金申请书中的创新性陈述，保留事实部分并标注需人工确认",
+   "residual": true
+  },
+  {
+   "id": "ZH03",
+   "lang": "zh",
+   "pattern": "绝对|完全解决|彻底解决|必然|一定能|毫无疑问|100%",
+   "category": "register",
+   "message": "绝对化表述",
+   "hint": "仅在材料支持时保留；修改会削弱结论，需记录",
+   "residual": false
+  },
+  {
+   "id": "ZH04",
+   "lang": "zh",
+   "pattern": "^\\s*(?:通过|经过|随着|在|由于|对于|关于)[^，。]{2,40}，?(?:使|使得|让|表明|说明|发现)",
+   "category": "grammar",
+   "message": "介词结构开头导致主语缺失（\"通过……使……\"）",
+   "hint": "删去介词或补出主语",
+   "residual": true
+  },
+  {
+   "id": "ZH05",
+   "lang": "zh",
+   "pattern": "(?:进行|开展|做)了?(?:一系列|大量|深入|系统|详细|初步)?的?(?:研究|分析|讨论|测试|表征|比较|计算|实验|观察|测量|处理|优化|改进|评价|评估|检测|统计|调查|模拟)",
+   "category": "concision",
+   "message": "冗余名词化（\"进行了分析\"）",
+   "hint": "直接用动词（\"分析了\"）",
+   "residual": false
+  },
+  {
+   "id": "ZH06",
+   "lang": "zh",
+   "pattern": "的的|了了|是是|和和|，，|。。",
+   "category": "spelling",
+   "message": "重复字/标点",
+   "hint": "删去重复",
+   "residual": true
+  },
+  {
+   "id": "ZH07",
+   "lang": "zh",
+   "pattern": "[一-鿿）」”][,;:?!](?=[一-鿿“（])|[一-鿿]\\.(?=[一-鿿]|$)",
+   "category": "punctuation",
+   "message": "中文语境使用半角标点",
+   "hint": "改为全角，。；：？！",
+   "residual": true
+  },
+  {
+   "id": "ZH08",
+   "lang": "zh",
+   "pattern": "随着.{1,20}的(?:快速|迅速|不断)?发展|越来越多的|起着?(?:重要|关键|至关重要)的?作用|引起了?(?:广泛|越来越多的|人们的)关注",
+   "category": "concision",
+   "message": "套话",
+   "hint": "改为具体陈述或删去",
+   "residual": false
+  },
+  {
+   "id": "ZH09",
+   "lang": "zh",
+   "pattern": "(?:是否|能否)[^，。？]{2,30}(?:的关键|的重要|取决于|是)[^，。？是否]*$",
+   "category": "grammar",
+   "message": "两面对一面（\"是否……是关键\"）",
+   "hint": "前后都用两面词或都用一面词",
+   "residual": false
+  },
+  {
+   "id": "ZH10",
+   "lang": "zh",
+   "pattern": "(?:大约|约|近|接近)[^，。]{0,6}\\d+(?:\\.\\d+)?\\s*(?:%|个|种|倍|nm|K)?左右",
+   "category": "concision",
+   "message": "概数重复（\"约……左右\"）",
+   "hint": "保留一个概数词；不改数值",
+   "residual": true
+  },
+  {
+   "id": "ZH11",
+   "lang": "zh",
+   "pattern": "[\\u4e00-\\u9fff] +[\\u4e00-\\u9fff]",
+   "category": "format",
+   "message": "汉字之间多余空格",
+   "hint": "删除空格",
+   "residual": true
+  },
+  {
+   "id": "ZH12",
+   "lang": "zh",
+   "pattern": "\"[^\"]{1,40}\"|'[^']{1,20}'",
+   "category": "punctuation",
+   "message": "中文语境使用直引号",
+   "hint": "改为“”或‘’",
+   "residual": true
+  },
+  {
+   "id": "ZH13",
+   "lang": "zh",
+   "pattern": "被[^，。]{1,12}所|受到了?[^，。]{1,10}的影响作用",
+   "category": "concision",
+   "message": "被动/冗余结构",
+   "hint": "必要时改为主动句",
+   "residual": false
+  },
+  {
+   "id": "ANY01",
+   "lang": "any",
+   "pattern": "  +(?=\\S)",
+   "category": "format",
+   "message": "repeated spaces",
+   "hint": "single space",
+   "residual": true
+  },
+  {
+   "id": "ANY02",
+   "lang": "any",
+   "pattern": "\\ufffd|Ã[\\x80-\\xbf]|â€|锟斤拷|ï¿½",
+   "case": true,
+   "category": "format",
+   "message": "encoding damage (mojibake)",
+   "hint": "do not guess the text: mark the sentence in needs_confirmation",
+   "residual": true
+  },
+  {
+   "id": "EN26",
+   "lang": "en",
+   "pattern": "\\b[Aa] (?=[AEFHILMNORSX][A-Z0-9]{1,6}\\b)",
+   "case": true,
+   "category": "article",
+   "message": "'a' before an acronym read with a vowel sound (a HTL, a SEM)?",
+   "hint": "'an HTL', 'an SEM' (letter names starting with a vowel sound)",
+   "residual": true
+  },
+  {
+   "id": "ZH14",
+   "lang": "zh",
+   "pattern": "我们|我(?=[认觉发提])",
+   "category": "register",
+   "message": "学位论文/期刊中文稿使用第一人称",
+   "hint": "学位论文通常用“本文”“本研究”；按目标文体决定",
+   "residual": true,
+   "genres": [
+    "thesis"
+   ]
+  },
+  {
+   "id": "ZH15",
+   "lang": "zh",
+   "pattern": "从图中可以看出|从表中可以看出|由此可以看出|可以看出|不难看出|众所周知",
+   "category": "concision",
+   "message": "口语化引导语",
+   "hint": "“由图N可见”“图N表明”；补出具体图表号",
+   "residual": true
+  },
+  {
+   "id": "TEX01",
+   "lang": "en",
+   "pattern": "^Where\\s+\\$",
+   "case": true,
+   "category": "format",
+   "message": "'Where' after a display equation usually continues the sentence",
+   "hint": "lower-case 'where' (no paragraph break before it)",
+   "residual": true
+  },
+  {
+   "id": "EN27",
+   "lang": "en",
+   "pattern": "^(?:But|And|So|Also|Plus)\\b,?",
+   "case": true,
+   "category": "register",
+   "message": "sentence-initial conjunction (informal)",
+   "hint": "However, / In addition, / Therefore, - keep the logical relation",
+   "residual": true
+  },
+  {
+   "id": "EN28",
+   "lang": "en",
+   "pattern": ", which (?:suggest|indicate|show|demonstrate|imply|mean|confirm|reveal|lead|make)\\b",
+   "category": "agreement",
+   "message": "'which' referring to the preceding clause takes a singular verb",
+   "hint": "which suggests / which indicates",
+   "residual": true
+  },
+  {
+   "id": "EN29",
+   "lang": "en",
+   "pattern": "\\b(?:[A-Z]{2,6}) (?:are|were|have)\\b",
+   "case": true,
+   "category": "agreement",
+   "message": "singular abbreviation with plural verb (PSC are)?",
+   "hint": "plural abbreviation (PSCs are) or singular verb",
+   "residual": true
+  }
+ ]
+}

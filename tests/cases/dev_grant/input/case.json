@@ -1,0 +1,3 @@
+{"case_id": "dev-grant-zh2en", "source_text": "本项目拟以钠离子电池硬碳负极为研究对象，揭示其储钠机制。前期研究表明，硬碳的首次库伦效率仅为75%左右，严重制约了其实际应用[3]。申请人团队在前期工作中发现，引入适量的硫掺杂可以将可逆容量提高到约320 mAh g-1（图1）。然而，掺杂对首次库伦效率的影响尚不清楚。本项目将重点研究缺陷结构与储钠行为之间的关系，有望为高性能负极材料的设计提供理论依据。",
+ "glossary": [{"zh": "硬碳", "en": "hard carbon"}, {"zh": "首次库伦效率", "en": "initial Coulombic efficiency", "abbr": "ICE"}, {"zh": "钠离子电池", "en": "sodium-ion battery", "abbr": "SIB", "variants": "sodium ion battery;Na-ion battery"}, {"zh": "储钠机制", "en": "sodium storage mechanism"}],
+ "output_contract": {"english_text": "English version for an international grant proposal", "bilingual_table": "sentence-aligned Chinese/English", "translation_notes": "decisions and changes"}}

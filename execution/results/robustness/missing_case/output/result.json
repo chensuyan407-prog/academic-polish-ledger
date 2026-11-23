@@ -1,0 +1,19 @@
+{
+ "case_id": "unknown",
+ "status": "failed",
+ "status_reason": "no manuscript text could be read",
+ "polished_text": null,
+ "change_log": null,
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [],
+ "uncertainty": [
+  "case.json not found at C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json",
+  "no output_contract in case.json; default fields used"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ }
+}

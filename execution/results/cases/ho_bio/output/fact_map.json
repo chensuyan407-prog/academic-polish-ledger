@@ -1,0 +1,308 @@
+[
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   0,
+   136
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s1",
+  "doc": "d1",
+  "offset": [
+   138,
+   230
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "1,248",
+    "3",
+    "4",
+    "2015",
+    "2019"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "1,248",
+    "3",
+    "4",
+    "2015",
+    "2019"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s2",
+  "doc": "d1",
+  "offset": [
+   231,
+   294
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "4.2 years",
+    "3.1",
+    "5.0"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "4.2 years",
+    "3.1",
+    "5.0"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s3",
+  "doc": "d1",
+  "offset": [
+   295,
+   390
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": [
+    "after adjusting for"
+   ]
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": [
+    "after adjustment for"
+   ]
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p3.s1",
+  "doc": "d1",
+  "offset": [
+   392,
+   513
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "1.32",
+    "95 %",
+    "1.11",
+    "1.57",
+    "0.002"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "1.32",
+    "95 %",
+    "1.11",
+    "1.57",
+    "0.002"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p3.s2",
+  "doc": "d1",
+  "offset": [
+   514,
+   584
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [
+    "50 years"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "not"
+   ],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": [
+    "in patients younger"
+   ]
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p3.s3",
+  "doc": "d1",
+  "offset": [
+   585,
+   625
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "not"
+   ],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p4.s1",
+  "doc": "d1",
+  "offset": [
+   627,
+   758
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "may"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [
+    "may"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ }
+]

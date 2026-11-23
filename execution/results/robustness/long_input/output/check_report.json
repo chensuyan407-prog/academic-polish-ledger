@@ -1,0 +1,18 @@
+{
+ "summary": {
+  "segments_in_scope": 600,
+  "edited_units": 1,
+  "reviewed": 30,
+  "not_reviewed": 570,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "word-choice": 1
+  },
+  "by_code": {}
+ },
+ "units": [],
+ "document": [],
+ "termbase_conflicts": []
+}

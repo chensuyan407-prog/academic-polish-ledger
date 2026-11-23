@@ -1,0 +1,4 @@
+﻿preferred,abbr,variants_to_avoid,zh,en,source,count_in_revised,variant_counts_in_revised,enforced,conflict,note
+氧空位,,氧缺陷;氧空穴,,,术语表.csv,2,"{""氧缺陷"": 0, ""氧空穴"": 0}",True,False,
+X射线衍射,XRD,X光衍射,,,术语表.csv,1,"{""X光衍射"": 0}",True,False,
+扫描电子显微镜,SEM,扫描电镜,,,术语表.csv,1,"{""扫描电镜"": 0}",True,False,

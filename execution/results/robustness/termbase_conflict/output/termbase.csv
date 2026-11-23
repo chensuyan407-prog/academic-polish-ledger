@@ -1,0 +1,3 @@
+﻿preferred,abbr,variants_to_avoid,zh,en,source,count_in_revised,variant_counts_in_revised,enforced,conflict,note
+density functional theory,,,,,terms.csv,1,{},False,True,
+DFT method,,density-functional theory,,,terms.csv,0,"{""density-functional theory"": 1}",False,True,

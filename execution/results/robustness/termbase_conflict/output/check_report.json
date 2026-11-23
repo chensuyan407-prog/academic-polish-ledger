@@ -1,0 +1,33 @@
+{
+ "summary": {
+  "segments_in_scope": 2,
+  "edited_units": 0,
+  "reviewed": 2,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {}
+ },
+ "units": [],
+ "document": [
+  {
+   "code": "D03",
+   "severity": "info",
+   "detail": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['DFT']"
+  }
+ ],
+ "termbase_conflicts": [
+  {
+   "type": "variant_is_preferred_elsewhere",
+   "term": "density-functional theory",
+   "entries": [
+    "DFT method",
+    "density functional theory"
+   ]
+  }
+ ]
+}

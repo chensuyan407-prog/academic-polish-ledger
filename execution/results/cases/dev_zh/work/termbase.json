@@ -1,0 +1,54 @@
+{
+ "entries": [
+  {
+   "preferred": "氧空位",
+   "variants": [
+    "氧缺陷",
+    "氧空穴"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "",
+   "note": "",
+   "source": "术语表.csv"
+  },
+  {
+   "preferred": "X射线衍射",
+   "variants": [
+    "X光衍射"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "XRD",
+   "note": "",
+   "source": "术语表.csv"
+  },
+  {
+   "preferred": "扫描电子显微镜",
+   "variants": [
+    "扫描电镜"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "SEM",
+   "note": "",
+   "source": "术语表.csv"
+  }
+ ],
+ "sources": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\术语表.csv",
+   "entries": 3,
+   "sha256": "9ccf1b2f4f70079a961399b92924c93fbced3bfc1c6d0c215d350d54c078961e"
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": [
+  {
+   "abbr": "XRD",
+   "long": "光衍射",
+   "doc": "d1",
+   "offset": 13
+  }
+ ]
+}

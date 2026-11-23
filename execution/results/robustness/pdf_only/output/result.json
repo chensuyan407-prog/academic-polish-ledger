@@ -1,0 +1,77 @@
+{
+ "case_id": "pdf",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "The samples was heated to 500 K for 2 h.",
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "draft.pdf",
+   "role": "manuscript",
+   "sha256": "b34489f40156b71b965bca70b2664d08ab65bffa3745876aa6680aec012eeee0",
+   "fmt": "pdf",
+   "read_info": {
+    "pages": 1,
+    "extractor": "pymupdf",
+    "repairs": [
+     "text extracted from PDF layout; line breaks and hyphenation reconstructed"
+    ]
+   }
+  }
+ ],
+ "uncertainty": [
+  "draft.pdf: text extracted from PDF layout; line breaks and hyphenation reconstructed"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 0,
+  "segments_in_scope": 1,
+  "change_types": {},
+  "verdicts": {}
+ },
+ "checks": {
+  "segments_in_scope": 1,
+  "edited_units": 0,
+  "reviewed": 1,
+  "not_reviewed": 0,
+  "severity": {
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {
+   "R04": 1
+  }
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:23.054974+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

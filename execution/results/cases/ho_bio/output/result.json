@@ -1,0 +1,305 @@
+{
+ "case_id": "ho-bio-abstract",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "revised_abstract": "Background: Chronic kidney disease (CKD) is associated with increased cardiovascular risk, but the role of serum uric acid remains unclear.\n\nMethods: We enrolled 1,248 patients with stage 3–4 CKD from 2015 to 2019. Patients were followed for a median of 4.2 years (IQR 3.1–5.0). Cox regression was used to estimate hazard ratios (HRs) after adjustment for age, sex and eGFR.\n\nResults: Higher uric acid was associated with major adverse cardiovascular events (MACE) (HR 1.32, 95% CI 1.11–1.57; p = 0.002). The association was not significant in patients younger than 50 years. Allopurinol use did not modify the risk.\n\nConclusions: Elevated uric acid may be an independent risk factor for cardiovascular events in CKD, and randomised controlled trials are needed.\n",
+ "edit_log": [
+  {
+   "sid": "p1.s1",
+   "original": "Background: Chronic kidney disease (CKD) is associated to increased cardiovascular risk, but the role of serum uric acid remain unclear.",
+   "revised": "Background: Chronic kidney disease (CKD) is associated with increased cardiovascular risk, but the role of serum uric acid remains unclear.",
+   "changes": [
+    {
+     "from": "associated to",
+     "to": "associated with",
+     "type": "preposition",
+     "reason": "fixed collocation 'associated with'"
+    },
+    {
+     "from": "remain",
+     "to": "remains",
+     "type": "agreement",
+     "reason": "singular subject 'the role'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s1",
+   "original": "Methods: We enrolled 1,248 patients with stage 3-4 chronic kidney disease from 2015 to 2019.",
+   "revised": "Methods: We enrolled 1,248 patients with stage 3–4 CKD from 2015 to 2019.",
+   "changes": [
+    {
+     "from": "3-4",
+     "to": "3–4",
+     "type": "format",
+     "reason": "en dash for ranges"
+    },
+    {
+     "from": "chronic kidney disease",
+     "to": "CKD",
+     "type": "abbreviation",
+     "reason": "abbreviation already defined in Background"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s2",
+   "original": "Patients were followed for a median of 4.2 years (IQR 3.1-5.0).",
+   "revised": "Patients were followed for a median of 4.2 years (IQR 3.1–5.0).",
+   "changes": [
+    {
+     "from": "3.1-5.0",
+     "to": "3.1–5.0",
+     "type": "format",
+     "reason": "en dash for ranges"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s3",
+   "original": "Cox regression were used to estimate hazard ratios (HRs) after adjusting for age, sex and eGFR.",
+   "revised": "Cox regression was used to estimate hazard ratios (HRs) after adjustment for age, sex and eGFR.",
+   "changes": [
+    {
+     "from": "were",
+     "to": "was",
+     "type": "agreement",
+     "reason": "singular subject 'Cox regression'"
+    },
+    {
+     "from": "adjusting",
+     "to": "adjustment",
+     "type": "style",
+     "reason": "nominal form is usual in clinical abstracts"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p3.s1",
+   "original": "Results: Higher uric acid was associated with major adverse cardiovascular events (HR 1.32, 95% CI 1.11-1.57; p = 0.002).",
+   "revised": "Results: Higher uric acid was associated with major adverse cardiovascular events (MACE) (HR 1.32, 95% CI 1.11–1.57; p = 0.002).",
+   "changes": [
+    {
+     "from": "events (HR",
+     "to": "events (MACE) (HR",
+     "type": "abbreviation",
+     "reason": "termbase abbreviation introduced at first use"
+    },
+    {
+     "from": "1.11-1.57",
+     "to": "1.11–1.57",
+     "type": "format",
+     "reason": "en dash for ranges"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p4.s1",
+   "original": "Conclusions: Elevated uric acid may be an independent risk factor of cardiovascular events in CKD, and randomized trials is needed.",
+   "revised": "Conclusions: Elevated uric acid may be an independent risk factor for cardiovascular events in CKD, and randomised controlled trials are needed.",
+   "changes": [
+    {
+     "from": "risk factor of",
+     "to": "risk factor for",
+     "type": "collocation",
+     "reason": "'risk factor for'"
+    },
+    {
+     "from": "randomized trials is",
+     "to": "randomised controlled trials are",
+     "type": "terminology",
+     "reason": "termbase term in British spelling; plural verb"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  }
+ ],
+ "term_list": [
+  {
+   "preferred": "major adverse cardiovascular events",
+   "abbr": "MACE",
+   "variants": [
+    "major cardiovascular adverse events",
+    "MACCE"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "glossary.tsv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "chronic kidney disease",
+   "abbr": "CKD",
+   "variants": [
+    "chronic renal disease"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "glossary.tsv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "randomised controlled trial",
+   "abbr": "RCT",
+   "variants": [
+    "randomized controlled trial",
+    "randomized trial"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "glossary.tsv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "hazard ratios",
+   "abbr": "HRs",
+   "variants": [],
+   "zh": "",
+   "en": "",
+   "source": "text",
+   "count_in_revised": 1,
+   "enforced": false,
+   "conflict": false,
+   "note": "abbreviation defined in the original text"
+  }
+ ],
+ "open_questions": [
+  {
+   "sid": "p2.s3",
+   "issue": "eGFR is not expanded in the abstract; most journals require 'estimated glomerular filtration rate (eGFR)' at first use"
+  },
+  {
+   "sid": "p4.s1",
+   "issue": "termbase uses 'randomised controlled trial'; the authors wrote 'randomized trials' - confirm that controlled trials are meant"
+  },
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['IQR']",
+   "source": "D03"
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "abstract.txt",
+   "role": "manuscript",
+   "sha256": "80174769c13b9738f4efad0ac9526e035748c43b8e35990574749b9ed55a265e",
+   "fmt": "txt",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  },
+  {
+   "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\glossary.tsv",
+   "role": "termbase",
+   "entries": 3,
+   "sha256": "801eb01442a9c6249028ab3966d5d63bf3fb9c630d752fb3b4cc007bcb36e208"
+  }
+ ],
+ "uncertainty": [],
+ "needs_confirmation": [
+  {
+   "sid": "p2.s3",
+   "issue": "eGFR is not expanded in the abstract; most journals require 'estimated glomerular filtration rate (eGFR)' at first use"
+  },
+  {
+   "sid": "p4.s1",
+   "issue": "termbase uses 'randomised controlled trial'; the authors wrote 'randomized trials' - confirm that controlled trials are meant"
+  },
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['IQR']",
+   "source": "D03"
+  }
+ ],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.txt",
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "polished.txt",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 6,
+  "segments_in_scope": 8,
+  "change_types": {
+   "preposition": 1,
+   "agreement": 2,
+   "format": 3,
+   "abbreviation": 2,
+   "style": 1,
+   "collocation": 1,
+   "terminology": 1
+  },
+  "verdicts": {
+   "pass": 6
+  }
+ },
+ "checks": {
+  "segments_in_scope": 8,
+  "edited_units": 6,
+  "reviewed": 8,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "preposition": 1,
+   "agreement": 2,
+   "format": 3,
+   "abbreviation": 2,
+   "style": 1,
+   "collocation": 1,
+   "terminology": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:15.116607+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

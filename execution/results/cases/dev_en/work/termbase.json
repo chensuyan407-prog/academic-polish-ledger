@@ -1,0 +1,61 @@
+{
+ "entries": [
+  {
+   "preferred": "perovskite solar cell",
+   "variants": [
+    "perovskite solar battery",
+    "perovskite photovoltaic cell"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "PSC",
+   "note": "device",
+   "source": "termbase.csv"
+  },
+  {
+   "preferred": "power conversion efficiency",
+   "variants": [
+    "photoelectric conversion efficiency",
+    "conversion efficiency"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "PCE",
+   "note": "metric",
+   "source": "termbase.csv"
+  },
+  {
+   "preferred": "hole transport layer",
+   "variants": [
+    "hole transporting layer"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "HTL",
+   "note": "",
+   "source": "termbase.csv"
+  }
+ ],
+ "sources": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\termbase.csv",
+   "entries": 3,
+   "sha256": "a86007cc68ba99221b4e4bb6a49556e2bf07b24cd0ebb9cde3d46f28f4d0cff9"
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": [
+  {
+   "abbr": "PSCs",
+   "long": "perovskite solar cells",
+   "doc": "d1",
+   "offset": 60
+  },
+  {
+   "abbr": "PCE",
+   "long": "power conversion efficiency",
+   "doc": "d1",
+   "offset": 326
+  }
+ ]
+}

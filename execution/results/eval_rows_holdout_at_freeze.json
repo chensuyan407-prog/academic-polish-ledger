@@ -1,0 +1,470 @@
+{
+ "holdout": {
+  "mutations": [
+   {
+    "id": "H01",
+    "case": "ho_bio",
+    "sid": "p3.s1",
+    "kind": "number",
+    "expect": "I01",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I01:fail"
+    ],
+    "baseline_numcite": true,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H02",
+    "case": "ho_bio",
+    "sid": "p3.s1",
+    "kind": "number",
+    "expect": "I01",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I01:fail",
+     "R01:fail"
+    ],
+    "baseline_numcite": true,
+    "baseline_record_only": true,
+    "build_exit": 1
+   },
+   {
+    "id": "H03",
+    "case": "ho_bio",
+    "sid": "p3.s2",
+    "kind": "negation",
+    "expect": "I10",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I10:fail",
+     "I11:fail"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H04",
+    "case": "ho_bio",
+    "sid": "p4.s1",
+    "kind": "hedge",
+    "expect": "I05",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I05:fail"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H05",
+    "case": "ho_bio",
+    "sid": "p3.s1",
+    "kind": "causal",
+    "expect": "I12",
+    "detected": false,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": false,
+    "codes_fired": [
+     "I12:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "H06",
+    "case": "ho_bio",
+    "sid": "p3.s3",
+    "kind": "quantifier",
+    "expect": "I11",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I11:fail"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H07",
+    "case": "ho_bio",
+    "sid": "p2.s2",
+    "kind": "unit",
+    "expect": "I01",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I01:fail"
+    ],
+    "baseline_numcite": true,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H08",
+    "case": "ho_bio",
+    "sid": "p2.s1",
+    "kind": "benign_number_format",
+    "expect": null,
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "H09",
+    "case": "ho_bio",
+    "sid": "p4.s1",
+    "kind": "benign_same_hedge",
+    "expect": null,
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "H10",
+    "case": "ho_bio",
+    "sid": "p2.s3",
+    "kind": "condition",
+    "expect": "I13",
+    "detected": false,
+    "detected_or_warned": false,
+    "sentence_or_doc_failed": false,
+    "codes_fired": [],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "H11",
+    "case": "ho_bio",
+    "sid": "p3.s1",
+    "kind": "term",
+    "expect": "D01",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "D01:fail"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "H12",
+    "case": "ho_bio",
+    "sid": "p1.s1",
+    "kind": "booster",
+    "expect": "I06",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I06:fail",
+     "I10:fail"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J01",
+    "case": "ho_grant_zh",
+    "sid": "p1.s2",
+    "kind": "approximator",
+    "expect": "I07",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I07:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J02",
+    "case": "ho_grant_zh",
+    "sid": "p1.s2",
+    "kind": "xref",
+    "expect": "I03",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I03:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J03",
+    "case": "ho_grant_zh",
+    "sid": "p1.s4",
+    "kind": "citation",
+    "expect": "I02",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I02:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": true,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J04",
+    "case": "ho_grant_zh",
+    "sid": "p1.s4",
+    "kind": "condition",
+    "expect": "I13",
+    "detected": false,
+    "detected_or_warned": false,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I01:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": true,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J05",
+    "case": "ho_grant_zh",
+    "sid": "p1.s5",
+    "kind": "hedge",
+    "expect": "I05",
+    "detected": false,
+    "detected_or_warned": false,
+    "sentence_or_doc_failed": false,
+    "codes_fired": [
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "J06",
+    "case": "ho_grant_zh",
+    "sid": "p1.s2",
+    "kind": "significance",
+    "expect": "I08",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I08:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J07",
+    "case": "ho_grant_zh",
+    "sid": "p1.s4",
+    "kind": "term",
+    "expect": "D01",
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "D01:fail",
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J08",
+    "case": "ho_grant_zh",
+    "sid": "p1.s1",
+    "kind": "benign_promo_removed",
+    "expect": null,
+    "detected": true,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   },
+   {
+    "id": "J09",
+    "case": "ho_grant_zh",
+    "sid": "p1.s4",
+    "kind": "benign_paraphrase_negation",
+    "expect": null,
+    "detected": false,
+    "detected_or_warned": false,
+    "sentence_or_doc_failed": true,
+    "codes_fired": [
+     "I05:warn",
+     "I10:fail",
+     "I14:warn",
+     "R03:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 1
+   },
+   {
+    "id": "J10",
+    "case": "ho_grant_zh",
+    "sid": "p1.s3",
+    "kind": "promotional_not_removed",
+    "expect": "R04",
+    "detected": false,
+    "detected_or_warned": true,
+    "sentence_or_doc_failed": false,
+    "codes_fired": [
+     "R04:warn"
+    ],
+    "baseline_numcite": false,
+    "baseline_record_only": false,
+    "build_exit": 0
+   }
+  ],
+  "lint": [
+   {
+    "case": "ho_bio",
+    "sid": "p1.s1",
+    "match": "associated to",
+    "type": "preposition",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p1.s1",
+    "match": "acid remain",
+    "type": "agreement",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p2.s1",
+    "match": "3-4",
+    "type": "format",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p2.s2",
+    "match": "3.1-5.0",
+    "type": "format",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p2.s3",
+    "match": "regression were",
+    "type": "agreement",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p3.s1",
+    "match": "1.11-1.57",
+    "type": "format",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p4.s1",
+    "match": "risk factor of",
+    "type": "collocation",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p4.s1",
+    "match": "trials is",
+    "type": "agreement",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_bio",
+    "sid": "p4.s1",
+    "match": "randomized trials",
+    "type": "terminology",
+    "hinted": true,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_grant_zh",
+    "sid": "p1.s1",
+    "match": "全新",
+    "type": "register",
+    "hinted": false,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_grant_zh",
+    "sid": "p1.s3",
+    "match": "国际领先",
+    "type": "register",
+    "hinted": true,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_grant_zh",
+    "sid": "p1.s3",
+    "match": "彻底解决",
+    "type": "register",
+    "hinted": true,
+    "gold_fixed": true
+   },
+   {
+    "case": "ho_grant_zh",
+    "sid": "p1.s4",
+    "match": "金属锂负极",
+    "type": "terminology",
+    "hinted": true,
+    "gold_fixed": true
+   }
+  ]
+ }
+}

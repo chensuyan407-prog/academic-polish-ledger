@@ -1,0 +1,8 @@
+{
+ "case_id": "docx",
+ "manuscript": "draft.docx",
+ "output_contract": [
+  "polished_text",
+  "change_log"
+ ]
+}

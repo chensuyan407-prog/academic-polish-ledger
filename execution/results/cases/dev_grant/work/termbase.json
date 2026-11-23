@@ -1,0 +1,94 @@
+{
+ "entries": [
+  {
+   "preferred": "hard carbon",
+   "variants": [],
+   "zh": "硬碳",
+   "en": "hard carbon",
+   "abbr": "",
+   "note": "",
+   "source": "inline"
+  },
+  {
+   "preferred": "initial Coulombic efficiency",
+   "variants": [],
+   "zh": "首次库伦效率",
+   "en": "initial Coulombic efficiency",
+   "abbr": "ICE",
+   "note": "",
+   "source": "inline"
+  },
+  {
+   "preferred": "sodium-ion battery",
+   "variants": [
+    "Na-ion battery"
+   ],
+   "zh": "钠离子电池",
+   "en": "sodium-ion battery",
+   "abbr": "SIB",
+   "note": "",
+   "source": "inline"
+  },
+  {
+   "preferred": "sodium storage mechanism",
+   "variants": [],
+   "zh": "储钠机制",
+   "en": "sodium storage mechanism",
+   "abbr": "",
+   "note": "",
+   "source": "inline"
+  }
+ ],
+ "sources": [
+  {
+   "path": "case.json:glossary[0].zh",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[0].en",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[1].zh",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[1].en",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[1].abbr",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[2].zh",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[2].en",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[2].abbr",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[2].variants",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[3].zh",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary[3].en",
+   "entries": 0
+  },
+  {
+   "path": "case.json:glossary",
+   "entries": 4
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": []
+}

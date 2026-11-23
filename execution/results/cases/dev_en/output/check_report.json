@@ -1,0 +1,55 @@
+{
+ "summary": {
+  "segments_in_scope": 13,
+  "edited_units": 10,
+  "reviewed": 13,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 1,
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 1,
+  "change_types": {
+   "chinglish": 2,
+   "agreement": 3,
+   "terminology": 3,
+   "article": 3,
+   "register": 2,
+   "grammar": 1,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "collocation": 1,
+   "spelling": 1
+  },
+  "by_code": {
+   "D03": 1
+  }
+ },
+ "units": [
+  {
+   "sids": [
+    "p2.s1"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I09",
+     "severity": "accepted",
+     "detail": "promotional wording removed: ['huge'] -> []",
+     "accepted": "'huge' removed as colloquial register; the claim of progress is kept with 'considerable'",
+     "severity_original": "warn"
+    }
+   ]
+  }
+ ],
+ "document": [
+  {
+   "code": "D03",
+   "severity": "warn",
+   "detail": "termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'",
+   "term": "HTL"
+  }
+ ],
+ "termbase_conflicts": []
+}

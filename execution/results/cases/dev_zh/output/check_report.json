@@ -1,0 +1,62 @@
+{
+ "summary": {
+  "segments_in_scope": 7,
+  "edited_units": 6,
+  "reviewed": 7,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 3
+  },
+  "fail": 0,
+  "accepted_overrides": 3,
+  "change_types": {
+   "grammar": 1,
+   "terminology": 3,
+   "concision": 5,
+   "register": 3,
+   "punctuation": 1
+  },
+  "by_code": {}
+ },
+ "units": [
+  {
+   "sids": [
+    "p1.s3"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I03",
+     "severity": "accepted",
+     "detail": "figure/table/equation references changed: missing [], added ['fig:2']",
+     "accepted": "“从图中”指的就是上一句的图2，补出图号不改变指向",
+     "severity_original": "fail"
+    }
+   ]
+  },
+  {
+   "sids": [
+    "p1.s6"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I06",
+     "severity": "accepted",
+     "detail": "booster removed (claim softened): ['完全'] -> []",
+     "accepted": "删除绝对化“完全”是有意削弱，依据是同节第4句“大部分样品出现明显团聚”",
+     "severity_original": "warn"
+    },
+    {
+     "code": "I14",
+     "severity": "accepted",
+     "detail": "direction words changed: up [] down [] -> up [] down ['抑制']",
+     "accepted": "“解决”改为“抑制”属同向表述，未翻转方向",
+     "severity_original": "warn"
+    }
+   ]
+  }
+ ],
+ "document": [],
+ "termbase_conflicts": []
+}

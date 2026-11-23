@@ -1,0 +1,82 @@
+{
+ "version": "0.1.0",
+ "case_id": "gbk",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "润色全文"
+ ],
+ "fields": [
+  "润色全文"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "稿件.txt",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\input\\稿件.txt",
+   "fmt": "txt",
+   "text": "本文研究了氧空位对电导率的影响。结果表明，电导率提高了约25%。",
+   "sha256": "88de9c67b4775513dce04b8aa8d3a64aec6d4c715e8b2373c316b1c0805b90b6",
+   "read_info": {
+    "encoding": "gb18030",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "zh",
+   "n_sentences": 2,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 16,
+   "kind": "sentence",
+   "para": 1,
+   "text": "本文研究了氧空位对电导率的影响。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 16,
+   "end": 32,
+   "kind": "sentence",
+   "para": 1,
+   "text": "结果表明，电导率提高了约25%。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p1.s2"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\input\\稿件.txt",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work",
+ "init_at": "2026-11-23T05:02:20.200267+00:00"
+}

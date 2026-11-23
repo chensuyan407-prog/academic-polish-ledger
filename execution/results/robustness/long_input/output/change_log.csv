@@ -1,0 +1,2 @@
+﻿sid,original_sentence,revised_sentence,from,to,type,reason,verdict,flags
+p1.s1,"Sample 1 was annealed at 301 K for 2 h, and its resistance decreased by about 2% [2].","Sample 1 was annealed at 301 K for 2 h, and its resistance decreased by approximately 2% [2].",about,approximately,word-choice,formal,pass,

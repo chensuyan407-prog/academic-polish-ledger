@@ -1,0 +1,117 @@
+{
+ "version": "0.1.0",
+ "case_id": "ho-grant-zh",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_grant_zh\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_grant_zh\\input\\task.md",
+ "contract": {
+  "润色稿": "润色后的段落",
+  "修改清单": "逐句修改及理由",
+  "需人工确认": "需要申请人确认的表述"
+ },
+ "fields": [
+  "润色稿",
+  "修改清单",
+  "需人工确认"
+ ],
+ "mode": "polish",
+ "genre": "grant",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "inline:原文",
+   "path": null,
+   "fmt": "txt",
+   "text": "本项目针对锂金属负极枝晶生长的问题，提出了一种全新的人工SEI膜设计策略。前期结果显示，该策略可使对称电池的循环寿命从200 h延长至800 h以上（图2）。这一结果国际领先，彻底解决了枝晶问题。然而，在高电流密度（>3 mA cm-2）下，金属锂负极的枝晶抑制效果仍不理想[8]。因此，本项目拟进一步研究SEI膜组成与锂沉积形貌之间的关系，以期为高能量密度电池的开发提供指导。",
+   "sha256": "436139b2cbc8ecf94a61276059d459689e6bfb2ace229f65bc11a62d4743d8db",
+   "read_info": {
+    "encoding": "json-string",
+    "repairs": []
+   },
+   "lang": "zh",
+   "n_sentences": 5,
+   "n_headings": 0
+  }
+ ],
+ "segments": [
+  {
+   "sid": "p1.s1",
+   "start": 0,
+   "end": 37,
+   "kind": "sentence",
+   "para": 1,
+   "text": "本项目针对锂金属负极枝晶生长的问题，提出了一种全新的人工SEI膜设计策略。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 37,
+   "end": 79,
+   "kind": "sentence",
+   "para": 1,
+   "text": "前期结果显示，该策略可使对称电池的循环寿命从200 h延长至800 h以上（图2）。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s3",
+   "start": 79,
+   "end": 98,
+   "kind": "sentence",
+   "para": 1,
+   "text": "这一结果国际领先，彻底解决了枝晶问题。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s4",
+   "start": 98,
+   "end": 141,
+   "kind": "sentence",
+   "para": 1,
+   "text": "然而，在高电流密度（>3 mA cm-2）下，金属锂负极的枝晶抑制效果仍不理想[8]。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s5",
+   "start": 141,
+   "end": 189,
+   "kind": "sentence",
+   "para": 1,
+   "text": "因此，本项目拟进一步研究SEI膜组成与锂沉积形貌之间的关系，以期为高能量密度电池的开发提供指导。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "p1.s1",
+    "p1.s2",
+    "p1.s3",
+    "p1.s4",
+    "p1.s5"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [],
+ "materials": [],
+ "style_notes": [
+  "文体: 国家自然科学基金申请书（立项依据）"
+ ],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work",
+ "init_at": "2026-11-23T05:02:15.220914+00:00"
+}

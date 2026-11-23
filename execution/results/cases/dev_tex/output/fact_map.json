@@ -1,0 +1,276 @@
+[
+ {
+  "sid": "h1",
+  "doc": "d1",
+  "offset": [
+   9,
+   16
+  ],
+  "changed": false,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": "same",
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s1",
+  "doc": "d1",
+  "offset": [
+   38,
+   155
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "12,000"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$10^{-4}$"
+   ],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "12,000"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$10^{-4}$"
+   ],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s2",
+  "doc": "d1",
+  "offset": [
+   156,
+   238
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "three"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "three"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p1.s3",
+  "doc": "d1",
+  "offset": [
+   239,
+   331
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "all"
+   ],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [
+    "all"
+   ],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s1",
+  "doc": "d1",
+  "offset": [
+   333,
+   502
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$p<0.01$"
+   ],
+   "hedges": [
+    "may",
+    "suggest"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$p<0.01$"
+   ],
+   "hedges": [
+    "may",
+    "suggests"
+   ],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p2.s2",
+  "doc": "d1",
+  "offset": [
+   503,
+   593
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [
+    "6"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "no"
+   ],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [
+    "6"
+   ],
+   "citations": [],
+   "references": [],
+   "math": [],
+   "hedges": [],
+   "boosters": [],
+   "negation": [
+    "no"
+   ],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ },
+ {
+  "sid": "p3.s1",
+  "doc": "d1",
+  "offset": [
+   690,
+   770
+  ],
+  "changed": true,
+  "original": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$y_i$",
+    "$\\hat{y}_i$"
+   ],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "revised": {
+   "numbers": [],
+   "citations": [],
+   "references": [],
+   "math": [
+    "$y_i$",
+    "$\\hat{y}_i$"
+   ],
+   "hedges": [],
+   "boosters": [],
+   "negation": [],
+   "quantifiers": [],
+   "causal": [],
+   "conditions": []
+  },
+  "preserved": true,
+  "meaning_flags": []
+ }
+]

@@ -1,0 +1,32 @@
+{
+ "summary": {
+  "segments_in_scope": 8,
+  "edited_units": 6,
+  "reviewed": 8,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "preposition": 1,
+   "agreement": 2,
+   "format": 3,
+   "abbreviation": 2,
+   "style": 1,
+   "collocation": 1,
+   "terminology": 1
+  },
+  "by_code": {}
+ },
+ "units": [],
+ "document": [
+  {
+   "code": "D03",
+   "severity": "info",
+   "detail": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['IQR']"
+  }
+ ],
+ "termbase_conflicts": []
+}

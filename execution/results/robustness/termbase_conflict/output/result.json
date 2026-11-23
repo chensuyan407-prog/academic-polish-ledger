@@ -1,0 +1,96 @@
+{
+ "case_id": "tbc",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "We used density-functional theory for all calculations. The DFT results agree with experiment.\n",
+ "needs_confirmation": [
+  {
+   "issue": "termbase conflict (variant_is_preferred_elsewhere): density-functional theory -> ['DFT method', 'density functional theory']; not enforced",
+   "source": "termbase"
+  },
+  {
+   "issue": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['DFT']",
+   "source": "D03"
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "manuscript.md",
+   "role": "manuscript",
+   "sha256": "4e5ade47c675a2474ad1bf0d7f8f1e22009e63f08a068bd5860c3f9678d9597e",
+   "fmt": "md",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  },
+  {
+   "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\terms.csv",
+   "role": "termbase",
+   "entries": 2,
+   "sha256": "a7e08ad853379992749e0426ca8702d94b722ad31181bebbf0cdb8ebcb809c1a"
+  }
+ ],
+ "uncertainty": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 0,
+  "segments_in_scope": 2,
+  "change_types": {},
+  "verdicts": {}
+ },
+ "checks": {
+  "segments_in_scope": 2,
+  "edited_units": 0,
+  "reviewed": 2,
+  "not_reviewed": 0,
+  "severity": {
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {},
+  "by_code": {}
+ },
+ "termbase_conflicts": [
+  {
+   "type": "variant_is_preferred_elsewhere",
+   "term": "density-functional theory",
+   "entries": [
+    "DFT method",
+    "density functional theory"
+   ]
+  }
+ ],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:20.767476+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

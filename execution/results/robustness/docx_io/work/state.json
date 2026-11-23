@@ -1,0 +1,98 @@
+{
+ "version": "0.1.0",
+ "case_id": "docx",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\case.json",
+ "task_path": null,
+ "contract": [
+  "polished_text",
+  "change_log"
+ ],
+ "fields": [
+  "polished_text",
+  "change_log"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "draft.docx",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\draft.docx",
+   "fmt": "docx",
+   "text": "Introduction\n\nThe method have been used widely. It's simple.",
+   "sha256": "5dc8048675d78e5537d35c4f725a9697d52194b30f4e36ccdda26c8387321b69",
+   "read_info": {
+    "encoding": "docx-xml",
+    "repairs": [
+     "run-level formatting not preserved"
+    ]
+   },
+   "lang": "en",
+   "n_sentences": 2,
+   "n_headings": 1
+  }
+ ],
+ "segments": [
+  {
+   "sid": "h1",
+   "start": 0,
+   "end": 12,
+   "kind": "heading",
+   "para": null,
+   "text": "Introduction",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s1",
+   "start": 14,
+   "end": 47,
+   "kind": "sentence",
+   "para": 1,
+   "text": "The method have been used widely.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s2",
+   "start": 48,
+   "end": 60,
+   "kind": "sentence",
+   "para": 1,
+   "text": "It's simple.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "h1",
+    "p1.s1",
+    "p1.s2"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\draft.docx",
+   "role": "manuscript"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [
+  "draft.docx: run-level formatting not preserved"
+ ],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work",
+ "init_at": "2026-11-23T05:02:22.217460+00:00"
+}

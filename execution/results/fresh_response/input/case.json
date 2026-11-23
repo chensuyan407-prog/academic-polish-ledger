@@ -1,0 +1,2 @@
+{"case_id": "fresh-response", "materials": {"draft_response": "response_draft.md"}, "audience": "Reviewer 2 of a materials journal",
+ "output_contract": {"polished_response": "polished reply", "change_records": "per-sentence changes with reasons", "author_queries": "points the authors must confirm"}}

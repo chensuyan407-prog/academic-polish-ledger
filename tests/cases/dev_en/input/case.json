@@ -1,0 +1,3 @@
+{"case_id": "dev-en-perovskite", "manuscript": "manuscript.md", "termbase": "termbase.csv",
+ "target_style": "journal article, American English, 'we' allowed",
+ "output_contract": {"polished_text": "polished full text in the original format", "change_log": "sentence-level changes: original, revised, type, reason", "terminology": "term table used", "needs_confirmation": "items the author must confirm"}}

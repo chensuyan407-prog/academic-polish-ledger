@@ -1,0 +1,388 @@
+{
+ "case_id": "dev-en-perovskite",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "# Abstract\n\nPerovskite solar cells (PSCs) have attracted increasing attention as a renewable energy technology. However, the long-term stability of PSCs is still limited by moisture and heat. In this work, we report a fluorinated hole transport layer that may suppress ion migration at the interface. The champion device reaches a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial PCE after 1000 h at 85 °C (Fig. 3b). These results suggest that interfacial fluorination is a promising strategy for stable devices [4, 7].\n\n# Introduction\n\nPerovskite solar cells have shown considerable progress in the past decade [1-3]. Their efficiencies increased from 3.8% to above 26% [2]. However, degradation under operating conditions does not yet allow commercial application. Several studies have attributed the degradation to the migration of iodide ions, which is accelerated when the temperature exceeds 60 °C [5]. An HTL with low ion permeability could therefore extend the device lifetime if its energy level is matched to that of the perovskite. Here, we design a fluorinated polymer and investigate its effect on the stability of PSCs (Table 1).\n",
+ "change_log": [
+  {
+   "sid": "p1.s1",
+   "original": "With the rapid development of renewable energy, perovskite solar cells (PSCs) have attracted more and more attention.",
+   "revised": "Perovskite solar cells (PSCs) have attracted increasing attention as a renewable energy technology.",
+   "changes": [
+    {
+     "from": "With the rapid development of renewable energy, perovskite",
+     "to": "Perovskite",
+     "type": "chinglish",
+     "reason": "formulaic opener removed; the renewable-energy context is kept at the end of the sentence"
+    },
+    {
+     "from": "more and more attention",
+     "to": "increasing attention as a renewable energy technology",
+     "type": "chinglish",
+     "reason": "'more and more' is translated phrasing; context moved here"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s2",
+   "original": "However, the long-term stability of PSC are still limited by moisture and heat.",
+   "revised": "However, the long-term stability of PSCs is still limited by moisture and heat.",
+   "changes": [
+    {
+     "from": "PSC are",
+     "to": "PSCs is",
+     "type": "agreement",
+     "reason": "subject is 'stability' (singular); plural abbreviation PSCs for devices"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s3",
+   "original": "In this work, we report a fluorinated hole transporting layer that may suppress the ion migration at the interface.",
+   "revised": "In this work, we report a fluorinated hole transport layer that may suppress ion migration at the interface.",
+   "changes": [
+    {
+     "from": "hole transporting layer",
+     "to": "hole transport layer",
+     "type": "terminology",
+     "reason": "termbase preferred form"
+    },
+    {
+     "from": "the ion migration",
+     "to": "ion migration",
+     "type": "article",
+     "reason": "generic uncountable noun, no article"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s4",
+   "original": "The champion device reach a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial photoelectric conversion efficiency after 1000 h at 85 °C (Fig. 3b).",
+   "revised": "The champion device reaches a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial PCE after 1000 h at 85 °C (Fig. 3b).",
+   "changes": [
+    {
+     "from": "reach",
+     "to": "reaches",
+     "type": "agreement",
+     "reason": "third-person singular subject 'device'"
+    },
+    {
+     "from": "photoelectric conversion efficiency",
+     "to": "PCE",
+     "type": "terminology",
+     "reason": "termbase variant replaced; abbreviation defined earlier in the sentence"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p1.s5",
+   "original": "These results suggests that interfacial fluorination is a promising strategy for stable devices [4, 7].",
+   "revised": "These results suggest that interfacial fluorination is a promising strategy for stable devices [4, 7].",
+   "changes": [
+    {
+     "from": "suggests",
+     "to": "suggest",
+     "type": "agreement",
+     "reason": "plural subject 'results'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s1",
+   "original": "Perovskite photovoltaic cell have shown a huge progress in the past decade [1-3].",
+   "revised": "Perovskite solar cells have shown considerable progress in the past decade [1-3].",
+   "changes": [
+    {
+     "from": "Perovskite photovoltaic cell",
+     "to": "Perovskite solar cells",
+     "type": "terminology",
+     "reason": "termbase preferred term; plural to agree with 'have'"
+    },
+    {
+     "from": "a huge progress",
+     "to": "considerable progress",
+     "type": "register",
+     "reason": "'progress' is uncountable; 'huge' is colloquial"
+    }
+   ],
+   "verdict": "pass",
+   "flags": [
+    "I09:accepted"
+   ]
+  },
+  {
+   "sid": "p2.s3",
+   "original": "But the degradation under operating conditions don't allow commercial application.",
+   "revised": "However, degradation under operating conditions does not yet allow commercial application.",
+   "changes": [
+    {
+     "from": "But the degradation",
+     "to": "However, degradation",
+     "type": "register",
+     "reason": "sentence-initial 'But' is informal; generic noun without article"
+    },
+    {
+     "from": "don't",
+     "to": "does not yet",
+     "type": "grammar",
+     "reason": "contraction expanded; singular subject 'degradation'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s4",
+   "original": "Several study have attributed the degradation to the migration of iodide ions, which is accelerated when temperature exceeds 60 °C [5].",
+   "revised": "Several studies have attributed the degradation to the migration of iodide ions, which is accelerated when the temperature exceeds 60 °C [5].",
+   "changes": [
+    {
+     "from": "Several study",
+     "to": "Several studies",
+     "type": "number-agreement",
+     "reason": "plural after 'several'"
+    },
+    {
+     "from": "when temperature",
+     "to": "when the temperature",
+     "type": "article",
+     "reason": "specific operating temperature"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s5",
+   "original": "A HTL with low ion permeability could therefore extend the device lifetime, if its energy level is matched with the perovskite.",
+   "revised": "An HTL with low ion permeability could therefore extend the device lifetime if its energy level is matched to that of the perovskite.",
+   "changes": [
+    {
+     "from": "A HTL",
+     "to": "An HTL",
+     "type": "article",
+     "reason": "'H' is read 'aitch' (vowel sound)"
+    },
+    {
+     "from": "lifetime, if",
+     "to": "lifetime if",
+     "type": "punctuation",
+     "reason": "restrictive condition, no comma"
+    },
+    {
+     "from": "matched with the perovskite",
+     "to": "matched to that of the perovskite",
+     "type": "collocation",
+     "reason": "compare energy level with energy level"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s6",
+   "original": "Here, we design a fluorinated polymer and investigate it's effect on the stability of PSCs (Table 1).",
+   "revised": "Here, we design a fluorinated polymer and investigate its effect on the stability of PSCs (Table 1).",
+   "changes": [
+    {
+     "from": "it's",
+     "to": "its",
+     "type": "spelling",
+     "reason": "possessive, not 'it is'"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  }
+ ],
+ "terminology": [
+  {
+   "preferred": "perovskite solar cell",
+   "abbr": "PSC",
+   "variants": [
+    "perovskite solar battery",
+    "perovskite photovoltaic cell"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "termbase.csv",
+   "count_in_revised": 2,
+   "enforced": true,
+   "conflict": false,
+   "note": "device"
+  },
+  {
+   "preferred": "power conversion efficiency",
+   "abbr": "PCE",
+   "variants": [
+    "photoelectric conversion efficiency",
+    "conversion efficiency"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "termbase.csv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": "metric"
+  },
+  {
+   "preferred": "hole transport layer",
+   "abbr": "HTL",
+   "variants": [
+    "hole transporting layer"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "termbase.csv",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": ""
+  },
+  {
+   "preferred": "ion migration",
+   "abbr": "",
+   "variants": [
+    "ionic migration"
+   ],
+   "zh": "",
+   "en": "",
+   "source": "agent",
+   "count_in_revised": 1,
+   "enforced": true,
+   "conflict": false,
+   "note": "agent term"
+  },
+  {
+   "preferred": "perovskite solar cells",
+   "abbr": "PSCs",
+   "variants": [],
+   "zh": "",
+   "en": "",
+   "source": "text",
+   "count_in_revised": 3,
+   "enforced": false,
+   "conflict": false,
+   "note": "abbreviation defined in the original text"
+  }
+ ],
+ "needs_confirmation": [
+  {
+   "sid": "p2.s3",
+   "issue": "'yet' added to express that commercialization is not excluded in future - confirm this matches the intended meaning"
+  },
+  {
+   "sid": "p2.s1",
+   "issue": "flag I09 accepted by the editor: 'huge' removed as colloquial register; the claim of progress is kept with 'considerable' (original flag: promotional wording removed: ['huge'] -> [])"
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "manuscript.md",
+   "role": "manuscript",
+   "sha256": "a8e8d76a1f1e4b9268502e5f3d543c3e2bcb7064423f9eef271b7aba96a34477",
+   "fmt": "md",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  },
+  {
+   "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\termbase.csv",
+   "role": "termbase",
+   "entries": 3,
+   "sha256": "a86007cc68ba99221b4e4bb6a49556e2bf07b24cd0ebb9cde3d46f28f4d0cff9"
+  }
+ ],
+ "uncertainty": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.1.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.md"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.md",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 10,
+  "segments_in_scope": 13,
+  "change_types": {
+   "chinglish": 2,
+   "agreement": 3,
+   "terminology": 3,
+   "article": 3,
+   "register": 2,
+   "grammar": 1,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "collocation": 1,
+   "spelling": 1
+  },
+  "verdicts": {
+   "pass": 10
+  }
+ },
+ "checks": {
+  "segments_in_scope": 13,
+  "edited_units": 10,
+  "reviewed": 13,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 1,
+   "warn": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 1,
+  "change_types": {
+   "chinglish": 2,
+   "agreement": 3,
+   "terminology": 3,
+   "article": 3,
+   "register": 2,
+   "grammar": 1,
+   "number-agreement": 1,
+   "punctuation": 1,
+   "collocation": 1,
+   "spelling": 1
+  },
+  "by_code": {
+   "D03": 1
+  }
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-23T05:02:06.733321+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

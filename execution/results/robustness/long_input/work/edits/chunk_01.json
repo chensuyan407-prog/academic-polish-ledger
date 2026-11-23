@@ -1,0 +1,18 @@
+{
+ "chunk": 1,
+ "status": "done",
+ "edits": [
+  {
+   "sid": "p1.s1",
+   "revised": "Sample 1 was annealed at 301 K for 2 h, and its resistance decreased by approximately 2% [2].",
+   "changes": [
+    {
+     "from": "about",
+     "to": "approximately",
+     "type": "word-choice",
+     "reason": "formal"
+    }
+   ]
+  }
+ ]
+}

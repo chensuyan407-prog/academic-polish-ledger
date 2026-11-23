@@ -1,0 +1,62 @@
+{
+ "summary": {
+  "segments_in_scope": 5,
+  "edited_units": 4,
+  "reviewed": 5,
+  "not_reviewed": 0,
+  "severity": {
+   "accepted": 2,
+   "info": 1
+  },
+  "fail": 0,
+  "accepted_overrides": 2,
+  "change_types": {
+   "register": 3,
+   "tense": 1,
+   "article": 1,
+   "grammar": 1,
+   "reorder": 1
+  },
+  "by_code": {}
+ },
+ "units": [
+  {
+   "sids": [
+    "p2.s2"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I12",
+     "severity": "accepted",
+     "detail": "causal wording removed: ['caused'] -> none",
+     "accepted": "'is caused by' -> 'attribute ... to' keeps the authors' causal interpretation; no new causal claim",
+     "severity_original": "warn"
+    }
+   ]
+  },
+  {
+   "sids": [
+    "p2.s4"
+   ],
+   "verdict": "pass",
+   "findings": [
+    {
+     "code": "I10",
+     "severity": "accepted",
+     "detail": "negation count changed 1 -> 0: [\"don't\"] -> []",
+     "accepted": "'don't agree' -> 'disagree': negation carried by the prefix dis-, meaning unchanged",
+     "severity_original": "fail"
+    }
+   ]
+  }
+ ],
+ "document": [
+  {
+   "code": "D03",
+   "severity": "info",
+   "detail": "abbreviations without a definition in this text (may be defined elsewhere / standard): ['S2', 'S5']"
+  }
+ ],
+ "termbase_conflicts": []
+}

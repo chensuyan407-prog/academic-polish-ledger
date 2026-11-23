@@ -1,0 +1,6 @@
+﻿preferred,abbr,variants_to_avoid,zh,en,source,count_in_revised,variant_counts_in_revised,enforced,conflict,note
+hard carbon,,,硬碳,hard carbon,inline,2,{},True,False,
+initial Coulombic efficiency,ICE,,首次库伦效率,initial Coulombic efficiency,inline,1,{},True,False,
+sodium-ion battery,SIB,Na-ion battery,钠离子电池,sodium-ion battery,inline,1,"{""Na-ion battery"": 0}",True,False,
+sodium storage mechanism,,,储钠机制,sodium storage mechanism,inline,1,{},True,False,
+anode,,negative electrode,负极,,agent,2,"{""negative electrode"": 0}",True,False,

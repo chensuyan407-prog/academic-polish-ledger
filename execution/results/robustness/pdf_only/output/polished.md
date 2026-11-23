@@ -1,0 +1,1 @@
+The samples was heated to 500 K for 2 h.

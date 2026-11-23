@@ -1,0 +1,10 @@
+\section{Methods}
+\label{sec:methods}
+The model were trained on 12,000 images using the Adam optimizer \cite{kingma2015} with a learning rate of $10^{-4}$. As shown in Fig.~\ref{fig:arch}, the network consist of three convolutional block. Data augmentation, e.g random cropping and flipping, was applied to all the training images.
+
+We find that the accuracy is significantly higher than the baseline ($p < 0.01$, Table~\ref{tab:res}), which suggest the attention module may improve feature extraction. The training takes approximately 6 hours on a single GPU, and no early stopping were used.
+\begin{equation}
+L = -\sum_i y_i \log \hat{y}_i
+\end{equation}
+% TODO: add hyperparameter table
+Where $y_i$ is the ground-truth label and $\hat{y}_i$ the predicted probability.
