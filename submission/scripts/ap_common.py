@@ -1,12 +1,13 @@
-"""Shared helpers for academic-polish-ledger: robust reading, format-aware segmentation with offsets,
-protected tokens (math, citations, cross-references, URLs), lexicon matching and termbase loading.
-Python 3.8+, standard library only (PyMuPDF optional for PDF input)."""
+"""Shared helpers for academic-polish-ledger v0.2.0: robust reading (incl. stdlib .xlsx), format-aware
+segmentation with offsets, protected tokens (math, citations, cross-references, URLs), lexicon matching and termbase loading.
+Python 3.8+, standard library only (PyMuPDF optional for PDF input/preview)."""
 import csv
 import io
 import json
 import os
 import re
 import unicodedata
+import xml.etree.ElementTree as ET
 import zipfile
 
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -132,11 +133,90 @@ def read_pdf(path):
     return r.stdout.decode("utf-8", errors="replace"), {"extractor": "pdftotext"}
 
 
+def _xlsx_sheets(path):
+    """Extract worksheet rows from .xlsx via stdlib zip+XML -> list of (sheet_name, rows)."""
+    with zipfile.ZipFile(path) as z:
+        names = set(z.namelist())
+        shared = []
+        if "xl/sharedStrings.xml" in names:
+            root = ET.fromstring(z.read("xl/sharedStrings.xml"))
+            for si in root.findall(".//{*}si"):
+                shared.append("".join(t.text or "" for t in si.findall(".//{*}t")))
+        sheet_names = {}
+        if "xl/workbook.xml" in names and "xl/_rels/workbook.xml.rels" in names:
+            wb = ET.fromstring(z.read("xl/workbook.xml"))
+            rels = ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
+            rmap = {r.attrib.get("Id", ""): r.attrib.get("Target", "").lstrip("/") for r in rels}
+            for sh in wb.findall(".//{*}sheet"):
+                rid = next((v for k, v in sh.attrib.items() if k.endswith("}id") or k == "r:id"), "")
+                tgt = rmap.get(rid, "")
+                if tgt and not tgt.startswith("xl/"):
+                    tgt = "xl/" + tgt
+                if tgt:
+                    sheet_names[tgt] = sh.attrib.get("name", os.path.basename(tgt))
+        sfiles = sorted(n for n in names if re.fullmatch(r"xl/worksheets/sheet\d+\.xml", n))
+        sheets = []
+        for sf in sfiles:
+            root = ET.fromstring(z.read(sf))
+            rows = []
+            for row in root.findall(".//{*}row"):
+                cells = {}
+                max_col = -1
+                for c in row.findall("{*}c"):
+                    ref = c.attrib.get("r", "")
+                    mcol = re.match(r"([A-Z]+)", ref)
+                    if mcol:
+                        idx = 0
+                        for ch in mcol.group(1):
+                            idx = idx * 26 + (ord(ch) - 64)
+                        idx -= 1
+                    else:
+                        idx = max_col + 1
+                    max_col = max(max_col, idx)
+                    ctype = c.attrib.get("t", "")
+                    val = ""
+                    if ctype == "inlineStr":
+                        val = "".join(t.text or "" for t in c.findall(".//{*}t"))
+                    else:
+                        v = c.find("{*}v")
+                        if v is not None and v.text is not None:
+                            if ctype == "s" and v.text.isdigit() and int(v.text) < len(shared):
+                                val = shared[int(v.text)]
+                            elif ctype == "b":
+                                val = "TRUE" if v.text == "1" else "FALSE"
+                            else:
+                                val = v.text
+                    cells[idx] = val.strip()
+                if any(cells.values()):
+                    rows.append([cells.get(i, "") for i in range(max_col + 1)])
+            if rows:
+                sheets.append((sheet_names.get(sf, os.path.basename(sf)), rows))
+        return sheets
+
+
+def read_xlsx(path):
+    """Render .xlsx sheets as Markdown tables via stdlib zip+XML."""
+    sheets = _xlsx_sheets(path)
+    out = []
+    for title, rows in sheets:
+        w = max(len(r) for r in rows)
+        norm = [r + [""] * (w - len(r)) for r in rows]
+        out.append(f"## {title}")
+        out.append("| " + " | ".join(c.replace("|", "/") for c in norm[0]) + " |")
+        out.append("| " + " | ".join(["---"] * w) + " |")
+        for r in norm[1:]:
+            out.append("| " + " | ".join(c.replace("|", "/") for c in r) + " |")
+        out.append("")
+    return "\n".join(out).strip()
+
+
 def read_any(path):
     """Return (text, fmt, info). fmt in txt|md|tex|docx|pdf|json."""
     ext = os.path.splitext(path)[1].lower()
     if ext == ".docx":
         return read_docx(path), "docx", {"encoding": "docx-xml", "repairs": ["run-level formatting not preserved"]}
+    if ext == ".xlsx":
+        return read_xlsx(path), "md", {"encoding": "xlsx-xml", "repairs": []}
     if ext == ".pdf":
         text, info = read_pdf(path)
         info["repairs"] = ["text extracted from PDF layout; line breaks and hyphenation reconstructed"]
@@ -233,7 +313,7 @@ EN_NUMWORDS = {"zero": 0, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, 
 ZH_DIGIT = {"二": 2, "两": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10, "百": 100, "千": 1000, "半": 0.5}
 ZH_CLASSIFIER = "个种组次项名例只篇类倍批天周年月份位台套层株轮步阶"
 NUM_RE = re.compile(r"(?<![A-Za-z0-9_.])[-−–+±]?\d{1,3}(?:,\d{3})+(?:\.\d+)?(?![\d])|(?<![A-Za-z0-9_.])[-−+±]?\d+(?:\.\d+)?(?:\s*[×x]\s*10\s*\^?\s*\{?[-−]?\d+\}?|[eE][-+]?\d+)?")
-UNIT_RE = re.compile(r"\s?(%|‰|°C|°|℃|K(?![A-Za-z])|nm(?![A-Za-z])|µm(?![A-Za-z])|μm(?![A-Za-z])|mm(?![A-Za-z])|cm(?![A-Za-z])|m(?![A-Za-z])|km(?![A-Za-z])|mg(?![A-Za-z])|g(?![A-Za-z])|kg(?![A-Za-z])|µg(?![A-Za-z])|μg(?![A-Za-z])|ng(?![A-Za-z])|mL(?![A-Za-z])|ml(?![A-Za-z])|L(?![A-Za-z])|µL(?![A-Za-z])|μL(?![A-Za-z])|mM(?![A-Za-z])|µM(?![A-Za-z])|μM(?![A-Za-z])|nM(?![A-Za-z])|M(?![A-Za-z])|mol(?![A-Za-z])|eV(?![A-Za-z])|meV(?![A-Za-z])|keV(?![A-Za-z])|MeV(?![A-Za-z])|Hz(?![A-Za-z])|kHz(?![A-Za-z])|MHz(?![A-Za-z])|GHz(?![A-Za-z])|THz(?![A-Za-z])|Pa(?![A-Za-z])|kPa(?![A-Za-z])|MPa(?![A-Za-z])|GPa(?![A-Za-z])|V(?![A-Za-z])|mV(?![A-Za-z])|A(?![A-Za-z])|mA(?![A-Za-z])|W(?![A-Za-z])|mW(?![A-Za-z])|kW(?![A-Za-z])|J(?![A-Za-z])|kJ(?![A-Za-z])|s(?![A-Za-z])|ms(?![A-Za-z])|min(?![A-Za-z])|h(?![A-Za-z])|d(?![A-Za-z])|days?(?![A-Za-z])|weeks?(?![A-Za-z])|months?(?![A-Za-z])|years?(?![A-Za-z])|fold(?![A-Za-z])|times(?![A-Za-z])|倍|个|例|名|天|小时|分钟|年|月)")
+UNIT_RE = re.compile(r"(?:[\s\u00a0]|-(?=[A-Za-zµμ°%]))?(%|‰|°C|°|℃|K(?![A-Za-z])|nm(?![A-Za-z])|µm(?![A-Za-z])|μm(?![A-Za-z])|mm(?![A-Za-z])|cm(?![A-Za-z])|m(?![A-Za-z])|km(?![A-Za-z])|mg(?![A-Za-z])|g(?![A-Za-z])|kg(?![A-Za-z])|µg(?![A-Za-z])|μg(?![A-Za-z])|ng(?![A-Za-z])|mL(?![A-Za-z])|ml(?![A-Za-z])|L(?![A-Za-z])|µL(?![A-Za-z])|μL(?![A-Za-z])|mM(?![A-Za-z])|µM(?![A-Za-z])|μM(?![A-Za-z])|nM(?![A-Za-z])|M(?![A-Za-z])|mol(?![A-Za-z])|eV(?![A-Za-z])|meV(?![A-Za-z])|keV(?![A-Za-z])|MeV(?![A-Za-z])|Hz(?![A-Za-z])|kHz(?![A-Za-z])|MHz(?![A-Za-z])|GHz(?![A-Za-z])|THz(?![A-Za-z])|Pa(?![A-Za-z])|kPa(?![A-Za-z])|MPa(?![A-Za-z])|GPa(?![A-Za-z])|V(?![A-Za-z])|mV(?![A-Za-z])|A(?![A-Za-z])|mA(?![A-Za-z])|W(?![A-Za-z])|mW(?![A-Za-z])|kW(?![A-Za-z])|J(?![A-Za-z])|kJ(?![A-Za-z])|s(?![A-Za-z])|ms(?![A-Za-z])|min(?![A-Za-z])|h(?![A-Za-z])|d(?![A-Za-z])|days?(?![A-Za-z])|weeks?(?![A-Za-z])|months?(?![A-Za-z])|years?(?![A-Za-z])|fold(?![A-Za-z])|times(?![A-Za-z])|倍|个|例|名|天|小时|分钟|年|月)")
 
 
 def _num_value(tok):
@@ -267,7 +347,8 @@ def numbers(text, lang=None):
         w = m.group(1).lower()
         if w in ("half", "double", "dozen") and not re.match(r"\s+(?:the|of|as|a)\b", t[m.end():m.end() + 6]) and w != "dozen":
             continue
-        out.append((float(EN_NUMWORDS[w]), "", m.group(0)))
+        u = "fold" if w in ("twice", "twofold", "threefold", "fourfold", "fivefold", "tenfold") else ""
+        out.append((float(EN_NUMWORDS[w]), u, m.group(0)))
     for m in re.finditer(f"([二两三四五六七八九十百千半]+)(?=[{ZH_CLASSIFIER}])", t):
         v = 0
         tok = m.group(1)
@@ -500,27 +581,34 @@ def load_termbase(path_or_obj):
     if isinstance(path_or_obj, str) and os.path.exists(path_or_obj):
         src = os.path.basename(path_or_obj)
         ext = os.path.splitext(path_or_obj)[1].lower()
-        text, _, _ = read_any(path_or_obj) if ext not in (".csv", ".tsv") else (decode_bytes(open(path_or_obj, "rb").read())[0], None, None)
-        if ext == ".json":
-            obj = json.loads(text)
-            return load_termbase(obj) if not isinstance(obj, str) else []
-        if ext in (".csv", ".tsv") or (text.count("\t") > text.count("|")):
-            dialect = "excel-tab" if (ext == ".tsv" or text.count("\t") > text.count(",")) else "excel"
-            rows = list(csv.DictReader(io.StringIO(text), dialect=dialect))
+        if ext == ".xlsx":
+            for _, srows in _xlsx_sheets(path_or_obj):
+                if len(srows) >= 2:
+                    head = [c.strip() for c in srows[0]]
+                    for r in srows[1:]:
+                        rows.append(dict(zip(head, r)))
         else:
-            lines = [l for l in text.splitlines() if l.strip().startswith("|")]
-            if len(lines) >= 2:
-                head = [c.strip() for c in lines[0].strip().strip("|").split("|")]
-                for l in lines[1:]:
-                    cells = [c.strip() for c in l.strip().strip("|").split("|")]
-                    if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
-                        continue
-                    rows.append(dict(zip(head, cells)))
+            text, _, _ = read_any(path_or_obj) if ext not in (".csv", ".tsv") else (decode_bytes(open(path_or_obj, "rb").read())[0], None, None)
+            if ext == ".json":
+                obj = json.loads(text)
+                return load_termbase(obj) if not isinstance(obj, str) else []
+            if ext in (".csv", ".tsv") or (text.count("\t") > text.count("|")):
+                dialect = "excel-tab" if (ext == ".tsv" or text.count("\t") > text.count(",")) else "excel"
+                rows = list(csv.DictReader(io.StringIO(text), dialect=dialect))
             else:
-                for l in text.splitlines():
-                    m = re.match(r"\s*[-*]?\s*(.+?)\s*(?:=>|->|→|:|：|=)\s*(.+)$", l)
-                    if m:
-                        rows.append({"variants": m.group(1), "preferred": m.group(2)})
+                lines = [l for l in text.splitlines() if l.strip().startswith("|")]
+                if len(lines) >= 2:
+                    head = [c.strip() for c in lines[0].strip().strip("|").split("|")]
+                    for l in lines[1:]:
+                        cells = [c.strip() for c in l.strip().strip("|").split("|")]
+                        if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
+                            continue
+                        rows.append(dict(zip(head, cells)))
+                else:
+                    for l in text.splitlines():
+                        m = re.match(r"\s*[-*]?\s*(.+?)\s*(?:=>|->|→|:|：|=)\s*(.+)$", l)
+                        if m:
+                            rows.append({"variants": m.group(1), "preferred": m.group(2)})
     elif isinstance(path_or_obj, dict):
         if "terms" in path_or_obj or "entries" in path_or_obj:
             return load_termbase(path_or_obj.get("terms") or path_or_obj.get("entries"))

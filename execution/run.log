@@ -1,4 +1,4 @@
-# reproduce.py run at 2026-11-23T05:02:23.610492Z
+# reproduce.py run at 2026-11-25T06:32:33.467737Z
 $ python tests/run_eval.py --set all
 {
  "dev": {
@@ -103,15 +103,16 @@ $ python tests/run_eval.py --set all
  "docx_io": true,
  "pdf_only_input": true,
  "deterministic_rebuild": true,
- "audit_full_rewrite": true
+ "audit_full_rewrite": true,
+ "v02_xlsx_schema_mode_units_preview": true
 }
-wall 17.18
+wall 23.75
 
 
 [exit 0]
 
 # frozen files vs tests/FREEZE_holdout.sha256
-scripts/ap_build.py: unchanged since freeze
+scripts/ap_build.py: CHANGED after freeze (post-freeze fix)
 scripts/ap_check.py: CHANGED after freeze (post-freeze fix)
 scripts/ap_common.py: CHANGED after freeze (post-freeze fix)
 scripts/ap_init.py: CHANGED after freeze (post-freeze fix)
@@ -119,74 +120,74 @@ scripts/ap_lint.py: unchanged since freeze
 rules/lexicon.json: CHANGED after freeze (post-freeze fix)
 rules/style_rules.json: CHANGED after freeze (post-freeze fix)
 
-# 98 script invocations (argv, exit, seconds, stdout tail) are in execution/results/commands.json
+# 100 script invocations (argv, exit, seconds, stdout tail) are in execution/results/commands.json
 $ python submission\scripts\ap_init.py --case tests\cases\dev_en\input\case.json --out execution\results\cases\dev_en\output --work execution\results\cases\dev_en\work
 <= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks
 next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output
 
-[exit 0, 0.162 s]
+[exit 0, 0.135 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_en\work --out execution\results\cases\dev_en\output
 status: success - all segments reviewed, no unresolved fail
 units: 10 edited / 13 in scope; verdicts {'pass': 10}; flags {'accepted': 1, 'warn': 1}
 warn [doc] D03: termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'
-outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output (10 files)
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output (12 files)
 
-[exit 0, 0.171 s]
+[exit 0, 0.268 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_grant\input\case.json --out execution\results\cases\dev_grant\output --work execution\results\cases\dev_grant\work
 -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks
 next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output
 
-[exit 0, 0.136 s]
+[exit 0, 0.117 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_grant\work --out execution\results\cases\dev_grant\output
 status: success - all segments reviewed, no unresolved fail
 units: 5 edited / 5 in scope; verdicts {'pass': 4, 'warn': 1}; flags {'accepted': 1, 'warn': 1}
 warn [p1.s5] I05: hedge level changed across languages (1 -> 2): ['有望'] -> ['is expected to']
-outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output (13 files)
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output (15 files)
 
-[exit 0, 0.16 s]
+[exit 0, 0.236 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_tex\input\case.json --out execution\results\cases\dev_tex\output --work execution\results\cases\dev_tex\work
  segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks
 next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output
 
-[exit 0, 0.133 s]
+[exit 0, 0.118 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_tex\work --out execution\results\cases\dev_tex\output
 status: success - all segments reviewed, no unresolved fail
 units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'info': 1}
-outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output (11 files)
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output (13 files)
 
-[exit 0, 0.16 s]
+[exit 0, 0.238 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_zh\input\case.json --out execution\results\cases\dev_zh\output --work execution\results\cases\dev_zh\work
 <= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks
 next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output
 
-[exit 0, 0.137 s]
+[exit 0, 0.116 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_zh\work --out execution\results\cases\dev_zh\output
 status: success - all segments reviewed, no unresolved fail
 units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'accepted': 3}
-outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output (11 files)
+outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output (13 files)
 
-[exit 0, 0.157 s]
-
-$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
-
-[exit 1, 0.17 s]
+[exit 0, 0.249 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.172 s]
+[exit 1, 0.251 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.169 s]
+[exit 1, 0.251 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.163 s]
+[exit 1, 0.245 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 1, 0.246 s]
 

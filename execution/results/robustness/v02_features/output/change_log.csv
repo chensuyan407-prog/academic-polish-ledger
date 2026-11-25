@@ -1,0 +1,5 @@
+﻿sid,original_sentence,revised_sentence,from,to,type,reason,verdict,flags
+p1.s1,"Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",Samples were annealed at 10 and 20 nm for 2 years with SiC particles.,10 nm and 20 nm,10 and 20 nm,concision,shared unit,pass,
+p1.s1,"Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",Samples were annealed at 10 and 20 nm for 2 years with SiC particles.,a 2-year test,2 years,concision,concise duration,pass,
+p1.s1,"Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",Samples were annealed at 10 and 20 nm for 2 years with SiC particles.,silicon carbide,SiC,terminology,termbase,pass,
+p2.s1,该方法是否有效是本研究的关键问题。,探讨该方法的有效性仍是本研究的关键。,该方法是否有效是本研究的关键问题,探讨该方法的有效性仍是本研究的关键,grammar,避免两面对一面,pass,

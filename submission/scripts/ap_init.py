@@ -26,7 +26,7 @@ from ap_common import (TEXT_EXT, abbreviation_definitions, dump_json, lang_of, l
                        read_any, segment, term_regex, termbase_conflicts, write_text, lexical_hits)
 from ap_lint import lint  # noqa: E402
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 CONTRACT_KEYS = ("output_contract", "outputs_contract", "output_schema", "required_outputs", "output_fields", "outputs", "deliverables")
 MS_KEYS = ("manuscript", "draft", "text", "input_text", "source_text", "original", "original_text", "content", "document", "paper_text",
            "abstract", "paragraph", "paragraphs", "section", "sections", "passage", "body", "原文", "稿件", "待润色", "正文", "摘要", "段落", "input")
@@ -81,13 +81,18 @@ def classify_file(p, keypath=""):
 
 
 def detect_mode(task, case):
-    t = (task + " " + json.dumps(case, ensure_ascii=False)).lower()
     m = case.get("mode") if isinstance(case, dict) else None
     if isinstance(m, str) and m:
         return m
-    if re.search(r"翻译|译成|译为|译文|中译英|英译中|translat|into english|into chinese|英文版|英文摘要.*中文|bilingual|双语", t):
+    clean_case = {k: v for k, v in case.items() if k not in CONTRACT_KEYS} if isinstance(case, dict) else case
+    t = (task + " " + json.dumps(clean_case, ensure_ascii=False)).lower()
+    t = re.sub(r"避免翻译腔|去翻译腔|翻译腔|直译腔|translationese", " ", t)
+    if re.search(r"翻译|译成|译为|译文|中译英|英译中|translat|into english|into chinese|英文版|英文摘要.*中文|双语对照|bilingual", t):
         if re.search(r"英译中|into chinese|译成中文|译为中文", t):
             return "translate_en_zh"
+        return "translate_zh_en"
+    contract_str = json.dumps(next((case[k] for k in CONTRACT_KEYS if isinstance(case, dict) and k in case), {}), ensure_ascii=False).lower()
+    if "bilingual" in contract_str and not re.search(r"polish|润色", t):
         return "translate_zh_en"
     return "polish"
 
@@ -102,9 +107,17 @@ def detect_genre(task, case):
 
 
 def section_filter(task):
-    """Sections the task restricts the work to, e.g. 'only polish the Methods section' / '仅润色引言部分'."""
-    m = re.findall(r"(?:only|仅|只)\s*(?:polish|edit|revise|润色|修改|处理)?\s*(?:the\s+)?([A-Za-z\u4e00-\u9fff ]{2,20}?)\s*(?:section|部分|章节|一节)", task, flags=re.I)
-    return [x.strip() for x in m if x.strip()]
+    """Sections the task restricts the work to, e.g. 'only polish the Methods section' / '仅润色引言和讨论部分'."""
+    out = []
+    for raw in re.findall(r"(?:only|仅|只)\s*(?:polish|edit|revise|润色|修改|处理)?\s*(?:the\s+)?([A-Za-z0-9\u4e00-\u9fff &、,，和与.]{2,48}?)\s*(?:sections?|部分|章节|一节|节)", task, flags=re.I):
+        for part in re.split(r"\s*(?:and|&|,|，|、|和|与)\s*", raw.strip()):
+            p = part.strip()
+            if p:
+                out.append(p)
+    for m in re.findall(r"(?:only|仅|只)\s*(?:polish|edit|revise|润色|修改|处理)\s+(?:Section|Sec\.?|第)\s*(\d+(?:\.\d+)*)\s*[章节]?", task, flags=re.I):
+        if m not in out:
+            out.append(m)
+    return out
 
 
 def main():
@@ -144,12 +157,25 @@ def main():
     if contract is None:
         problems.append("no output_contract in case.json; default fields used")
         contract = {"polished_text": "polished full text", "change_log": "sentence-level change records"}
-    fields = list(contract.keys()) if isinstance(contract, dict) else [c if isinstance(c, str) else c.get("name", str(c)) for c in contract]
+    contract_props = {}
+    if isinstance(contract, dict) and isinstance(contract.get("properties"), dict):
+        contract_props = contract["properties"]
+        fields = list(contract_props.keys())
+    elif isinstance(contract, dict):
+        fields = list(contract.keys())
+    else:
+        fields = [c if isinstance(c, str) else c.get("name", str(c)) for c in contract]
 
     bases = [case_dir, "/input", os.getcwd()]
     files = {}  # path -> role
     inline_ms, inline_tb, style_notes = [], [], []
+    for k in MS_KEYS:
+        if isinstance(case.get(k), list) and case[k] and all(isinstance(x, str) for x in case[k]):
+            inline_ms.append((k, "\n\n".join(case[k])))
+    joined_ms_keys = {k for k, _ in inline_ms}
     for path, val in walk(case):
+        if path.split("[")[0] in joined_ms_keys:
+            continue
         p = resolve(val, bases)
         if p:
             files.setdefault(p, classify_file(p, path))
@@ -157,7 +183,7 @@ def main():
         if isinstance(val, str):
             if key_has(path, CONTRACT_KEYS):
                 continue
-            if key_has(path, MS_KEYS) and len(val) >= 40:
+            if key_has(path, MS_KEYS) and len(val.strip()) >= 15:
                 inline_ms.append((path, val))
             elif key_has(path, TB_KEYS):
                 inline_tb.append((path, val))
@@ -173,7 +199,7 @@ def main():
                     p = os.path.abspath(os.path.join(r, fn))
                     if fn in ("case.json", "task.md") or p in files:
                         continue
-                    if os.path.splitext(fn)[1].lower() in TEXT_EXT + (".docx", ".pdf", ".csv", ".tsv", ".json"):
+                    if os.path.splitext(fn)[1].lower() in TEXT_EXT + (".docx", ".pdf", ".csv", ".tsv", ".xlsx", ".json"):
                         files[p] = classify_file(p)
     if a.manuscript:
         for p in files:
@@ -188,6 +214,8 @@ def main():
         ext = os.path.splitext(p)[1].lower()
         if role == "unknown" and ext in (".csv", ".tsv"):
             files[p] = "termbase"
+        elif role == "unknown" and ext == ".xlsx":
+            files[p] = "termbase" if re.search(r"term|glossar|术语|词表|vocab", os.path.basename(p).lower()) else "reference"
         elif role == "unknown" and ext == ".json":
             files[p] = "reference"
     if not inline_ms and not any(r == "manuscript" for r in files.values()):
@@ -347,7 +375,7 @@ def main():
             dump_json({"chunk": n, "status": "todo", "sids": [s["sid"] for s in part], "edits": []}, ep)
         chunks.append({"chunk": n, "sids": [s["sid"] for s in part], "md": os.path.join(chunk_dir, f"chunk_{n:02d}.md"), "edits": ep})
 
-    state = {"version": VERSION, "case_id": case_id, "case_path": a.case, "task_path": task_path, "contract": contract, "fields": fields,
+    state = {"version": VERSION, "case_id": case_id, "case_path": a.case, "task_path": task_path, "contract": contract, "contract_props": contract_props, "fields": fields,
              "mode": mode, "genre": genre, "sections": sections, "docs": docs, "segments": segs_all, "chunks": chunks,
              "files": [{"path": p, "role": r} for p, r in files.items()], "materials": mats, "style_notes": style_notes,
              "problems": problems, "termbase_path": os.path.join(a.work, "termbase.json"), "out": os.path.abspath(a.out),

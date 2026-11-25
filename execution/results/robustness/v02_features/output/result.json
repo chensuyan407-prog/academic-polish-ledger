@@ -1,0 +1,138 @@
+{
+ "case_id": "v02",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
+ "polished_text": "# Abstract\n\nSamples were annealed at 10 and 20 nm for 2 years with SiC particles.\n\n# Introduction\n\n探讨该方法的有效性仍是本研究的关键。\n\n# Methods\n\nUnchanged method sentence.\n",
+ "docx_path": "polished.docx",
+ "pdf_path": "polished_preview.pdf",
+ "change_log": [
+  {
+   "sid": "p1.s1",
+   "original": "Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",
+   "revised": "Samples were annealed at 10 and 20 nm for 2 years with SiC particles.",
+   "changes": [
+    {
+     "from": "10 nm and 20 nm",
+     "to": "10 and 20 nm",
+     "type": "concision",
+     "reason": "shared unit"
+    },
+    {
+     "from": "a 2-year test",
+     "to": "2 years",
+     "type": "concision",
+     "reason": "concise duration"
+    },
+    {
+     "from": "silicon carbide",
+     "to": "SiC",
+     "type": "terminology",
+     "reason": "termbase"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  },
+  {
+   "sid": "p2.s1",
+   "original": "该方法是否有效是本研究的关键问题。",
+   "revised": "探讨该方法的有效性仍是本研究的关键。",
+   "changes": [
+    {
+     "from": "该方法是否有效是本研究的关键问题",
+     "to": "探讨该方法的有效性仍是本研究的关键",
+     "type": "grammar",
+     "reason": "避免两面对一面"
+    }
+   ],
+   "verdict": "pass",
+   "flags": []
+  }
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sources": [
+  {
+   "name": "manuscript.md",
+   "role": "manuscript",
+   "sha256": "f65cd841217935f4b54da3ea0ead22e75ceb55f815d39c55bb6a8056816899be",
+   "fmt": "md",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   }
+  },
+  {
+   "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\terms.xlsx",
+   "role": "termbase",
+   "entries": 1,
+   "sha256": "dcb45852cee1a90aba57fe74f5a9a447db967661594b3117a0f9261b1ef67ace"
+  }
+ ],
+ "uncertainty": [
+  "2 segments outside the requested sections were left unchanged"
+ ],
+ "needs_confirmation": [],
+ "skill": {
+  "name": "academic-polish-ledger",
+  "version": "0.2.0"
+ },
+ "polished_files": {
+  "d1": [
+   "polished.md",
+   "polished.docx"
+  ]
+ },
+ "artifacts": [
+  "change_log.csv",
+  "change_log.json",
+  "change_log.md",
+  "check_report.json",
+  "diff.html",
+  "diff.md",
+  "fact_map.json",
+  "polished.docx",
+  "polished.md",
+  "polished_preview.pdf",
+  "polished_preview.png",
+  "result.json",
+  "termbase.csv"
+ ],
+ "change_summary": {
+  "edited_units": 2,
+  "segments_in_scope": 4,
+  "change_types": {
+   "concision": 2,
+   "terminology": 1,
+   "grammar": 1
+  },
+  "verdicts": {
+   "pass": 2
+  }
+ },
+ "checks": {
+  "segments_in_scope": 4,
+  "edited_units": 2,
+  "reviewed": 4,
+  "not_reviewed": 0,
+  "severity": {},
+  "fail": 0,
+  "accepted_overrides": 0,
+  "change_types": {
+   "concision": 2,
+   "terminology": 1,
+   "grammar": 1
+  },
+  "by_code": {}
+ },
+ "termbase_conflicts": [],
+ "fact_source_map": "fact_map.json",
+ "run": {
+  "built_at": "2026-11-25T06:32:33.411806+00:00",
+  "edit_files": [
+   "chunk_01.json"
+  ]
+ }
+}

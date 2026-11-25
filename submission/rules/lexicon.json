@@ -426,7 +426,25 @@
    "非极性",
    "非金属",
    "否则",
-   "难以置信"
+   "难以置信",
+   "是否",
+   "能否",
+   "可否",
+   "与否",
+   "无监督",
+   "无网格",
+   "无标记",
+   "无创",
+   "无损",
+   "无毒",
+   "无偏",
+   "非参数",
+   "非侵入",
+   "非局部",
+   "无穷",
+   "无限",
+   "不均匀",
+   "不完全"
   ]
  },
  "quantifier_universal": {
@@ -459,7 +477,14 @@
   "exclude_en": [
    "all of a sudden",
    "after all",
-   "at all"
+   "at all",
+   "without any",
+   "if any",
+   "at any",
+   "in any case",
+   "any longer",
+   "any more",
+   "hardly any"
   ],
   "exclude_zh": [
    "平均",

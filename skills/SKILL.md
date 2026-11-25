@@ -3,18 +3,20 @@ name: academic-polish-ledger
 description: Minimal-edit academic language polishing (English and Chinese, plus zh<->en translation of academic text) that returns the full polished text in its original format (plain text, Markdown, LaTeX, DOCX) together with a sentence-by-sentence change ledger (original, revised, from -> to, change type, reason). Deterministic scripts merge the edits and check that every revised sentence still says what the original said - numbers and units, citation markers, Fig./Table/Eq. references, math/LaTeX, hedge strength, boosters, approximators, significance and novelty wording, negation, quantifiers, causal vs correlational wording, conditions, direction words - and sweep the whole text against a termbase (variants, abbreviation first use, hyphen/case drift, US/UK mix). Use when asked to polish, copy-edit, language-edit, proofread, 润色, 修改语病, 统一术语, 去口语化, or translate a manuscript, abstract, thesis chapter, grant proposal or reviewer response while keeping its facts. Do not use for content questions about a paper, summaries, literature search, or writing new content from scratch - answer those directly without rewriting anything.
 ---
 
-# academic-polish-ledger (v0.1.0)
+# academic-polish-ledger (v0.2.0)
 
 You decide how each sentence should read; the scripts keep the text in its format, record every change and check
-that no fact, number, citation or claim strength moved. Python 3.8+ standard library (PyMuPDF only for PDF input).
-`SKILL_DIR` = the directory of this file (`/skills/weekly-skill`). Paths below use the evaluator layout
-(`/input`, `/app/work`, `/app/output`); change them if yours differ.
+that no fact, number, citation or claim strength moved. Python 3.8+ standard library (incl. native `.xlsx` termbases/tables;
+PyMuPDF or LibreOffice + `pdftoppm` optional for PDF input and visual previews).
+`SKILL_DIR` = the directory of this file (`/skills/weekly-skill`, or discover via `ls /skills`). Paths below use the evaluator
+layout (`/input`, `/app/work`, `/app/output`); change them if yours differ.
 
 ## Workflow (about 5-10 model requests; a valid result.json exists after step 1)
 
 1. **Init** (seconds):
    ```bash
-   python $SKILL_DIR/scripts/ap_init.py --case /input/case.json --out /app/output --work /app/work
+   SKILL_DIR=${SKILL_DIR:-/skills/weekly-skill}
+   python3 $SKILL_DIR/scripts/ap_init.py --case /input/case.json --out /app/output --work /app/work
    ```
    Prints case_id, contract fields, detected **mode** (`polish` | `translate_zh_en` | `translate_en_zh`) and **genre**
    (journal | thesis | grant | response | abstract), which file is the manuscript / termbase / style guide / reference,
@@ -27,13 +29,14 @@ that no fact, number, citation or claim strength moved. Python 3.8+ standard lib
    set `"status": "done"` when every sentence of the chunk was reviewed (unchanged = deliberately kept).
 4. **Build + check**:
    ```bash
-   python $SKILL_DIR/scripts/ap_build.py --work /app/work --out /app/output
+   python3 $SKILL_DIR/scripts/ap_build.py --work /app/work --out /app/output
    ```
    Prints status and every `FAIL` / `warn` with sentence id, code and the triggering words. Exit 1 = fails remain.
 5. **Fix every FAIL**, re-run step 4 (idempotent). For each fail either correct the sentence/record, or keep it and add
    `"accept": {"CODE": "why this change is intended"}` - accepted flags are listed for the author, never hidden.
-   Read warnings; fix or accept. Then do the next chunk. Out of budget: build anyway - unreviewed chunks stay as
-   original, status `partial`, and the result says which sentences were not reviewed.
+   Read warnings; fix or accept. Then do the next chunk. Before finishing, verify `/app/output/result.json` has
+   `status: "success"` and zero unmapped `null` `output_contract` fields (and inspect `polished_preview.png` if generated).
+   Out of budget: build anyway - unreviewed chunks stay as original, status `partial`, and the result says which sentences were not reviewed.
 
 ## Edit file (`work/edits/chunk_NN.json`)
 
@@ -103,8 +106,9 @@ In translation mode hedge levels may shift by one (warn), negation/universal qua
 ## Outputs (`/app/output`)
 
 `result.json` (case_id, every contract field, status, status_reason, sources with SHA-256, change_summary, checks,
-needs_confirmation, uncertainty, termbase_conflicts) · `polished.<ext>` in the input format (+ `polished.md`; DOCX input ->
-`polished.docx`) · `change_log.json|.md|.csv` · `diff.md`, `diff.html` (rendered side-by-side preview) · `bilingual.md|.csv`
+needs_confirmation, uncertainty, termbase_conflicts) · `polished.<ext>` in the input format (+ `polished.md`; DOCX input or
+contract -> `polished.docx`) · `polished_preview.pdf`, `polished_preview.png` (when PyMuPDF/LibreOffice available) ·
+`change_log.json|.md|.csv` · `diff.md`, `diff.html` (rendered side-by-side preview) · `bilingual.md|.csv`
 (translation or when the contract asks for bilingual) · `termbase.csv` (terms, counts, enforced/conflict) · `fact_map.json`
 (per sentence: numbers, citations, references, hedges, negation, quantifiers, causal words, conditions before/after, preserved
 flag) · `check_report.json` · `review.md`.

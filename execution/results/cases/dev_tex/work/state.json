@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "dev-tex-methods",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_tex\\input\\task.md",
@@ -8,6 +8,7 @@
   "edit_list",
   "issues_for_author"
  ],
+ "contract_props": {},
  "fields": [
   "revised_tex",
   "edit_list",
@@ -144,5 +145,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_tex\\work",
- "init_at": "2026-11-23T05:02:07.140722+00:00"
+ "init_at": "2026-11-25T06:32:10.533181+00:00"
 }

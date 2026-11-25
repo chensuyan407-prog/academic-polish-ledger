@@ -1,0 +1,24 @@
+{
+ "entries": [
+  {
+   "preferred": "SiC",
+   "variants": [
+    "silicon carbide"
+   ],
+   "zh": "",
+   "en": "",
+   "abbr": "",
+   "note": "",
+   "source": "terms.xlsx"
+  }
+ ],
+ "sources": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\terms.xlsx",
+   "entries": 1,
+   "sha256": "dcb45852cee1a90aba57fe74f5a9a447db967661594b3117a0f9261b1ef67ace"
+  }
+ ],
+ "conflicts": [],
+ "abbreviations_in_text": []
+}

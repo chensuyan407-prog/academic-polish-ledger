@@ -96,7 +96,7 @@
    "actual_value": 1.0,
    "reference_value": 1.0,
    "score": 1.0,
-   "explanation": "missing_case_json, empty_manuscript, mojibake_repair, gb18030_input, termbase_conflict, long_input, broken_edits_json, unknown_sid, mixed_japanese, docx_io, pdf_only_input, deterministic_rebuild, audit_full_rewrite",
+   "explanation": "missing_case_json, empty_manuscript, mojibake_repair, gb18030_input, termbase_conflict, long_input, broken_edits_json, unknown_sid, mixed_japanese, docx_io, pdf_only_input, deterministic_rebuild, audit_full_rewrite, v02_xlsx_schema_mode_units_preview",
    "evidence_artifact": "metrics",
    "tolerance": 0.0
   }

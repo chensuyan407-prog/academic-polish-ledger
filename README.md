@@ -1,4 +1,4 @@
-# academic-polish-ledger 0.1.0 — submission bundle for 写作02｜学术语言润色
+# academic-polish-ledger 0.2.0 — submission bundle for 写作02｜学术语言润色
 
 Skill for **minimal-edit academic polishing** (English, Chinese, zh↔en translation of academic text). The agent edits
 sentence by sentence; scripts merge the edits back into the original format (txt / Markdown / LaTeX / DOCX), record every

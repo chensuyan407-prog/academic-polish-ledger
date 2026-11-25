@@ -1,0 +1,26 @@
+{
+ "case_id": "v02",
+ "manuscript": "manuscript.md",
+ "termbase": "terms.xlsx",
+ "output_contract": {
+  "type": "object",
+  "properties": {
+   "polished_text": {
+    "type": "string"
+   },
+   "docx_path": {
+    "type": "string"
+   },
+   "pdf_path": {
+    "type": "string"
+   },
+   "change_log": {
+    "type": "array"
+   }
+  },
+  "required": [
+   "polished_text",
+   "change_log"
+  ]
+ }
+}

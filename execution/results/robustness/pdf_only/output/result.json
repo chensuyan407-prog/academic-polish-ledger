@@ -9,7 +9,7 @@
   {
    "name": "draft.pdf",
    "role": "manuscript",
-   "sha256": "b34489f40156b71b965bca70b2664d08ab65bffa3745876aa6680aec012eeee0",
+   "sha256": "0173a9aff9ca4a79190c7100ca768f5332fd751d3e7fa0e2fbcf779179a19f2d",
    "fmt": "pdf",
    "read_info": {
     "pages": 1,
@@ -26,7 +26,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.1.0"
+  "version": "0.2.0"
  },
  "polished_files": {
   "d1": [
@@ -42,6 +42,8 @@
   "diff.md",
   "fact_map.json",
   "polished.md",
+  "polished_preview.pdf",
+  "polished_preview.png",
   "result.json",
   "termbase.csv"
  ],
@@ -69,7 +71,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-23T05:02:23.054974+00:00",
+  "built_at": "2026-11-25T06:32:32.371408+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

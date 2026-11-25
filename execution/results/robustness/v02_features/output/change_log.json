@@ -1,0 +1,48 @@
+[
+ {
+  "sid": "p1.s1",
+  "original": "Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",
+  "revised": "Samples were annealed at 10 and 20 nm for 2 years with SiC particles.",
+  "changes": [
+   {
+    "from": "10 nm and 20 nm",
+    "to": "10 and 20 nm",
+    "type": "concision",
+    "reason": "shared unit"
+   },
+   {
+    "from": "a 2-year test",
+    "to": "2 years",
+    "type": "concision",
+    "reason": "concise duration"
+   },
+   {
+    "from": "silicon carbide",
+    "to": "SiC",
+    "type": "terminology",
+    "reason": "termbase"
+   }
+  ],
+  "verdict": "pass",
+  "findings": [],
+  "confirm": null,
+  "edit_file": "chunk_01.json"
+ },
+ {
+  "sid": "p2.s1",
+  "original": "该方法是否有效是本研究的关键问题。",
+  "revised": "探讨该方法的有效性仍是本研究的关键。",
+  "changes": [
+   {
+    "from": "该方法是否有效是本研究的关键问题",
+    "to": "探讨该方法的有效性仍是本研究的关键",
+    "type": "grammar",
+    "reason": "避免两面对一面"
+   }
+  ],
+  "verdict": "pass",
+  "findings": [],
+  "confirm": null,
+  "edit_file": "chunk_01.json"
+ }
+]

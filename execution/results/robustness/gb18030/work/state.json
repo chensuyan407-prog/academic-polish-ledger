@@ -1,11 +1,12 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "gbk",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\input\\case.json",
  "task_path": null,
  "contract": [
   "润色全文"
  ],
+ "contract_props": {},
  "fields": [
   "润色全文"
  ],
@@ -78,5 +79,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\gb18030\\work",
- "init_at": "2026-11-23T05:02:20.200267+00:00"
+ "init_at": "2026-11-25T06:32:29.305458+00:00"
 }

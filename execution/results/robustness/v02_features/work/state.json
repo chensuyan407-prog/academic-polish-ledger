@@ -1,0 +1,170 @@
+{
+ "version": "0.2.0",
+ "case_id": "v02",
+ "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\case.json",
+ "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\task.md",
+ "contract": {
+  "type": "object",
+  "properties": {
+   "polished_text": {
+    "type": "string"
+   },
+   "docx_path": {
+    "type": "string"
+   },
+   "pdf_path": {
+    "type": "string"
+   },
+   "change_log": {
+    "type": "array"
+   }
+  },
+  "required": [
+   "polished_text",
+   "change_log"
+  ]
+ },
+ "contract_props": {
+  "polished_text": {
+   "type": "string"
+  },
+  "docx_path": {
+   "type": "string"
+  },
+  "pdf_path": {
+   "type": "string"
+  },
+  "change_log": {
+   "type": "array"
+  }
+ },
+ "fields": [
+  "polished_text",
+  "docx_path",
+  "pdf_path",
+  "change_log"
+ ],
+ "mode": "polish",
+ "genre": "journal",
+ "sections": [
+  "Abstract",
+  "Introduction"
+ ],
+ "docs": [
+  {
+   "doc_id": "d1",
+   "name": "manuscript.md",
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\manuscript.md",
+   "fmt": "md",
+   "text": "# Abstract\n\nSamples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.\n\n# Introduction\n\n该方法是否有效是本研究的关键问题。\n\n# Methods\n\nUnchanged method sentence.\n",
+   "sha256": "f65cd841217935f4b54da3ea0ead22e75ceb55f815d39c55bb6a8056816899be",
+   "read_info": {
+    "encoding": "utf-8-sig",
+    "repairs": [],
+    "replacement_chars": 0,
+    "mojibake_left": 0
+   },
+   "lang": "en",
+   "n_sentences": 3,
+   "n_headings": 3
+  }
+ ],
+ "segments": [
+  {
+   "sid": "h1",
+   "start": 2,
+   "end": 10,
+   "kind": "heading",
+   "para": null,
+   "text": "Abstract",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p1.s1",
+   "start": 12,
+   "end": 103,
+   "kind": "sentence",
+   "para": 1,
+   "text": "Samples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "h2",
+   "start": 107,
+   "end": 119,
+   "kind": "heading",
+   "para": null,
+   "text": "Introduction",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "p2.s1",
+   "start": 121,
+   "end": 138,
+   "kind": "sentence",
+   "para": 2,
+   "text": "该方法是否有效是本研究的关键问题。",
+   "lang": "zh",
+   "doc": "d1",
+   "in_scope": true
+  },
+  {
+   "sid": "h3",
+   "start": 142,
+   "end": 149,
+   "kind": "heading",
+   "para": null,
+   "text": "Methods",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": false
+  },
+  {
+   "sid": "p3.s1",
+   "start": 151,
+   "end": 177,
+   "kind": "sentence",
+   "para": 3,
+   "text": "Unchanged method sentence.",
+   "lang": "en",
+   "doc": "d1",
+   "in_scope": false
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": 1,
+   "sids": [
+    "h1",
+    "p1.s1",
+    "h2",
+    "p2.s1"
+   ],
+   "md": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work\\chunks\\chunk_01.md",
+   "edits": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work\\edits\\chunk_01.json"
+  }
+ ],
+ "files": [
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\manuscript.md",
+   "role": "manuscript"
+  },
+  {
+   "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\terms.xlsx",
+   "role": "termbase"
+  }
+ ],
+ "materials": [],
+ "style_notes": [],
+ "problems": [],
+ "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work\\termbase.json",
+ "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\output",
+ "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work",
+ "init_at": "2026-11-25T06:32:33.129105+00:00"
+}

@@ -27,7 +27,7 @@
      "unit_verdicts": {
       "p2.s1": "pass"
      },
-     "seconds": 0.34,
+     "seconds": 0.41,
      "contract_fields_filled": [
       "polished_text",
       "change_log",
@@ -55,7 +55,7 @@
       "p1.s4": "pass",
       "p1.s5": "warn"
      },
-     "seconds": 0.31,
+     "seconds": 0.36,
      "contract_fields_filled": [
       "english_text",
       "bilingual_table",
@@ -75,7 +75,7 @@
      "accepted_codes": [],
      "warn_codes": [],
      "unit_verdicts": {},
-     "seconds": 0.3,
+     "seconds": 0.36,
      "contract_fields_filled": [
       "revised_tex",
       "edit_list",
@@ -102,7 +102,7 @@
       "p1.s3": "pass",
       "p1.s6": "pass"
      },
-     "seconds": 0.3,
+     "seconds": 0.37,
      "contract_fields_filled": [
       "润色全文",
       "修改说明",
@@ -169,7 +169,7 @@
      "accepted_codes": [],
      "warn_codes": [],
      "unit_verdicts": {},
-     "seconds": 0.31,
+     "seconds": 0.38,
      "contract_fields_filled": [
       "revised_abstract",
       "edit_log",
@@ -200,7 +200,7 @@
       "p1.s1": "warn",
       "p1.s3": "warn"
      },
-     "seconds": 0.31,
+     "seconds": 0.37,
      "contract_fields_filled": [
       "润色稿",
       "修改清单",
@@ -260,7 +260,8 @@
   "docx_io": true,
   "pdf_only_input": true,
   "deterministic_rebuild": true,
-  "audit_full_rewrite": true
+  "audit_full_rewrite": true,
+  "v02_xlsx_schema_mode_units_preview": true
  },
  "robustness_detail": {
   "missing_case_json": {
@@ -303,7 +304,7 @@
   "long_input": {
    "sentences": 600,
    "chunks": 20,
-   "seconds_init_build": 0.81,
+   "seconds_init_build": 0.88,
    "status": "partial",
    "not_reviewed": 570,
    "ok": true
@@ -371,9 +372,24 @@
    },
    "pairs_flagged": 8,
    "ok": true
+  },
+  "v02_xlsx_schema_mode_units_preview": {
+   "mode": "polish",
+   "in_scope_sids": [
+    "h1",
+    "p1.s1",
+    "h2",
+    "p2.s1"
+   ],
+   "status": "success",
+   "build_exit": 0,
+   "docx_path": "polished.docx",
+   "pdf_path": "polished_preview.pdf",
+   "preview_exists": true,
+   "ok": true
   }
  },
- "wall_seconds": 17.18,
+ "wall_seconds": 23.75,
  "holdout_at_freeze (before post-freeze lexicon fix)": {
   "cases": [
    "ho_bio",

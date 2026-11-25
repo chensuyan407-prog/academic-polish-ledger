@@ -16,8 +16,8 @@
  "execution": {
   "log_path": "execution/run.log",
   "exit_code": 0,
-  "ran_at": "2026-11-23T05:02:23.629051Z",
-  "wall_time_s": 17.33,
+  "ran_at": "2026-11-25T06:32:33.471608Z",
+  "wall_time_s": 23.85,
   "ran_by": "agent",
   "artifacts": [
    {
@@ -25,7 +25,7 @@
     "path": "execution/results/metrics.json",
     "type": "metric",
     "format": "json",
-    "checksum_sha256": "f2309a3ef944df9446d576dfded4fa9d901378bb7d72e15ef79c81c9583b37fb"
+    "checksum_sha256": "19fe6ff2b5fd7a3f88bf35d0f2e01f76652b600141eccf981a90a3e72e577e95"
    },
    {
     "id": "eval_rows",
@@ -53,14 +53,14 @@
     "path": "execution/results/commands.json",
     "type": "log",
     "format": "json",
-    "checksum_sha256": "9077c11939563c98264ef99a96b8857fe3d91a6b4c258ef10b2e4a23b106812f"
+    "checksum_sha256": "e0e0641230c7aa86456e80e9d090b185288f8c0219e14ca4165d939eb86efce7"
    },
    {
     "id": "dev_en_result",
     "path": "execution/results/cases/dev_en/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "0365eaa39f5a291616cc4aeb6decca09cc8565b3f411cbb8f859f6aff6116c86"
+    "checksum_sha256": "9f6c110ce3f7918fd1b9190dc787036b9c5dd4175c49264d6a6f6a5bb1e7e9df"
    },
    {
     "id": "dev_en_polished",
@@ -88,7 +88,7 @@
     "path": "execution/results/cases/dev_zh/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "2006090e9b81b63d23faaf35bac032a5ca168a0ad7108ba7f55e4662e5315dc2"
+    "checksum_sha256": "1486f17da0cfa63c6e49fb09ae9833368743fb76096060018212e8d6d3bdf1a9"
    },
    {
     "id": "dev_zh_polished",
@@ -116,7 +116,7 @@
     "path": "execution/results/cases/dev_tex/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "c75b7aecd9989122ae231083ff641d68770c6571f1597e268c21f75d94261b3b"
+    "checksum_sha256": "143162f4809a74c5498337c85cb34da0e704e3713dbeed12d4ed1cb31d9c1f58"
    },
    {
     "id": "dev_tex_polished",
@@ -144,7 +144,7 @@
     "path": "execution/results/cases/dev_grant/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "ba8a5c2c8ebdb67cc6e8f7eb21c8a4e2992bed695bae0e044ad2981ef84a003f"
+    "checksum_sha256": "a83f9a42a63e1a11e069a4b58345562b321f2c3582cda9f9c3d855943eac4e1b"
    },
    {
     "id": "dev_grant_polished",
@@ -172,7 +172,7 @@
     "path": "execution/results/cases/ho_bio/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "173ba68d2feb220176a741d5760b1aee4dcfe1dbb3d7b4faddf9d0fd0ec3123b"
+    "checksum_sha256": "636a103277cd0e5d07ec6cb90a7fa64f028a0ba8f4f1423a3b258ded20329c07"
    },
    {
     "id": "ho_bio_polished",
@@ -200,7 +200,7 @@
     "path": "execution/results/cases/ho_grant_zh/output/result.json",
     "type": "data",
     "format": "json",
-    "checksum_sha256": "a37e2234a6f150a1ca4a3484fee5f513cdc8a26b880c53c79b7cb43aa5be9d05"
+    "checksum_sha256": "17b31ff67d2b2fba2076c8f600a5e7aca8c8850f64f0806176f77ab510f12527"
    },
    {
     "id": "ho_grant_zh_polished",

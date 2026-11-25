@@ -26,7 +26,10 @@ import io
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import zipfile
 from collections import Counter
 
@@ -35,8 +38,10 @@ from ap_common import CJK, dump_json, lexical_hits, load_json, numbers, protecte
 from ap_check import FAIL, INFO, WARN, check_pair, doc_checks, hunks, verdict  # noqa: E402
 from ap_lint import lint  # noqa: E402
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 KIND_PATTERNS = [
+    ("docx_path", r"docx|word_file|word_path"),
+    ("pdf_path", r"pdf|preview_png|rendered_preview"),
     ("bilingual", r"bilingual|parallel|对照|双语|中英"),
     ("termbase", r"term|glossar|术语|词表|vocab"),
     ("fact_map", r"fact|source_map|provenance|evidence|来源|映射|溯源|事实"),
@@ -47,7 +52,7 @@ KIND_PATTERNS = [
     ("sources", r"^sources?$|input|材料|输入"),
     ("summary", r"summary|overview|摘要说明|总结|概述|review"),
     ("status", r"^status$|状态"),
-    ("polished_text", r"polish|revised|润色|text|manuscript|稿|translat|译文|abstract|output|全文|正文|result|final|article|section|paragraph|段|draft|英文|中文|content"),
+    ("polished_text", r"polish|revised|润色|text|manuscript|稿|translat|译文|abstract|output|全文|正文|result|final|article|section|paragraph|段|draft|英文|中文|content|rebuttal|response_letter|edited_text"),
 ]
 
 
@@ -112,6 +117,62 @@ def write_docx(path, paragraphs):
         z.writestr("_rels/.rels", '<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
                    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>')
         z.writestr("word/document.xml", doc)
+
+
+def render_preview(out_dir, full_text, docx_path=None):
+    """Render polished_preview.pdf and page-1 polished_preview.png for visual inspection."""
+    pdf_out = os.path.join(out_dir, "polished_preview.pdf")
+    png_out = os.path.join(out_dir, "polished_preview.png")
+    try:
+        import pymupdf as fitz  # noqa
+    except ImportError:
+        try:
+            import fitz  # noqa
+        except ImportError:
+            fitz = None
+    soffice = shutil.which("soffice") or shutil.which("libreoffice")
+    if docx_path and os.path.exists(docx_path) and soffice:
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                r = subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir", td, docx_path],
+                                   capture_output=True, timeout=45)
+                gen_pdf = os.path.join(td, os.path.splitext(os.path.basename(docx_path))[0] + ".pdf")
+                if r.returncode == 0 and os.path.exists(gen_pdf):
+                    shutil.copy2(gen_pdf, pdf_out)
+                    if fitz is not None:
+                        doc = fitz.open(pdf_out)
+                        if len(doc):
+                            doc[0].get_pixmap(dpi=100).save(png_out)
+                    else:
+                        pdftoppm = shutil.which("pdftoppm")
+                        if pdftoppm:
+                            subprocess.run([pdftoppm, "-png", "-f", "1", "-l", "1", "-r", "100", "-singlefile",
+                                            pdf_out, os.path.splitext(png_out)[0]], capture_output=True, timeout=30)
+                    if os.path.exists(pdf_out):
+                        return pdf_out, png_out if os.path.exists(png_out) else None
+        except Exception:  # noqa: BLE001
+            pass
+    if fitz is None:
+        return None, None
+    try:
+        paras = "".join(f"<p>{html.escape(p)}</p>" for p in full_text.split("\n\n") if p.strip())
+        story = fitz.Story(f"<html><body style='font-family:sans-serif;font-size:10.5pt;line-height:1.45'>{paras}</body></html>")
+        writer = fitz.DocumentWriter(pdf_out)
+        mediabox = fitz.paper_rect("a4")
+        where = mediabox + (54, 54, -54, -54)
+        more = True
+        while more:
+            dev = writer.begin_page(mediabox)
+            more, _ = story.place(where)
+            story.draw(dev, None)
+            writer.end_page()
+        writer.close()
+        doc = fitz.open(pdf_out)
+        if len(doc):
+            doc[0].get_pixmap(dpi=100).save(png_out)
+        return pdf_out, png_out if os.path.exists(png_out) else None
+    except Exception:  # noqa: BLE001
+        return None, None
 
 
 def inline_diff(a, b):
@@ -339,13 +400,23 @@ def main():
     write_text(os.path.join(a.out, "change_log.md"), "\n".join(md))
 
     # ---- polished files + diff views
+    def _contract_desc(f):
+        cprops = st.get("contract_props") or {}
+        if isinstance(cprops.get(f), dict):
+            return cprops[f].get("description", "")
+        return st["contract"].get(f, "") if isinstance(st.get("contract"), dict) else ""
+
+    want_docx = any(field_kind(f, _contract_desc(f)) == "docx_path" for f in st["fields"])
     artifacts = {}
+    first_docx = None
     for p in polished_docs:
         d = p["doc"]
         stem = "polished" if len(polished_docs) == 1 else f"polished_{d['doc_id']}"
         ext = {"md": ".md", "tex": ".tex", "txt": ".txt", "docx": ".docx", "pdf": ".md", "json": ".txt"}[d["fmt"]]
         if d["fmt"] == "docx":
-            write_docx(os.path.join(a.out, stem + ".docx"), [x for x in p["text"].split("\n\n")])
+            dp = os.path.join(a.out, stem + ".docx")
+            write_docx(dp, [x for x in p["text"].split("\n\n")])
+            first_docx = first_docx or dp
             write_text(os.path.join(a.out, stem + ".md"), p["text"])
             artifacts[d["doc_id"]] = [stem + ".docx", stem + ".md"]
         else:
@@ -354,6 +425,12 @@ def main():
             if ext != ".md":
                 write_text(os.path.join(a.out, stem + ".md"), p["text"])
                 artifacts[d["doc_id"]].append(stem + ".md")
+            if want_docx and len(polished_docs) == 1:
+                dp = os.path.join(a.out, stem + ".docx")
+                write_docx(dp, [x for x in p["text"].split("\n\n")])
+                first_docx = dp
+                artifacts[d["doc_id"]].append(stem + ".docx")
+    pdf_prev, png_prev = render_preview(a.out, full_rev, docx_path=first_docx)
     diff_md, diff_html = ["# Sentence diff (original → revised)", ""], []
     for s in segs:
         if not s["in_scope"]:
@@ -377,7 +454,7 @@ def main():
                f"<h1>{html.escape(str(st['case_id']))} — {html.escape(mode)}</h1><table><tr><th>sid</th><th>original</th><th>revised</th><th>change records</th><th>checks</th></tr>"
                + "".join(diff_html) + "</table>")
     bilingual_rows = []
-    want_bi = translate or any(field_kind(f, st["contract"].get(f, "") if isinstance(st["contract"], dict) else "") == "bilingual" for f in st["fields"])
+    want_bi = translate or any(field_kind(f, _contract_desc(f)) == "bilingual" for f in st["fields"])
     if want_bi:
         bm = ["| sid | original | revised / translation |", "|---|---|---|"]
         for s in segs:
@@ -478,6 +555,8 @@ def main():
     dump_json(check_report, os.path.join(a.out, "check_report.json"))
 
     kinds = {
+        "docx_path": os.path.basename(first_docx) if first_docx else None,
+        "pdf_path": os.path.basename(pdf_prev) if pdf_prev else None,
         "polished_text": full_rev if len(polished_docs) == 1 else {p["doc"]["doc_id"]: p["text"] for p in polished_docs},
         "change_log": [{"sid": r["sid"], "original": r["original"], "revised": r["revised"], "changes": r["changes"], "verdict": r["verdict"],
                         "flags": [f"{x['code']}:{x['severity']}" for x in r["findings"] if x["severity"] != INFO]} for r in log],
@@ -494,7 +573,7 @@ def main():
     kinds["sources"] = sources
     unfilled = []
     for f in st["fields"]:
-        desc = st["contract"].get(f, "") if isinstance(st["contract"], dict) else ""
+        desc = _contract_desc(f)
         spec = E["fields"].get(f)
         if isinstance(spec, dict) and "value" in spec:
             result[f] = spec["value"]

@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "docx",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\case.json",
  "task_path": null,
@@ -7,6 +7,7 @@
   "polished_text",
   "change_log"
  ],
+ "contract_props": {},
  "fields": [
   "polished_text",
   "change_log"
@@ -21,7 +22,7 @@
    "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\draft.docx",
    "fmt": "docx",
    "text": "Introduction\n\nThe method have been used widely. It's simple.",
-   "sha256": "5dc8048675d78e5537d35c4f725a9697d52194b30f4e36ccdda26c8387321b69",
+   "sha256": "1ab1ada9ec1b5b16e3a2c54f2d46bb97b0f4787a835405eda1f6e207d14ae49c",
    "read_info": {
     "encoding": "docx-xml",
     "repairs": [
@@ -94,5 +95,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work",
- "init_at": "2026-11-23T05:02:22.217460+00:00"
+ "init_at": "2026-11-25T06:32:31.595891+00:00"
 }

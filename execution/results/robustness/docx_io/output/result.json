@@ -41,7 +41,7 @@
   {
    "name": "draft.docx",
    "role": "manuscript",
-   "sha256": "5dc8048675d78e5537d35c4f725a9697d52194b30f4e36ccdda26c8387321b69",
+   "sha256": "1ab1ada9ec1b5b16e3a2c54f2d46bb97b0f4787a835405eda1f6e207d14ae49c",
    "fmt": "docx",
    "read_info": {
     "encoding": "docx-xml",
@@ -57,7 +57,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.1.0"
+  "version": "0.2.0"
  },
  "polished_files": {
   "d1": [
@@ -75,6 +75,8 @@
   "fact_map.json",
   "polished.docx",
   "polished.md",
+  "polished_preview.pdf",
+  "polished_preview.png",
   "result.json",
   "termbase.csv"
  ],
@@ -106,7 +108,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-23T05:02:22.409484+00:00",
+  "built_at": "2026-11-25T06:32:31.848700+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "dev-zh-thesis",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\task.md",
@@ -9,6 +9,7 @@
   "术语表": "统一后的术语",
   "待确认事项": "需要作者确认的内容"
  },
+ "contract_props": {},
  "fields": [
   "润色全文",
   "修改说明",
@@ -151,5 +152,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work",
- "init_at": "2026-11-23T05:02:07.446068+00:00"
+ "init_at": "2026-11-25T06:32:10.892589+00:00"
 }

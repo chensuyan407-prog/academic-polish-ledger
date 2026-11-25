@@ -336,6 +336,59 @@ def robustness():
     codes = au.get("summary", {}).get("codes", {})
     out["audit_full_rewrite"] = {"planted_meaning_changes": len(planted), "planted": planted, "flag_codes": codes, "pairs_flagged": sum(1 for p in au.get("pairs", []) if any(f["severity"] == "fail" for f in p["findings"])),
                                  "ok": all(codes.get(k, 0) > 0 for k in ("I05", "I07", "I03", "I11", "I13"))}
+    # 14 v0.2.0: xlsx termbase, JSON schema output_contract, 避免翻译腔 mode guard, multi-section filter, factored units, docx+preview
+    d = mk("v02_features", {
+        "manuscript.md": "# Abstract\n\nSamples were annealed at 10 nm and 20 nm for a 2-year test, with silicon carbide particles.\n\n# Introduction\n\n该方法是否有效是本研究的关键问题。\n\n# Methods\n\nUnchanged method sentence.\n",
+        "task.md": "Only polish the Abstract and Introduction sections. 注意避免翻译腔。",
+    }, {
+        "case_id": "v02",
+        "manuscript": "manuscript.md",
+        "termbase": "terms.xlsx",
+        "output_contract": {
+            "type": "object",
+            "properties": {
+                "polished_text": {"type": "string"},
+                "docx_path": {"type": "string"},
+                "pdf_path": {"type": "string"},
+                "change_log": {"type": "array"},
+            },
+            "required": ["polished_text", "change_log"],
+        },
+    })
+    import zipfile
+    with zipfile.ZipFile(os.path.join(d, "terms.xlsx"), "w", zipfile.ZIP_DEFLATED) as zx:
+        zx.writestr("[Content_Types].xml", '<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>')
+        zx.writestr("xl/worksheets/sheet1.xml", '<?xml version="1.0" encoding="UTF-8"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>'
+                    '<row r="1"><c r="A1" t="inlineStr"><is><t>preferred</t></is></c><c r="B1" t="inlineStr"><is><t>variants</t></is></c></row>'
+                    '<row r="2"><c r="A2" t="inlineStr"><is><t>SiC</t></is></c><c r="B2" t="inlineStr"><is><t>silicon carbide</t></is></c></row>'
+                    '</sheetData></worksheet>')
+    w, o = W("v02_features")
+    r1 = run([os.path.join(SCRIPTS, "ap_init.py"), "--case", os.path.join(d, "case.json"), "--out", o, "--work", w])
+    st14 = load(os.path.join(w, "state.json"), {})
+    e14 = {"chunk": 1, "status": "done", "edits": [
+        {"sid": "p1.s1", "revised": "Samples were annealed at 10 and 20 nm for 2 years with SiC particles.",
+         "changes": [{"from": "10 nm and 20 nm", "to": "10 and 20 nm", "type": "concision", "reason": "shared unit"},
+                     {"from": "a 2-year test", "to": "2 years", "type": "concision", "reason": "concise duration"},
+                     {"from": "silicon carbide", "to": "SiC", "type": "terminology", "reason": "termbase"}]},
+        {"sid": "p2.s1", "revised": "探讨该方法的有效性仍是本研究的关键。",
+         "changes": [{"from": "该方法是否有效是本研究的关键问题", "to": "探讨该方法的有效性仍是本研究的关键", "type": "grammar", "reason": "避免两面对一面"}]},
+    ]}
+    dump(e14, os.path.join(w, "edits", "chunk_01.json"))
+    r2 = run([os.path.join(SCRIPTS, "ap_build.py"), "--work", w, "--out", o])
+    rr14 = res("v02_features")
+    out["v02_xlsx_schema_mode_units_preview"] = {
+        "mode": st14.get("mode"),
+        "in_scope_sids": [s["sid"] for s in st14.get("segments", []) if s.get("in_scope")],
+        "status": rr14.get("status"),
+        "build_exit": r2.returncode,
+        "docx_path": rr14.get("docx_path"),
+        "pdf_path": rr14.get("pdf_path"),
+        "preview_exists": os.path.exists(os.path.join(o, "polished_preview.png")),
+        "ok": (r1.returncode == 0 and r2.returncode == 0 and st14.get("mode") == "polish"
+               and rr14.get("status") == "success" and rr14.get("docx_path") == "polished.docx"
+               and bool(rr14.get("pdf_path")) and os.path.exists(os.path.join(o, "polished.docx"))
+               and "p3.s1" not in [s["sid"] for s in st14.get("segments", []) if s.get("in_scope")]),
+    }
     return out
 
 

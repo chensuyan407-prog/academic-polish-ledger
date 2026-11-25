@@ -1,11 +1,12 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "pdf",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\input\\case.json",
  "task_path": null,
  "contract": [
   "polished_text"
  ],
+ "contract_props": {},
  "fields": [
   "polished_text"
  ],
@@ -19,7 +20,7 @@
    "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\input\\draft.pdf",
    "fmt": "pdf",
    "text": "The samples was heated to 500 K for 2 h.",
-   "sha256": "b34489f40156b71b965bca70b2664d08ab65bffa3745876aa6680aec012eeee0",
+   "sha256": "0173a9aff9ca4a79190c7100ca768f5332fd751d3e7fa0e2fbcf779179a19f2d",
    "read_info": {
     "pages": 1,
     "extractor": "pymupdf",
@@ -69,5 +70,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\pdf_only\\work",
- "init_at": "2026-11-23T05:02:22.782015+00:00"
+ "init_at": "2026-11-25T06:32:32.029298+00:00"
 }

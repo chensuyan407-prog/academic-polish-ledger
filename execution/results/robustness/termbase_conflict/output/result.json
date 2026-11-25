@@ -38,7 +38,7 @@
  "uncertainty": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.1.0"
+  "version": "0.2.0"
  },
  "polished_files": {
   "d1": [
@@ -54,6 +54,8 @@
   "diff.md",
   "fact_map.json",
   "polished.md",
+  "polished_preview.pdf",
+  "polished_preview.png",
   "result.json",
   "termbase.csv"
  ],
@@ -88,7 +90,7 @@
  ],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-23T05:02:20.767476+00:00",
+  "built_at": "2026-11-25T06:32:29.919718+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

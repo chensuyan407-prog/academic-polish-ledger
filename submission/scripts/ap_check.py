@@ -33,8 +33,10 @@ from ap_lint import lint  # noqa: E402
 CHANGE_TYPES = {"grammar", "agreement", "number-agreement", "tense", "voice", "article", "preposition", "collocation",
                 "word-choice", "spelling", "punctuation", "format", "terminology", "abbreviation", "register", "tone",
                 "hedging", "concision", "redundancy", "chinglish", "clarity", "sentence-split", "merge", "restructure",
-                "reorder", "translation", "consistency", "style", "other", "subject", "connective", "typo"}
-HEAVY_OK = {"sentence-split", "merge", "restructure", "reorder", "translation", "chinglish", "subject", "clarity"}
+                "reorder", "translation", "consistency", "style", "other", "subject", "connective", "typo",
+                "syntax", "vocabulary", "phrasing", "fluency", "lexical", "wording", "academic-style", "formatting",
+                "translationese", "passive-voice", "active-voice", "nominalization", "style-guide"}
+HEAVY_OK = {"sentence-split", "merge", "restructure", "reorder", "translation", "chinglish", "subject", "clarity", "translationese"}
 INFERENTIAL = {"therefore", "thus", "hence", "consequently", "as a result", "因此", "所以", "从而", "进而"}
 FAIL, WARN, INFO = "fail", "warn", "info"
 UNIT_EQ = {"倍": "fold", "times": "fold", "天": "days", "年": "years", "月": "months", "小时": "h", "分钟": "min",
@@ -95,7 +97,12 @@ def _find_all(hay, needle):
     if spans:
         return spans
     rx = re.escape(re.sub(r"\s+", " ", needle.strip())).replace(r"\ ", r"\s+")
-    return [(m.start(), m.end()) for m in re.finditer(rx, hay, flags=re.I)]
+    spans = [(m.start(), m.end()) for m in re.finditer(rx, hay, flags=re.I)]
+    if spans:
+        return spans
+    norm = lambda s: s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace("–", "-").replace("—", "-").replace("\u00a0", " ")  # noqa: E731
+    rx2 = re.escape(re.sub(r"\s+", " ", norm(needle).strip())).replace(r"\ ", r"\s+")
+    return [(m.start(), m.end()) for m in re.finditer(rx2, norm(hay), flags=re.I)]
 
 
 def _hedge_level(h):
@@ -127,7 +134,12 @@ def check_pair(orig, rev, mode="polish", records=None, accept=None, genre=None, 
         if ua != ub and not translate:
             l2, n2 = sorted((ua - ub).elements(), key=str), sorted((ub - ua).elements(), key=str)
             if any(u for _, u in l2 + n2):
-                add("I01", FAIL, f"unit changed: {l2} -> {n2}")
+                ub_units = {u for _, u in ub if u}
+                ua_units = {u for _, u in ua if u}
+                factored_drop = all(u in ub_units for _, u in l2 if u) and all(u == "" for _, u in n2)
+                factored_add = all(u in ua_units for _, u in n2 if u) and all(u == "" for _, u in l2)
+                if not (factored_drop or factored_add):
+                    add("I01", FAIL, f"unit changed: {l2} -> {n2}")
     pa, pb = protected_tokens(orig), protected_tokens(rev)
     for p in (pa, pb):  # LaTeX cite commands count as citations, ref/eqref commands as cross-references
         lc = p.pop("latex_cmd", [])
@@ -264,7 +276,10 @@ def check_pair(orig, rev, mode="polish", records=None, accept=None, genre=None, 
                 add("R05", WARN, f"record {k + 1} does not overlap any change: {fr!r} -> {to!r}")
         undoc = [(h[4], h[5]) for h, c in zip(hs, covered) if not c]
         if undoc:
-            add("R02", FAIL, "changes without a record: " + "; ".join(f"{a!r}->{b!r}" for a, b in undoc[:6]) + (" ..." if len(undoc) > 6 else ""))
+            if records and any(covered) and all(not re.search(f"[A-Za-z0-9{CJK}]", a + b) for a, b in undoc):
+                add("R02", WARN, "punctuation/formatting changes without a record: " + "; ".join(f"{a!r}->{b!r}" for a, b in undoc[:6]))
+            else:
+                add("R02", FAIL, "changes without a record: " + "; ".join(f"{a!r}->{b!r}" for a, b in undoc[:6]) + (" ..." if len(undoc) > 6 else ""))
         if not hs and records:
             add("R05", WARN, "records given but the sentence is unchanged")
         frac = 1 - ratio

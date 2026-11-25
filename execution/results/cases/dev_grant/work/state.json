@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "case_id": "dev-grant-zh2en",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_grant\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_grant\\input\\task.md",
@@ -8,6 +8,7 @@
   "bilingual_table": "sentence-aligned Chinese/English",
   "translation_notes": "decisions and changes"
  },
+ "contract_props": {},
  "fields": [
   "english_text",
   "bilingual_table",
@@ -111,5 +112,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_grant\\work",
- "init_at": "2026-11-23T05:02:06.834133+00:00"
+ "init_at": "2026-11-25T06:32:10.171302+00:00"
 }

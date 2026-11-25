@@ -42,7 +42,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.1.0"
+  "version": "0.2.0"
  },
  "polished_files": {
   "d1": [
@@ -60,6 +60,8 @@
   "fact_map.json",
   "polished.md",
   "polished.txt",
+  "polished_preview.pdf",
+  "polished_preview.png",
   "result.json",
   "termbase.csv"
  ],
@@ -89,7 +91,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-23T05:02:21.584740+00:00",
+  "built_at": "2026-11-25T06:32:30.802354+00:00",
   "edit_files": [
    "chunk_01.json",
    "chunk_02.json",
