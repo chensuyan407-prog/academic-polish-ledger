@@ -9,6 +9,8 @@
    "warn": 1
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 1,
   "change_types": {
    "chinglish": 2,

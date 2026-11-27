@@ -1,7 +1,4 @@
 {
- "case_id": "ho-grant-zh",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "润色稿": "本项目针对锂金属负极枝晶生长问题，提出一种新的人工SEI膜设计策略。前期结果显示，该策略可将对称电池的循环寿命从200 h延长至800 h以上（图2）。这一结果优于已报道的同类工作，并明显抑制了枝晶生长。然而，在高电流密度（>3 mA cm-2）下，锂金属负极的枝晶抑制效果仍不理想[8]。因此，本项目拟进一步研究SEI膜组成与锂沉积形貌之间的关系，以期为高能量密度电池的开发提供指导。",
  "修改清单": [
   {
@@ -106,6 +103,9 @@
    "issue": "flag I14 accepted by the editor: “解决”改为“抑制”为同向表述 (original flag: direction words changed: up [] down [] -> up [] down ['抑制'])"
   }
  ],
+ "case_id": "ho-grant-zh",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "grant",
  "sources": [
@@ -163,7 +163,7 @@
  ],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -210,6 +210,8 @@
    "accepted": 3
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 3,
   "change_types": {
    "concision": 1,
@@ -225,7 +227,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:22.732783+00:00",
+  "built_at": "2026-11-27T02:29:15.456315+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

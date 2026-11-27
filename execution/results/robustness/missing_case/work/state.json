@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "unknown",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\input\\case.json",
  "task_path": null,
@@ -16,6 +16,7 @@
  "genre": "journal",
  "sections": [],
  "docs": [],
+ "manuscript_sig": [],
  "segments": [],
  "chunks": [],
  "files": [],
@@ -28,5 +29,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\missing_case\\work",
- "init_at": "2026-11-25T06:32:28.586622+00:00"
+ "init_at": "2026-11-27T02:29:24.171230+00:00"
 }

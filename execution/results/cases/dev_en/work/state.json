@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "dev-en-perovskite",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_en\\input\\task.md",
@@ -37,6 +37,9 @@
    "n_sentences": 11,
    "n_headings": 2
   }
+ ],
+ "manuscript_sig": [
+  "a8e8d76a1f1e4b9268502e5f3d543c3e2bcb7064423f9eef271b7aba96a34477"
  ],
  "segments": [
   {
@@ -223,5 +226,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_en\\work",
- "init_at": "2026-11-25T06:32:09.773596+00:00"
+ "init_at": "2026-11-27T02:28:57.119219+00:00"
 }

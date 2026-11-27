@@ -1,4 +1,4 @@
-# chunk 01 (30 segments) - mode polish, genre journal
+# chunk 01 (40 segments) - mode polish, genre journal
 
 Keep: numbers/units, citation markers, Fig./Table/Eq. references, math, hedges, negation, quantifiers, conditions.
 
@@ -91,3 +91,33 @@ Keep: numbers/units, citation markers, Fig./Table/Eq. references, math, hedges, 
 
 [p1.s30] Sample 30 was annealed at 330 K for 3 h, and its resistance decreased by about 11% [4].
     keep: nums 30 330 3 11; citation [4]; approximator=about
+
+[p1.s31] Sample 31 was annealed at 331 K for 4 h, and its resistance decreased by about 12% [5].
+    keep: nums 31 331 4 12; citation [5]; approximator=about
+
+[p1.s32] Sample 32 was annealed at 332 K for 5 h, and its resistance decreased by about 13% [6].
+    keep: nums 32 332 5 13; citation [6]; approximator=about
+
+[p1.s33] Sample 33 was annealed at 333 K for 6 h, and its resistance decreased by about 14% [7].
+    keep: nums 33 333 6 14; citation [7]; approximator=about
+
+[p1.s34] Sample 34 was annealed at 334 K for 7 h, and its resistance decreased by about 15% [8].
+    keep: nums 34 334 7 15; citation [8]; approximator=about
+
+[p1.s35] Sample 35 was annealed at 335 K for 1 h, and its resistance decreased by about 16% [9].
+    keep: nums 35 335 1 16; citation [9]; approximator=about
+
+[p1.s36] Sample 36 was annealed at 336 K for 2 h, and its resistance decreased by about 17% [1].
+    keep: nums 36 336 2 17; citation [1]; approximator=about
+
+[p1.s37] Sample 37 was annealed at 337 K for 3 h, and its resistance decreased by about 18% [2].
+    keep: nums 37 337 3 18; citation [2]; approximator=about
+
+[p1.s38] Sample 38 was annealed at 338 K for 4 h, and its resistance decreased by about 19% [3].
+    keep: nums 38 338 4 19; citation [3]; approximator=about
+
+[p1.s39] Sample 39 was annealed at 339 K for 5 h, and its resistance decreased by about 20% [4].
+    keep: nums 39 339 5 20; citation [4]; approximator=about
+
+[p1.s40] Sample 40 was annealed at 340 K for 6 h, and its resistance decreased by about 1% [5].
+    keep: nums 40 340 6 1; citation [5]; approximator=about

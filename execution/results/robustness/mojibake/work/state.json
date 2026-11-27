@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "moj",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\input\\case.json",
  "task_path": null,
@@ -33,6 +33,9 @@
    "n_sentences": 1,
    "n_headings": 0
   }
+ ],
+ "manuscript_sig": [
+  "5b1edee204f801bfe0bda45f7d79eef121efbf321512fa62c23dc0004c5e63cd"
  ],
  "segments": [
   {
@@ -71,5 +74,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\mojibake\\work",
- "init_at": "2026-11-25T06:32:28.956818+00:00"
+ "init_at": "2026-11-27T02:29:24.708349+00:00"
 }

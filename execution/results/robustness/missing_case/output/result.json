@@ -1,9 +1,9 @@
 {
+ "polished_text": null,
+ "change_log": null,
  "case_id": "unknown",
  "status": "failed",
  "status_reason": "no manuscript text could be read",
- "polished_text": null,
- "change_log": null,
  "mode": "polish",
  "genre": "journal",
  "sources": [],
@@ -14,6 +14,6 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.2.1"
  }
 }

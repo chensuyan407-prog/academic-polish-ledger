@@ -11,12 +11,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I01:fail"
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E02",
@@ -28,12 +29,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I07:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E03",
@@ -45,12 +47,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I03:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E04",
@@ -62,12 +65,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I01:fail"
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E05",
@@ -85,7 +89,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E06",
@@ -102,7 +106,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E07",
@@ -114,12 +118,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I05:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E08",
@@ -136,7 +141,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E09",
@@ -153,7 +158,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E10",
@@ -170,7 +175,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E11",
@@ -182,6 +187,7 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "D03:warn",
      "I09:fail",
      "I09:warn",
@@ -189,7 +195,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E12",
@@ -206,7 +212,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E13",
@@ -223,7 +229,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": true,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E14",
@@ -240,7 +246,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": true,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "E15",
@@ -257,7 +263,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z01",
@@ -269,12 +275,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I01:fail",
      "I03:fail"
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z02",
@@ -286,12 +293,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I02:fail",
      "I03:fail"
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z03",
@@ -303,12 +311,13 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I03:fail",
      "I12:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z04",
@@ -325,7 +334,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z05",
@@ -342,7 +351,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z06",
@@ -359,7 +368,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z07",
@@ -371,11 +380,12 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I03:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z08",
@@ -392,7 +402,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z09",
@@ -408,7 +418,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "Z10",
@@ -424,7 +434,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T01",
@@ -440,7 +450,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T02",
@@ -456,7 +466,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T03",
@@ -472,7 +482,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T04",
@@ -488,7 +498,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T05",
@@ -504,7 +514,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T06",
@@ -520,7 +530,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T07",
@@ -536,7 +546,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T08",
@@ -552,7 +562,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "T09",
@@ -569,7 +579,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": true,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G01",
@@ -586,7 +596,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G02",
@@ -603,7 +613,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G03",
@@ -620,7 +630,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G04",
@@ -636,7 +646,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G05",
@@ -654,7 +664,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G06",
@@ -672,7 +682,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G07",
@@ -689,7 +699,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "G08",
@@ -706,7 +716,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    }
   ],
   "lint": [
@@ -984,7 +994,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H02",
@@ -1001,7 +1011,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": true,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H03",
@@ -1018,7 +1028,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H04",
@@ -1030,11 +1040,12 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I05:fail"
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H05",
@@ -1050,7 +1061,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H06",
@@ -1066,7 +1077,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H07",
@@ -1082,7 +1093,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H08",
@@ -1126,7 +1137,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H11",
@@ -1142,7 +1153,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "H12",
@@ -1159,7 +1170,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J01",
@@ -1177,7 +1188,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J02",
@@ -1195,7 +1206,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J03",
@@ -1207,13 +1218,14 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I02:fail",
      "I09:warn",
      "R03:warn"
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J04",
@@ -1225,6 +1237,7 @@
     "detected_or_warned": true,
     "sentence_or_doc_failed": true,
     "codes_fired": [
+     "D01:fail",
      "I01:fail",
      "I09:warn",
      "I13:fail",
@@ -1232,7 +1245,7 @@
     ],
     "baseline_numcite": true,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J05",
@@ -1250,7 +1263,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J06",
@@ -1268,7 +1281,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J07",
@@ -1286,7 +1299,7 @@
     ],
     "baseline_numcite": false,
     "baseline_record_only": false,
-    "build_exit": 1
+    "build_exit": 0
    },
    {
     "id": "J08",

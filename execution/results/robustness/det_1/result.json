@@ -1,7 +1,4 @@
 {
- "case_id": "dev-en-perovskite",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "polished_text": "# Abstract\n\nPerovskite solar cells (PSCs) have attracted increasing attention as a renewable energy technology. However, the long-term stability of PSCs is still limited by moisture and heat. In this work, we report a fluorinated hole transport layer that may suppress ion migration at the interface. The champion device reaches a power conversion efficiency (PCE) of 23.4% and retains about 90% of its initial PCE after 1000 h at 85 °C (Fig. 3b). These results suggest that interfacial fluorination is a promising strategy for stable devices [4, 7].\n\n# Introduction\n\nPerovskite solar cells have shown considerable progress in the past decade [1-3]. Their efficiencies increased from 3.8% to above 26% [2]. However, degradation under operating conditions does not yet allow commercial application. Several studies have attributed the degradation to the migration of iodide ions, which is accelerated when the temperature exceeds 60 °C [5]. An HTL with low ion permeability could therefore extend the device lifetime if its energy level is matched to that of the perovskite. Here, we design a fluorinated polymer and investigate its effect on the stability of PSCs (Table 1).\n",
  "change_log": [
   {
@@ -287,6 +284,9 @@
    "issue": "flag I09 accepted by the editor: 'huge' removed as colloquial register; the claim of progress is kept with 'considerable' (original flag: promotional wording removed: ['huge'] -> [])"
   }
  ],
+ "case_id": "dev-en-perovskite",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -312,7 +312,7 @@
  "uncertainty": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -362,6 +362,8 @@
    "warn": 1
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 1,
   "change_types": {
    "chinglish": 2,
@@ -382,7 +384,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:32.627576+00:00",
+  "built_at": "2026-11-27T02:29:29.800013+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

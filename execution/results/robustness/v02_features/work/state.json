@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "v02",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\task.md",
@@ -68,6 +68,9 @@
    "n_sentences": 3,
    "n_headings": 3
   }
+ ],
+ "manuscript_sig": [
+  "f65cd841217935f4b54da3ea0ead22e75ceb55f815d39c55bb6a8056816899be"
  ],
  "segments": [
   {
@@ -166,5 +169,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\work",
- "init_at": "2026-11-25T06:32:33.129105+00:00"
+ "init_at": "2026-11-27T02:29:30.460855+00:00"
 }

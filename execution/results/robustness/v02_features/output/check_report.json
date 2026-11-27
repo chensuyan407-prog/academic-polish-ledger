@@ -6,6 +6,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {
    "concision": 2,

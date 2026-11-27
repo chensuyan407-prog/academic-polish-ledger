@@ -20,6 +20,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -43,6 +44,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -60,6 +62,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -83,6 +86,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": "eGFR is not expanded in the abstract; most journals require 'estimated glomerular filtration rate (eGFR)' at first use",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -106,6 +110,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -129,6 +134,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": "termbase uses 'randomised controlled trial'; the authors wrote 'randomized trials' - confirm that controlled trials are meant",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  }
 ]

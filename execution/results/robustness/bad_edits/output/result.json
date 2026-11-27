@@ -1,8 +1,8 @@
 {
+ "polished_text": "The results is clear. We measured 5 samples.",
  "case_id": "bad",
  "status": "partial",
  "status_reason": "2/2 segments not reviewed",
- "polished_text": "The results is clear. We measured 5 samples.",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -27,7 +27,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -63,6 +63,8 @@
   "not_reviewed": 2,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {},
   "by_code": {}
@@ -70,7 +72,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:31.127941+00:00",
+  "built_at": "2026-11-27T02:29:27.686354+00:00",
   "edit_files": [
    "extra.json"
   ]

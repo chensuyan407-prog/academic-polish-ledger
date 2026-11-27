@@ -1,7 +1,4 @@
 {
- "case_id": "dev-tex-methods",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "revised_tex": "\\section{Methods}\n\\label{sec:methods}\nThe model was trained on 12,000 images using the Adam optimizer \\cite{kingma2015} with a learning rate of $10^{-4}$. As shown in Fig.~\\ref{fig:arch}, the network consists of three convolutional blocks. Data augmentation, e.g., random cropping and flipping, was applied to all training images.\n\nWe found that the accuracy is significantly higher than that of the baseline ($p < 0.01$, Table~\\ref{tab:res}), which suggests that the attention module may improve feature extraction. Training took approximately 6 hours on a single GPU, and no early stopping was used.\n\\begin{equation}\nL = -\\sum_i y_i \\log \\hat{y}_i\n\\end{equation}\n% TODO: add hyperparameter table\nwhere $y_i$ is the ground-truth label and $\\hat{y}_i$ is the predicted probability.\n",
  "edit_list": [
   {
@@ -137,6 +134,9 @@
    "source": "D03"
   }
  ],
+ "case_id": "dev-tex-methods",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -162,7 +162,7 @@
  ],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -211,6 +211,8 @@
    "info": 1
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {
    "agreement": 4,
@@ -227,7 +229,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:10.793251+00:00",
+  "built_at": "2026-11-27T02:28:58.498115+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "ho-bio-abstract",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_bio\\input\\task.md",
@@ -37,6 +37,9 @@
    "n_sentences": 8,
    "n_headings": 0
   }
+ ],
+ "manuscript_sig": [
+  "80174769c13b9738f4efad0ac9526e035748c43b8e35990574749b9ed55a265e"
  ],
  "segments": [
   {
@@ -163,5 +166,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_bio\\work",
- "init_at": "2026-11-25T06:32:22.083518+00:00"
+ "init_at": "2026-11-27T02:29:14.491073+00:00"
 }

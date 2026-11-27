@@ -3,10 +3,10 @@
   {
    "target": "planted defects caught at fail level (dev set, rules tuned on it)",
    "metric": "absolute_error",
-   "actual_value": 1.0,
+   "actual_value": 0.9524,
    "reference_value": 1.0,
-   "score": 1.0,
-   "explanation": "42 bad edits with plausible change records in 4 cases (EN Markdown, ZH thesis, LaTeX, ZH->EN grant); baselines: numbers+citations only 0.238, record coverage only 0.071, no checks 0",
+   "score": 0.5238,
+   "explanation": "42 bad edits with plausible change records in 4 cases (EN Markdown, ZH thesis, LaTeX, ZH->EN grant); baselines: numbers+citations only 0.214, record coverage only 0.071, no checks 0",
    "evidence_artifact": "metrics",
    "tolerance": 0.1
   },

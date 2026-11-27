@@ -1,8 +1,8 @@
 # Review - long
 
-- status: **partial** — 570/600 segments not reviewed
+- status: **partial** — 560/600 segments not reviewed
 - mode: polish; genre: journal
-- segments in scope: 600; edited: 1; not reviewed: 570
+- segments in scope: 600; edited: 1; not reviewed: 560
 - change types: {'word-choice': 1}
 - flags: {}; accepted overrides: 0
 
@@ -20,4 +20,4 @@
 
 ## Uncertainty / limits
 
-- 570 in-scope segments were not reviewed: ['p1.s31', 'p1.s32', 'p1.s33', 'p1.s34', 'p1.s35', 'p1.s36', 'p1.s37', 'p1.s38', 'p1.s39', 'p1.s40', 'p2.s1', 'p2.s2', 'p2.s3', 'p2.s4', 'p2.s5', 'p2.s6', 'p2.s7', 'p2.s8', 'p2.s9', 'p2.s10', 'p2.s11', 'p2.s12', 'p2.s13', 'p2.s14', 'p2.s15', 'p2.s16', 'p2.s17', 'p2.s18', 'p2.s19', 'p2.s20']
+- 560 in-scope segments were not reviewed: ['p2.s1', 'p2.s2', 'p2.s3', 'p2.s4', 'p2.s5', 'p2.s6', 'p2.s7', 'p2.s8', 'p2.s9', 'p2.s10', 'p2.s11', 'p2.s12', 'p2.s13', 'p2.s14', 'p2.s15', 'p2.s16', 'p2.s17', 'p2.s18', 'p2.s19', 'p2.s20', 'p2.s21', 'p2.s22', 'p2.s23', 'p2.s24', 'p2.s25', 'p2.s26', 'p2.s27', 'p2.s28', 'p2.s29', 'p2.s30']

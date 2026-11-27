@@ -1,7 +1,4 @@
 {
- "case_id": "docx",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "polished_text": "Introduction\n\nThe method has been used widely. It is simple.",
  "change_log": [
   {
@@ -35,29 +32,32 @@
    "flags": []
   }
  ],
+ "case_id": "docx",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "journal",
  "sources": [
   {
    "name": "draft.docx",
    "role": "manuscript",
-   "sha256": "1ab1ada9ec1b5b16e3a2c54f2d46bb97b0f4787a835405eda1f6e207d14ae49c",
+   "sha256": "6b452fa672a2f5f6dafac174ba70b4f335195556d27bcd730b3c8f12edbfd2d1",
    "fmt": "docx",
    "read_info": {
     "encoding": "docx-xml",
     "repairs": [
-     "run-level formatting not preserved"
+     "DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run"
     ]
    }
   }
  ],
  "uncertainty": [
-  "draft.docx: run-level formatting not preserved"
+  "draft.docx: DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run"
  ],
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -98,6 +98,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {
    "agreement": 1,
@@ -108,7 +110,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:31.848700+00:00",
+  "built_at": "2026-11-27T02:29:28.717531+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

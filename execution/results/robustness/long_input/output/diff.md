@@ -60,25 +60,25 @@
 
 [p1.s30] Sample 30 was annealed at 330 K for 3 h, and its resistance decreased by about 11% [4].  _(unchanged)_
 
-[p1.s31] Sample 31 was annealed at 331 K for 4 h, and its resistance decreased by about 12% [5].  _(unchanged, NOT REVIEWED)_
+[p1.s31] Sample 31 was annealed at 331 K for 4 h, and its resistance decreased by about 12% [5].  _(unchanged)_
 
-[p1.s32] Sample 32 was annealed at 332 K for 5 h, and its resistance decreased by about 13% [6].  _(unchanged, NOT REVIEWED)_
+[p1.s32] Sample 32 was annealed at 332 K for 5 h, and its resistance decreased by about 13% [6].  _(unchanged)_
 
-[p1.s33] Sample 33 was annealed at 333 K for 6 h, and its resistance decreased by about 14% [7].  _(unchanged, NOT REVIEWED)_
+[p1.s33] Sample 33 was annealed at 333 K for 6 h, and its resistance decreased by about 14% [7].  _(unchanged)_
 
-[p1.s34] Sample 34 was annealed at 334 K for 7 h, and its resistance decreased by about 15% [8].  _(unchanged, NOT REVIEWED)_
+[p1.s34] Sample 34 was annealed at 334 K for 7 h, and its resistance decreased by about 15% [8].  _(unchanged)_
 
-[p1.s35] Sample 35 was annealed at 335 K for 1 h, and its resistance decreased by about 16% [9].  _(unchanged, NOT REVIEWED)_
+[p1.s35] Sample 35 was annealed at 335 K for 1 h, and its resistance decreased by about 16% [9].  _(unchanged)_
 
-[p1.s36] Sample 36 was annealed at 336 K for 2 h, and its resistance decreased by about 17% [1].  _(unchanged, NOT REVIEWED)_
+[p1.s36] Sample 36 was annealed at 336 K for 2 h, and its resistance decreased by about 17% [1].  _(unchanged)_
 
-[p1.s37] Sample 37 was annealed at 337 K for 3 h, and its resistance decreased by about 18% [2].  _(unchanged, NOT REVIEWED)_
+[p1.s37] Sample 37 was annealed at 337 K for 3 h, and its resistance decreased by about 18% [2].  _(unchanged)_
 
-[p1.s38] Sample 38 was annealed at 338 K for 4 h, and its resistance decreased by about 19% [3].  _(unchanged, NOT REVIEWED)_
+[p1.s38] Sample 38 was annealed at 338 K for 4 h, and its resistance decreased by about 19% [3].  _(unchanged)_
 
-[p1.s39] Sample 39 was annealed at 339 K for 5 h, and its resistance decreased by about 20% [4].  _(unchanged, NOT REVIEWED)_
+[p1.s39] Sample 39 was annealed at 339 K for 5 h, and its resistance decreased by about 20% [4].  _(unchanged)_
 
-[p1.s40] Sample 40 was annealed at 340 K for 6 h, and its resistance decreased by about 1% [5].  _(unchanged, NOT REVIEWED)_
+[p1.s40] Sample 40 was annealed at 340 K for 6 h, and its resistance decreased by about 1% [5].  _(unchanged)_
 
 [p2.s1] Sample 1 was annealed at 301 K for 2 h, and its resistance decreased by about 2% [2].  _(unchanged, NOT REVIEWED)_
 

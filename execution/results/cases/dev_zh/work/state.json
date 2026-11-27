@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "dev-zh-thesis",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\dev_zh\\input\\task.md",
@@ -37,6 +37,9 @@
    "n_sentences": 6,
    "n_headings": 1
   }
+ ],
+ "manuscript_sig": [
+  "b4a7da9293c29c391630244fbfb7fbe19d23c54f94d65d0584e775077f4abbd7"
  ],
  "segments": [
   {
@@ -152,5 +155,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\dev_zh\\work",
- "init_at": "2026-11-25T06:32:10.892589+00:00"
+ "init_at": "2026-11-27T02:28:58.626814+00:00"
 }

@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "ho-grant-zh",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_grant_zh\\input\\case.json",
  "task_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\tests\\cases\\ho_grant_zh\\input\\task.md",
@@ -33,6 +33,9 @@
    "n_sentences": 5,
    "n_headings": 0
   }
+ ],
+ "manuscript_sig": [
+  "436139b2cbc8ecf94a61276059d459689e6bfb2ace229f65bc11a62d4743d8db"
  ],
  "segments": [
   {
@@ -114,5 +117,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\cases\\ho_grant_zh\\work",
- "init_at": "2026-11-25T06:32:22.461546+00:00"
+ "init_at": "2026-11-27T02:29:15.041450+00:00"
 }

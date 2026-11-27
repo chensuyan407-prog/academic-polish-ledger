@@ -8,6 +8,8 @@
    "accepted": 3
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 3,
   "change_types": {
    "grammar": 1,

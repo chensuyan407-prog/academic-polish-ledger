@@ -214,7 +214,7 @@ def read_any(path):
     """Return (text, fmt, info). fmt in txt|md|tex|docx|pdf|json."""
     ext = os.path.splitext(path)[1].lower()
     if ext == ".docx":
-        return read_docx(path), "docx", {"encoding": "docx-xml", "repairs": ["run-level formatting not preserved"]}
+        return read_docx(path), "docx", {"encoding": "docx-xml", "repairs": ["DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run"]}
     if ext == ".xlsx":
         return read_xlsx(path), "md", {"encoding": "xlsx-xml", "repairs": []}
     if ext == ".pdf":

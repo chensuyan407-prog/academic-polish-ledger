@@ -1,8 +1,8 @@
 {
+ "polished_text": "The sample’s band gap is about 2.3 eV at 300 °C — see Fig. 2.\n",
  "case_id": "moj",
  "status": "success",
  "status_reason": "all segments reviewed, no unresolved fail",
- "polished_text": "The sample’s band gap is about 2.3 eV at 300 °C — see Fig. 2.\n",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -27,7 +27,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -63,6 +63,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {},
   "by_code": {}
@@ -70,7 +72,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:29.205909+00:00",
+  "built_at": "2026-11-27T02:29:25.044533+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

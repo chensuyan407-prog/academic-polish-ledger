@@ -1,4 +1,4 @@
-# academic-polish-ledger 0.2.0 — reference
+# academic-polish-ledger 0.3.0 — reference
 
 Minimal-edit academic polishing with a verifiable change ledger. The agent writes sentence-level edits; five
 standard-library Python scripts segment the manuscript, merge the edits back into the original format, check
@@ -141,4 +141,6 @@ reference key, so a supplementary -> main reference swap was not flagged; supple
 - Add discipline vocabulary in `rules/lexicon.json` (keep class names; add `exclude_*` entries for false hits) and style rules
   in `rules/style_rules.json` (`residual: true` re-checks them on the revised text). Re-run `python tests/run_eval.py` in the
   bundle to see the effect on detection and false positives.
-- Version: 0.2.0 (2026-11-25). Added native `.xlsx` termbase/table reader, JSON Schema `output_contract` parsing, `避免翻译腔` mode guard, multi-section filter, factored-unit / `是否` false-fail fixes, punctuation-remainder `R02` warning downgrade, and `polished_preview.pdf`/`.png` visual rendering. Scripts and rules are deterministic: same inputs and edits -> same outputs (timestamps aside).
+- Version: 0.3.0 (2026-11-27). Non-blocking build: ap_build.py always exits 0 once result.json is written; R01/R02 record gaps are completed from the diff (resolution `auto-recorded`), a sentence that fails a meaning check (I01-I14) is reverted to the original and its proposed revision listed in needs_confirmation (resolution `reverted`), D01 termbase fails are flagged for confirmation; findings keep their original severity in check_report.json. `partial` only for unreviewed chunks, untranslated sentences or no edits. SKILL.md cut to a 4-step flow.
+- 0.2.1 (2026-11-26). Explicit `role`/`primary` file selection in case.json (reference PDFs no longer polished next to an editable manuscript), edit-level `type`+`reason` shorthand with derived records, lenient sid matching (`d1:` prefix, case), chunk inference / `"chunk": "all"`, fallback mapping for unrecognised contract fields, actionable build output (fix hints, suggested records, NEXT/DONE line), in-place DOCX write-back that keeps styles/tables, default chunk 40, portable `PY`/`SKILL_DIR` discovery in SKILL.md.
+- Previous: 0.2.0 (2026-11-25). Added native `.xlsx` termbase/table reader, JSON Schema `output_contract` parsing, `避免翻译腔` mode guard, multi-section filter, factored-unit / `是否` false-fail fixes, punctuation-remainder `R02` warning downgrade, and `polished_preview.pdf`/`.png` visual rendering. Scripts and rules are deterministic: same inputs and edits -> same outputs (timestamps aside).

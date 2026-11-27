@@ -26,6 +26,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -43,6 +44,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  }
 ]

@@ -26,6 +26,7 @@
    }
   ],
   "confirm": "“全新”改为“新的”，如需强调创新性，请在创新点部分给出与已有策略的具体区别",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -43,6 +44,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -93,6 +95,7 @@
    }
   ],
   "confirm": "“优于已报道的同类工作”需要申请人给出对比文献；“彻底解决”已削弱为“明显抑制”，请确认",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -110,6 +113,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  }
 ]

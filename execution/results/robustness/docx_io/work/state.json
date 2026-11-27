@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "docx",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\case.json",
  "task_path": null,
@@ -22,17 +22,20 @@
    "path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\input\\draft.docx",
    "fmt": "docx",
    "text": "Introduction\n\nThe method have been used widely. It's simple.",
-   "sha256": "1ab1ada9ec1b5b16e3a2c54f2d46bb97b0f4787a835405eda1f6e207d14ae49c",
+   "sha256": "6b452fa672a2f5f6dafac174ba70b4f335195556d27bcd730b3c8f12edbfd2d1",
    "read_info": {
     "encoding": "docx-xml",
     "repairs": [
-     "run-level formatting not preserved"
+     "DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run"
     ]
    },
    "lang": "en",
    "n_sentences": 2,
    "n_headings": 1
   }
+ ],
+ "manuscript_sig": [
+  "6b452fa672a2f5f6dafac174ba70b4f335195556d27bcd730b3c8f12edbfd2d1"
  ],
  "segments": [
   {
@@ -90,10 +93,10 @@
  "materials": [],
  "style_notes": [],
  "problems": [
-  "draft.docx: run-level formatting not preserved"
+  "draft.docx: DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run"
  ],
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\docx_io\\work",
- "init_at": "2026-11-25T06:32:31.595891+00:00"
+ "init_at": "2026-11-27T02:29:28.330329+00:00"
 }

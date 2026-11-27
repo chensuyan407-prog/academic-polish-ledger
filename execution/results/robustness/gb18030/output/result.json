@@ -1,8 +1,8 @@
 {
+ "润色全文": "本文研究了氧空位对电导率的影响。结果表明，电导率提高了约25%。",
  "case_id": "gbk",
  "status": "success",
  "status_reason": "all segments reviewed, no unresolved fail",
- "润色全文": "本文研究了氧空位对电导率的影响。结果表明，电导率提高了约25%。",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -23,7 +23,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -59,6 +59,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {},
   "by_code": {}
@@ -66,7 +68,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:29.566216+00:00",
+  "built_at": "2026-11-27T02:29:25.531531+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

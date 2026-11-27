@@ -38,20 +38,21 @@ from ap_common import CJK, dump_json, lexical_hits, load_json, numbers, protecte
 from ap_check import FAIL, INFO, WARN, check_pair, doc_checks, hunks, verdict  # noqa: E402
 from ap_lint import lint  # noqa: E402
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 KIND_PATTERNS = [
     ("docx_path", r"docx|word_file|word_path"),
-    ("pdf_path", r"pdf|preview_png|rendered_preview"),
+    ("pdf_path", r"pdf"),
+    ("png_path", r"preview_png|rendered_preview|\.png$"),
     ("bilingual", r"bilingual|parallel|对照|双语|中英"),
     ("termbase", r"term|glossar|术语|词表|vocab"),
     ("fact_map", r"fact|source_map|provenance|evidence|来源|映射|溯源|事实"),
     ("check_report", r"check|invariant|qa\b|quality|校验|检查|一致性|verification|verify"),
-    ("needs_confirmation", r"confirm|人工|待确认|review_items|flag|issue|question|query|疑问"),
-    ("uncertainty", r"uncertain|limitation|gap|不确定|缺口|局限|风险|risk"),
-    ("change_log", r"change|edit|revision|修改|说明|log|record|diff|清单|记录|track|modif"),
-    ("sources", r"^sources?$|input|材料|输入"),
-    ("summary", r"summary|overview|摘要说明|总结|概述|review"),
-    ("status", r"^status$|状态"),
+    ("needs_confirmation", r"confirm|人工|待确认|需确认|review_items|flag|issue|question|query|疑问|open_|for_author|to_author|author_queries|待核|核实"),
+    ("uncertainty", r"uncertain|limitation|limits?\b|gap|missing|caveat|boundar|不确定|缺口|局限|边界|风险|risk|异常|exception"),
+    ("change_log", r"change|edit|revision|修改|说明|log|record|diff|清单|记录|track|modif|note|comment|rationale|justif|理由|批注|对照表|ledger"),
+    ("sources", r"^sources?$|input|材料|输入|provenance_files|references_used"),
+    ("summary", r"summary|overview|摘要说明|总结|概述|review|report|meta|run_info|版本|version"),
+    ("status", r"^status$|状态|^state$"),
     ("polished_text", r"polish|revised|润色|text|manuscript|稿|translat|译文|abstract|output|全文|正文|result|final|article|section|paragraph|段|draft|英文|中文|content|rebuttal|response_letter|edited_text"),
 ]
 
@@ -66,6 +67,71 @@ def field_kind(name, desc=""):
         if re.search(pat, s):
             return kind
     return None
+
+
+DONE_WORDS = ("done", "reviewed", "complete", "completed", "finished", "final", "ok", "true", "yes", "已完成", "完成")
+
+def _norm_sid(x):
+    return re.sub(r"\s+", "", str(x)).lower()
+
+
+def resolve_sid(sid, by_sid, cache={}):  # noqa: B006
+    """Exact sid, else case/space-insensitive, else unique match ignoring a d<N>: document prefix (or adding one)."""
+    if sid in by_sid:
+        return sid
+    key = id(by_sid)
+    if cache.get("key") != key:
+        cache.clear()
+        cache["key"] = key
+        cache["norm"] = {_norm_sid(k): k for k in by_sid}
+        bare = {}
+        for k in by_sid:
+            bare.setdefault(_norm_sid(k.split(":", 1)[-1]), []).append(k)
+        cache["bare"] = bare
+    n = _norm_sid(sid)
+    if n in cache["norm"]:
+        return cache["norm"][n]
+    hit = cache["bare"].get(n.split(":", 1)[-1], [])
+    return hit[0] if len(hit) == 1 else None
+
+
+def derive_records(orig, rev, typ, reason):
+    """Edit-level shorthand {"type", "reason"} without 'changes': one exact record per changed span."""
+    hs, _, _ = hunks(orig, rev)
+    return [{"from": a.strip(), "to": b.strip(), "type": typ, "reason": reason, "derived": True} for _, _, _, _, a, b in hs]
+
+
+def suggest_records(orig, rev, records, cap=4):
+    """Ready-to-paste records for spans not covered by the agent's records (printed with R02)."""
+    hs, _, _ = hunks(orig, rev)
+    spans = [(str(r.get("from", "")), str(r.get("to", ""))) for r in records or [] if isinstance(r, dict)]
+    out = []
+    for _, _, _, _, a, b in hs:
+        a, b = a.strip(), b.strip()
+        if not any((a and a in fr) or (b and b in to) for fr, to in spans):
+            out.append({"from": a.strip(), "to": b.strip(), "type": "?", "reason": "?"})
+    return out[:cap]
+
+
+def auto_records(orig, rev, records):
+    """Keep the agent's records that match the text (filling a missing type/reason), add one derived record per changed span
+    that has none. Used instead of a blocking R01/R02 fail."""
+    keep = []
+    for c in records or []:
+        if not isinstance(c, dict):
+            continue
+        fr, to = str(c.get("from", "")).strip(), str(c.get("to", "")).strip()
+        if (fr and fr not in orig) or (to and to not in rev) or (not fr and not to):
+            continue
+        c = dict(c)
+        c["type"] = c.get("type") or "edit"
+        c["reason"] = c.get("reason") or "reason not given by the editor"
+        keep.append(c)
+    typ = keep[0]["type"] if keep else "edit"
+    for r in suggest_records(orig, rev, keep, cap=50):
+        r.update({"type": typ, "reason": "auto-recorded: this changed span had no matching record", "derived": True})
+        keep.append(r)
+    return keep
 
 
 def load_edits(work, chunks=None):
@@ -83,8 +149,20 @@ def load_edits(work, chunks=None):
             continue
         if isinstance(d, list):
             d = {"edits": d, "status": "done"}
+        if not isinstance(d, dict):
+            bundle["errors"].append(f"{os.path.basename(p)}: not a JSON object - file ignored")
+            continue
         bundle["files"].append(os.path.basename(p))
+        ch = d.get("chunk")
+        if ch is None:  # infer from the file name chunk_NN.json; a single edits.json covers everything
+            m = re.search(r"chunk_?(\d+)", os.path.basename(p))
+            ch = int(m.group(1)) if m else ("all" if os.path.basename(p) == "edits.json" or len(chunk_sids) <= 1 else None)
+        elif isinstance(ch, str) and ch.strip().isdigit():
+            ch = int(ch.strip())
         for e in d.get("edits", []) or []:
+            if not isinstance(e, dict):
+                bundle["errors"].append(f"{os.path.basename(p)}: ignored non-object edit item {e!r}")
+                continue
             e = dict(e)
             e["_file"] = os.path.basename(p)
             bundle["edits"].append(e)
@@ -95,8 +173,11 @@ def load_edits(work, chunks=None):
         bundle["accept_doc"].update(d.get("accept_doc", {}) or {})
         if d.get("mode"):
             bundle["mode"] = d["mode"]
-        if str(d.get("status", "")).lower() in ("done", "reviewed", "complete", "completed"):
-            bundle["reviewed"].update(d.get("sids") or chunk_sids.get(d.get("chunk"), []))
+        if d.get("status") is True or str(d.get("status", "")).strip().lower() in DONE_WORDS:
+            if isinstance(ch, str) and ch.lower() in ("all", "*"):
+                bundle["reviewed"].update(x for v in chunk_sids.values() for x in v)
+            else:
+                bundle["reviewed"].update(d.get("sids") or chunk_sids.get(ch, []) or (list(chunk_sids.values())[0] if len(chunk_sids) == 1 else []))
         bundle["reviewed"].update(d.get("reviewed") or [])
         for e in d.get("edits", []) or []:
             sid = e.get("sid")
@@ -117,6 +198,62 @@ def write_docx(path, paragraphs):
         z.writestr("_rels/.rels", '<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
                    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>')
         z.writestr("word/document.xml", doc)
+
+
+def _docx_para_text(p):
+    p = re.sub(r"<w:tab/>", "\t", p)
+    p = re.sub(r"<w:br/>", "\n", p)
+    t = "".join(re.findall(r"<w:t(?: [^>]*)?>(.*?)</w:t>", p, flags=re.S))
+    return t.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", '"').replace("&apos;", "'").replace("&amp;", "&")
+
+
+def write_docx_inplace(src, dst, orig_text, new_text):
+    """Write the polished paragraphs back into a copy of the ORIGINAL .docx: styles, numbering, tables, headers/footers,
+    images and section settings stay; a changed paragraph keeps its paragraph properties and the first run's formatting
+    (inline formatting inside a changed paragraph collapses onto that run). Returns False when the paragraph structure no
+    longer lines up (caller falls back to a plain .docx)."""
+    po, pn = orig_text.split("\n\n"), new_text.split("\n\n")
+    if len(po) != len(pn):
+        return False
+    try:
+        with zipfile.ZipFile(src) as z:
+            items = [(i, z.read(i.filename)) for i in z.infolist()]
+    except Exception:  # noqa: BLE001
+        return False
+    out_items, k, ok = [], 0, True
+    for info, data in items:
+        if info.filename == "word/document.xml":
+            xml = data.decode("utf-8")
+            pieces, pos = [], 0
+            for m in re.finditer(r"<w:p[ >].*?</w:p>", xml, flags=re.S):
+                para = m.group(0)
+                t = _docx_para_text(para)
+                if t.strip():
+                    if k >= len(po) or t != po[k]:
+                        ok = False
+                        break
+                    if pn[k] != po[k]:
+                        ts = list(re.finditer(r"<w:t(?: [^>]*)?>.*?</w:t>", para, flags=re.S))
+                        new_para, last = [], 0
+                        for j, tm in enumerate(ts):
+                            new_para.append(para[last:tm.start()])
+                            new_para.append('<w:t xml:space="preserve">' + html.escape(pn[k], quote=False) + "</w:t>" if j == 0 else "<w:t></w:t>")
+                            last = tm.end()
+                        new_para.append(para[last:])
+                        para = re.sub(r"<w:tab/>|<w:br/>", "", "".join(new_para))
+                    k += 1
+                pieces.append(xml[pos:m.start()])
+                pieces.append(para)
+                pos = m.end()
+            if not ok or k != len(po):
+                return False
+            pieces.append(xml[pos:])
+            data = "".join(pieces).encode("utf-8")
+        out_items.append((info, data))
+    with zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED) as z:
+        for info, data in out_items:
+            z.writestr(info, data)
+    return True
 
 
 def render_preview(out_dir, full_text, docx_path=None):
@@ -237,6 +374,11 @@ def main():
     for e in E["edits"]:
         sids = e.get("sid")
         sids = sids if isinstance(sids, list) else [sids]
+        fixed = [resolve_sid(x, by_sid) for x in sids]
+        if all(fixed) and fixed != sids:
+            problems.append(f"edit sid {sids} resolved to {fixed}")
+            sids = fixed
+            e["sid"] = sids if len(sids) > 1 else sids[0]
         bad = [s for s in sids if s not in by_sid]
         if bad:
             problems.append(f"edit in {e['_file']} refers to unknown sid {bad} - ignored")
@@ -256,9 +398,23 @@ def main():
             problems.append(f"edit {sids} has no 'revised' text - ignored")
             continue
         orig = " ".join(by_sid[s]["text"] for s in sids) if not re.search(f"[{CJK}]", by_sid[sids[0]]["text"]) else "".join(by_sid[s]["text"] for s in sids)
-        units.append({"sids": sids, "orig": orig, "rev": str(rev).strip(), "changes": e.get("changes") or [], "accept": e.get("accept") or {},
+        changes = e.get("changes") or []
+        if isinstance(changes, dict):
+            changes = [changes]
+        elif not isinstance(changes, list):
+            problems.append(f"edit {sids} has non-list 'changes' - ignored")
+            changes = []
+        else:
+            bad_c = [c for c in changes if not isinstance(c, dict)]
+            if bad_c:
+                problems.append(f"edit {sids} has non-object change items - ignored")
+                changes = [c for c in changes if isinstance(c, dict)]
+        if not changes and e.get("type") and e.get("reason") and str(rev).strip() != orig:
+            changes = derive_records(orig, str(rev).strip(), e["type"], e["reason"])
+        units.append({"sids": sids, "orig": orig, "rev": str(rev).strip(), "changes": changes, "accept": e.get("accept") or {},
                       "confirm": e.get("confirm"), "file": e["_file"]})
     unit_of = {s: u for u in units for s in u["sids"]}
+    E["reviewed"] = {resolve_sid(x, by_sid) or x for x in E["reviewed"] if x is not None}
 
     # ---- per-unit checks (termbase terms are masked for the meaning-class checks)
     tb0 = load_json(st["termbase_path"], {}) or {}
@@ -272,6 +428,28 @@ def main():
         u["findings"] = fd
         u["verdict"] = verdict(fd)
         report_units.append(u)
+    # ---- non-blocking resolution: no fix loop for the agent.
+    #  I-codes (a fact, number, citation or claim strength moved) -> the sentence is reverted to the original (safe output),
+    #  the proposed revision goes to needs_confirmation; R01/R02 (incomplete records) -> records completed from the diff.
+    #  The findings stay in check_report.json with their original severity plus a 'resolution'.
+    for u in report_units:
+        fl = [x for x in u["findings"] if x["severity"] == FAIL]
+        if not fl:
+            continue
+        meaning = sorted({x["code"] for x in fl if x["code"].startswith("I")})
+        if meaning and not translate:
+            u["proposed"] = u["rev"]
+            u["rev"], u["changes"] = u["orig"], []
+            for x in fl:
+                x["resolution"] = "reverted"
+            u["verdict"] = "reverted"
+            note = f"proposed revision reverted ({', '.join(meaning)}: {'; '.join(x['detail'] for x in fl if x['code'].startswith('I'))[:300]}); proposed: {u['proposed']}"
+            u["confirm"] = (str(u["confirm"]) + " | " if u.get("confirm") else "") + note
+        elif all(x["code"] in ("R01", "R02") for x in fl):
+            u["changes"] = auto_records(u["orig"], u["rev"], u["changes"])
+            for x in fl:
+                x["resolution"] = "auto-recorded"
+            u["verdict"] = WARN
     # reviewed but unchanged sentences: residual style issues; translation mode: untranslated = fail
     untouched = []
     for s in segs:
@@ -347,11 +525,15 @@ def main():
         r = E["accept_doc"].get(f["code"])
         if r and f["severity"] in (FAIL, WARN):
             f["accepted"], f["severity_original"], f["severity"] = r, f["severity"], "accepted"
+        elif f["severity"] == FAIL and f["code"].startswith("D"):
+            f["resolution"] = "flagged for confirmation"
 
     # ---- tallies
     all_units = report_units + untouched
     sev = Counter(x["severity"] for u in all_units for x in u["findings"]) + Counter(x["severity"] for x in dfind)
-    fails = [(u["sids"], x) for u in all_units for x in u["findings"] if x["severity"] == FAIL] + [(f.get("sids", ["doc"]), f) for f in dfind if f["severity"] == FAIL]
+    fails = [(u["sids"], x) for u in all_units for x in u["findings"] if x["severity"] == FAIL and not x.get("resolution")] + \
+        [(f.get("sids", ["doc"]), f) for f in dfind if f["severity"] == FAIL and not f.get("resolution")]
+    resolved = [(u["sids"], x) for u in all_units for x in u["findings"] if x.get("resolution")] + [(f.get("sids", ["doc"]), f) for f in dfind if f.get("resolution")]
     accepted = [(u["sids"], x) for u in all_units for x in u["findings"] if x["severity"] == "accepted"] + [(["doc"], f) for f in dfind if f["severity"] == "accepted"]
     types = Counter(t.strip() for u in report_units for c in u["changes"] for t in re.split(r"[,/+ ]+", (c.get("type") or "unlabelled").lower()) if t.strip())
     n_scope = sum(1 for s in segs if s["in_scope"])
@@ -361,6 +543,7 @@ def main():
     for u in sorted(report_units, key=lambda u: order[u["sids"][0]]):
         log.append({"sid": u["sids"][0] if len(u["sids"]) == 1 else u["sids"], "original": u["orig"], "revised": u["rev"],
                     "changes": u["changes"], "verdict": u["verdict"], "findings": u["findings"], "confirm": u.get("confirm"),
+                    "proposed_revision": u.get("proposed"),
                     "edit_file": u["file"]})
     dump_json(log, os.path.join(a.out, "change_log.json"))
     buf = io.StringIO()
@@ -415,7 +598,9 @@ def main():
         ext = {"md": ".md", "tex": ".tex", "txt": ".txt", "docx": ".docx", "pdf": ".md", "json": ".txt"}[d["fmt"]]
         if d["fmt"] == "docx":
             dp = os.path.join(a.out, stem + ".docx")
-            write_docx(dp, [x for x in p["text"].split("\n\n")])
+            if not (d.get("path") and os.path.exists(d["path"]) and write_docx_inplace(d["path"], dp, d["text"], p["text"])):
+                write_docx(dp, [x for x in p["text"].split("\n\n")])
+                problems.append(f"{d['name']}: paragraph structure changed - polished.docx rebuilt as plain paragraphs (original styles/tables not carried over)")
             first_docx = first_docx or dp
             write_text(os.path.join(a.out, stem + ".md"), p["text"])
             artifacts[d["doc_id"]] = [stem + ".docx", stem + ".md"]
@@ -526,6 +711,9 @@ def main():
     for sids, x in accepted:
         confirm.append({"sid": "+".join(sids), "issue": f"flag {x['code']} accepted by the editor: {x['accepted']} (original flag: {x['detail']})"})
     for f in dfind:
+        if f.get("resolution"):
+            confirm.append({"sid": "+".join(f.get("sids") or []) or None, "issue": f"{f['code']}: {f['detail']}", "source": f["code"]})
+    for f in dfind:
         if f["code"] == "D03" and f["severity"] == INFO:
             confirm.append({"issue": f["detail"], "source": "D03"})
     uncertainty = problems + [f"{len(not_reviewed)} in-scope segments were not reviewed: {not_reviewed[:30]}"] * bool(not_reviewed) + E["notes"]
@@ -547,7 +735,8 @@ def main():
         status = "success" if not reasons else "partial"
 
     check_report = {"summary": {"segments_in_scope": n_scope, "edited_units": len(report_units), "reviewed": n_scope - len(not_reviewed),
-                                "not_reviewed": len(not_reviewed), "severity": dict(sev), "fail": len(fails), "accepted_overrides": len(accepted),
+                                "not_reviewed": len(not_reviewed), "severity": dict(sev), "fail": len(fails), "auto_resolved": len(resolved),
+                                "reverted_units": sum(1 for u in report_units if u.get("proposed") is not None), "accepted_overrides": len(accepted),
                                 "change_types": dict(types), "by_code": dict(Counter(x["code"] for u in all_units for x in u["findings"] if x["severity"] in (FAIL, WARN)) +
                                                                           Counter(f["code"] for f in dfind if f["severity"] in (FAIL, WARN)))},
                     "units": [{"sids": u["sids"], "verdict": u["verdict"], "findings": u["findings"]} for u in all_units if u["findings"]],
@@ -564,7 +753,7 @@ def main():
         "bilingual": bilingual_rows or [{"sid": s["sid"], "original": s["text"], "revised": revised_by_sid[s["sid"]]} for s in segs if s["in_scope"] and revised_by_sid[s["sid"]]],
         "fact_map": fact_map, "check_report": check_report["summary"], "needs_confirmation": confirm, "uncertainty": uncertainty,
         "sources": None, "status": status,
-        "summary": f"{len(report_units)} of {n_scope} segments edited; change types {dict(types)}; {len(fails)} unresolved fails; {len(accepted)} accepted overrides; status {status}",
+        "summary": f"{len(report_units)} of {n_scope} segments edited; change types {dict(types)}; {len(fails)} unresolved fails; {len(resolved)} flags auto-resolved; {len(accepted)} accepted overrides; status {status}",
     }
     result = load_json(os.path.join(a.out, "result.json"), {}) or {}
     sources = [{"name": d["name"], "role": "manuscript", "sha256": d["sha256"], "fmt": d["fmt"], "read_info": d["read_info"]} for d in st["docs"]] + \
@@ -573,6 +762,9 @@ def main():
     kinds["sources"] = sources
     unfilled = []
     for f in st["fields"]:
+        if f.lower() in ("case_id", "caseid", "id"):
+            result[f] = st["case_id"]
+            continue
         desc = _contract_desc(f)
         spec = E["fields"].get(f)
         if isinstance(spec, dict) and "value" in spec:
@@ -580,6 +772,27 @@ def main():
             continue
         kind = (spec or {}).get("kind") if isinstance(spec, dict) else (spec if isinstance(spec, str) else None)
         kind = kind or field_kind(f, desc)
+        if kind not in kinds and not spec:
+            exp_t = (st.get("contract_props") or {}).get(f, {}).get("type")
+            if exp_t == "array":
+                result[f] = []
+                uncertainty.append(f"contract field '{f}' (array) matched no known kind; defaulted to []")
+                continue
+            if exp_t == "object":
+                result[f] = {}
+                uncertainty.append(f"contract field '{f}' (object) matched no known kind; defaulted to {{}}")
+                continue
+            if exp_t in ("integer", "number"):
+                result[f] = 0
+                uncertainty.append(f"contract field '{f}' ({exp_t}) matched no known kind; defaulted to 0")
+                continue
+            if exp_t == "boolean":
+                result[f] = False
+                uncertainty.append(f"contract field '{f}' (boolean) matched no known kind; defaulted to false")
+                continue
+            # last resort (no pattern matched): a short run summary + pointer, flagged, instead of a null that forces 'partial'
+            kind = "summary"
+            uncertainty.append(f"contract field '{f}' matched no known kind; filled with the run summary - map it under 'fields' if another kind fits")
         if kind in kinds:
             result[f] = kinds[kind]
         else:
@@ -615,16 +828,26 @@ def main():
         print(f"status: {status} - {result['status_reason']}")
         print(f"units: {len(report_units)} edited / {n_scope} in scope; verdicts {dict(Counter(r['verdict'] for r in log))}; flags {dict(sev)}")
         for sids, x in fails[:40]:
-            print(f"FAIL [{'+'.join(sids) if isinstance(sids, list) else sids}] {x['code']}: {x['detail']}")
+            key = '+'.join(sids) if isinstance(sids, list) else sids
+            print(f"FAIL [{key}] {x['code']}: {x['detail']}")
+        for sids, x in resolved[:40]:
+            key = '+'.join(sids) if isinstance(sids, list) else sids
+            print(f"{x['resolution'].upper()} [{key}] {x['code']}: {x['detail']}")
         warns = [(u["sids"], x) for u in all_units for x in u["findings"] if x["severity"] == WARN] + [(["doc"], f) for f in dfind if f["severity"] == WARN]
-        for sids, x in warns[:40]:
+        for sids, x in warns[:15]:
             print(f"warn [{'+'.join(sids)}] {x['code']}: {x['detail']}")
-        if len(warns) > 40:
-            print(f"... {len(warns) - 40} more warnings in check_report.json")
+        if len(warns) > 15:
+            print(f"... {len(warns) - 15} more warnings in check_report.json (informational, no action needed)")
         for p in problems[-8:]:
             print(f"NOTE: {p}")
         print(f"outputs: {a.out} ({len(out_files)} files)")
-    return 1 if fails else 0
+        todo = [c for c in st.get("chunks", []) if any(x in set(not_reviewed) for x in c["sids"])]
+        if todo:
+            print("NEXT: chunks not marked reviewed -> " + ", ".join(f"{os.path.basename(c['edits'])} ({sum(1 for x in c['sids'] if x in set(not_reviewed))} sentences)" for c in todo[:12])
+                  + '  (review them, then set "status": "done")')
+        else:
+            print(f"DONE: status {status}" + ("" if status == "success" else f" ({result['status_reason']})") + " - result.json written; no further step required")
+    return 0  # result.json is always written; only a missing state.json (return 2) is fatal
 
 
 if __name__ == "__main__":

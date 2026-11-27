@@ -1,7 +1,4 @@
 {
- "case_id": "v02",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "polished_text": "# Abstract\n\nSamples were annealed at 10 and 20 nm for 2 years with SiC particles.\n\n# Introduction\n\n探讨该方法的有效性仍是本研究的关键。\n\n# Methods\n\nUnchanged method sentence.\n",
  "docx_path": "polished.docx",
  "pdf_path": "polished_preview.pdf",
@@ -49,6 +46,9 @@
    "flags": []
   }
  ],
+ "case_id": "v02",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -68,7 +68,7 @@
    "name": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\v02_features\\input\\terms.xlsx",
    "role": "termbase",
    "entries": 1,
-   "sha256": "dcb45852cee1a90aba57fe74f5a9a447db967661594b3117a0f9261b1ef67ace"
+   "sha256": "2ccf87fbdfd3390bdd54012779a574d3dcbec6922066245d18a919abafb41484"
   }
  ],
  "uncertainty": [
@@ -77,7 +77,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -119,6 +119,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {
    "concision": 2,
@@ -130,7 +132,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:33.411806+00:00",
+  "built_at": "2026-11-27T02:29:30.805325+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

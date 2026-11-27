@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.2.1",
  "case_id": "tbc",
  "case_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\input\\case.json",
  "task_path": null,
@@ -33,6 +33,9 @@
    "n_sentences": 2,
    "n_headings": 0
   }
+ ],
+ "manuscript_sig": [
+  "4e5ade47c675a2474ad1bf0d7f8f1e22009e63f08a068bd5860c3f9678d9597e"
  ],
  "segments": [
   {
@@ -85,5 +88,5 @@
  "termbase_path": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work\\termbase.json",
  "out": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\output",
  "work": "C:\\Users\\12117\\Desktop\\bohrium-pdf-evidence-reader\\polish\\execution\\results\\robustness\\termbase_conflict\\work",
- "init_at": "2026-11-25T06:32:29.665378+00:00"
+ "init_at": "2026-11-27T02:29:25.652712+00:00"
 }

@@ -1,8 +1,8 @@
 {
+ "polished_text": "The film thickness was 20 nm. この結果は再現性が高いことを示している。 The device was stable.",
  "case_id": "ja",
  "status": "success",
  "status_reason": "all segments reviewed, no unresolved fail",
- "polished_text": "The film thickness was 20 nm. この結果は再現性が高いことを示している。 The device was stable.",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -25,7 +25,7 @@
  "needs_confirmation": [],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -61,6 +61,8 @@
   "not_reviewed": 0,
   "severity": {},
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {},
   "by_code": {}
@@ -68,7 +70,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:31.498870+00:00",
+  "built_at": "2026-11-27T02:29:28.196390+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

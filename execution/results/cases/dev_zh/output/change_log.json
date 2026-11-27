@@ -20,6 +20,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -43,6 +44,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -80,6 +82,7 @@
    }
   ],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -103,6 +106,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -126,6 +130,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": "XPS 缩写在本节首次出现时未给出全称（X射线光电子能谱），请确认前文是否已定义",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -164,6 +169,7 @@
    }
   ],
   "confirm": "“完全解决”改为“有效抑制”削弱了原结论，请作者确认",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  }
 ]

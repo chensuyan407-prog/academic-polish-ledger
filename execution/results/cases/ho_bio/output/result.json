@@ -1,7 +1,4 @@
 {
- "case_id": "ho-bio-abstract",
- "status": "success",
- "status_reason": "all segments reviewed, no unresolved fail",
  "revised_abstract": "Background: Chronic kidney disease (CKD) is associated with increased cardiovascular risk, but the role of serum uric acid remains unclear.\n\nMethods: We enrolled 1,248 patients with stage 3–4 CKD from 2015 to 2019. Patients were followed for a median of 4.2 years (IQR 3.1–5.0). Cox regression was used to estimate hazard ratios (HRs) after adjustment for age, sex and eGFR.\n\nResults: Higher uric acid was associated with major adverse cardiovascular events (MACE) (HR 1.32, 95% CI 1.11–1.57; p = 0.002). The association was not significant in patients younger than 50 years. Allopurinol use did not modify the risk.\n\nConclusions: Elevated uric acid may be an independent risk factor for cardiovascular events in CKD, and randomised controlled trials are needed.\n",
  "edit_log": [
   {
@@ -197,6 +194,9 @@
    "source": "D03"
   }
  ],
+ "case_id": "ho-bio-abstract",
+ "status": "success",
+ "status_reason": "all segments reviewed, no unresolved fail",
  "mode": "polish",
  "genre": "journal",
  "sources": [
@@ -236,7 +236,7 @@
  ],
  "skill": {
   "name": "academic-polish-ledger",
-  "version": "0.2.0"
+  "version": "0.3.0"
  },
  "polished_files": {
   "d1": [
@@ -284,6 +284,8 @@
    "info": 1
   },
   "fail": 0,
+  "auto_resolved": 0,
+  "reverted_units": 0,
   "accepted_overrides": 0,
   "change_types": {
    "preposition": 1,
@@ -299,7 +301,7 @@
  "termbase_conflicts": [],
  "fact_source_map": "fact_map.json",
  "run": {
-  "built_at": "2026-11-25T06:32:22.362176+00:00",
+  "built_at": "2026-11-27T02:29:14.905858+00:00",
   "edit_files": [
    "chunk_01.json"
   ]

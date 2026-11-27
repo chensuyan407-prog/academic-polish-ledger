@@ -140,6 +140,11 @@ def check_pair(orig, rev, mode="polish", records=None, accept=None, genre=None, 
                 factored_add = all(u in ua_units for _, u in n2 if u) and all(u == "" for _, u in l2)
                 if not (factored_drop or factored_add):
                     add("I01", FAIL, f"unit changed: {l2} -> {n2}")
+        elif not translate and len(na) >= 2:
+            seq_a = [(v, UNIT_EQ.get(u, u)) for v, u, _ in na]
+            seq_b = [(v, UNIT_EQ.get(u, u)) for v, u, _ in nb]
+            if seq_a != seq_b:
+                add("I01", FAIL, f"number order/pairing changed: {[r for _, _, r in na]} -> {[r for _, _, r in nb]}")
     pa, pb = protected_tokens(orig), protected_tokens(rev)
     for p in (pa, pb):  # LaTeX cite commands count as citations, ref/eqref commands as cross-references
         lc = p.pop("latex_cmd", [])
@@ -256,9 +261,11 @@ def check_pair(orig, rev, mode="polish", records=None, accept=None, genre=None, 
                 add("R05", WARN, f"record {k + 1}: unknown change type '{typ}'")
             fs, ts = _find_all(orig, fr), _find_all(rev, to)
             if fr and not fs:
-                add("R01", FAIL, f"record {k + 1}: 'from' text not in the original: {fr!r}")
+                near = difflib.get_close_matches(fr, [h[4].strip() for h in hs if h[4].strip()], n=1, cutoff=0.3)
+                add("R01", FAIL, f"record {k + 1}: 'from' text not in the original: {fr!r}" + (f" (changed span in the original is {near[0]!r})" if near else ""))
             if to and not ts:
-                add("R01", FAIL, f"record {k + 1}: 'to' text not in the revised sentence: {to!r}")
+                near = difflib.get_close_matches(to, [h[5].strip() for h in hs if h[5].strip()], n=1, cutoff=0.3)
+                add("R01", FAIL, f"record {k + 1}: 'to' text not in the revised sentence: {to!r}" + (f" (changed span in the revision is {near[0]!r})" if near else ""))
             if not fr and not to:
                 add("R01", FAIL, f"record {k + 1}: empty from and to")
             hit = False

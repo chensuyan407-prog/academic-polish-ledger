@@ -20,6 +20,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -37,6 +38,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -60,6 +62,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -83,6 +86,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -100,6 +104,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -131,6 +136,7 @@
    }
   ],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -154,6 +160,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": "'yet' added to express that commercialization is not excluded in future - confirm this matches the intended meaning",
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -177,6 +184,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -206,6 +214,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  },
  {
@@ -223,6 +232,7 @@
   "verdict": "pass",
   "findings": [],
   "confirm": null,
+  "proposed_revision": null,
   "edit_file": "chunk_01.json"
  }
 ]

@@ -26,7 +26,7 @@ from ap_common import (TEXT_EXT, abbreviation_definitions, dump_json, lang_of, l
                        read_any, segment, term_regex, termbase_conflicts, write_text, lexical_hits)
 from ap_lint import lint  # noqa: E402
 
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 CONTRACT_KEYS = ("output_contract", "outputs_contract", "output_schema", "required_outputs", "output_fields", "outputs", "deliverables")
 MS_KEYS = ("manuscript", "draft", "text", "input_text", "source_text", "original", "original_text", "content", "document", "paper_text",
            "abstract", "paragraph", "paragraphs", "section", "sections", "passage", "body", "原文", "稿件", "待润色", "正文", "摘要", "段落", "input")
@@ -67,12 +67,72 @@ def resolve(val, bases):
     return None
 
 
+STRONG_REF_KEYS = ("reference", "material", "background", "support", "context", "evidence", "fact", "appendix", "supplement",
+                   "参考", "材料", "背景", "附件", "证据", "事实", "补充")
+ROLE_KEYS = ("role", "type", "kind", "category", "purpose", "usage", "use", "用途", "类型", "角色", "作用")
+PATH_KEYS = ("path", "file", "filename", "file_name", "name", "uri", "src", "location", "文件", "路径")
+PRIMARY_KEYS = ("primary", "primary_file", "main", "main_file", "target", "target_file", "to_polish", "to_edit", "manuscript_file",
+                "主稿", "主文件", "待润色文件", "目标文件")
+
+
+def role_of_value(v):
+    """Map an explicit role label from case.json to manuscript / termbase / style / reference (None = unknown label)."""
+    v = str(v).strip().lower()
+    if re.search(r"primary|main|manuscript|target|draft|to[_ -]?(?:polish|edit|revise|translate)|source[_ -]?text|original|input[_ -]?text|主稿|待润色|待修改|待翻译|原文|正文|稿件|目标", v):
+        return "manuscript"
+    if re.search(r"term|glossar|vocab|术语|词表", v):
+        return "termbase"
+    if re.search(r"style|guide|rule|instruction|规范|风格|要求", v):
+        return "style"
+    if re.search(r"ref|support|background|context|material|evidence|fact|supplement|appendix|参考|材料|背景|证据|附件", v):
+        return "reference"
+    return None
+
+
+def explicit_roles(case, bases):
+    """Files whose role case.json states explicitly: {"path": ..., "role": "primary"}, {"file": ..., "primary": true},
+    "primary_file": "x.docx". These beat file-name and size heuristics."""
+    out = {}
+
+    def visit(obj, parent_key=""):
+        if isinstance(obj, dict):
+            pkey = next((k for k in obj if str(k).lower() in PATH_KEYS and isinstance(obj[k], str)), None)
+            p = resolve(obj[pkey], bases) if pkey else None
+            if p:
+                role = None
+                for k, v in obj.items():
+                    kl = str(k).lower()
+                    if kl in ROLE_KEYS and isinstance(v, str):
+                        role = role_of_value(v) or role
+                    elif kl in ("primary", "is_primary", "main", "is_main", "to_polish", "主稿") and v is True:
+                        role = "manuscript"
+                if role is None and parent_key:
+                    role = role_of_value(parent_key) if not key_has(parent_key, ("file", "input", "attach", "附件")) else None
+                if role:
+                    out.setdefault(p, role)
+            for k, v in obj.items():
+                kl = str(k).lower()
+                if kl in PRIMARY_KEYS and isinstance(v, str):
+                    pp = resolve(v, bases)
+                    if pp:
+                        out[pp] = "manuscript"
+                visit(v, str(k))
+        elif isinstance(obj, list):
+            for v in obj:
+                visit(v, parent_key)
+
+    visit(case)
+    return out
+
+
 def classify_file(p, keypath=""):
     n = os.path.basename(p).lower()
     if re.search(r"term|glossar|术语|词表|vocab", n) or key_has(keypath, TB_KEYS):
         return "termbase"
     if re.search(r"style|guide|规范|要求|instruction|rubric|template", n) or key_has(keypath, ("style", "guide", "rules", "风格", "规范")):
         return "style"
+    if keypath and key_has(keypath, STRONG_REF_KEYS) and not key_has(keypath, ("manuscript", "draft", "原文", "稿件", "source_text")):
+        return "reference"
     if key_has(keypath, MS_KEYS) or re.search(r"manuscript|draft|原文|稿|abstract|摘要|input|polish|润色|section|chapter|grant|申请|proposal|response|rebuttal", n):
         return "manuscript"
     if key_has(keypath, REF_KEYS) or n.endswith(".pdf") or re.search(r"ref|paper|source|material|fact|论文|材料", n):
@@ -130,8 +190,10 @@ def main():
     ap.add_argument("--termbase", action="append", help="override/add: termbase file(s)")
     ap.add_argument("--mode")
     ap.add_argument("--genre")
-    ap.add_argument("--chunk", type=int, default=30, help="sentences per chunk file")
+    ap.add_argument("--chunk", type=int, default=40, help="sentences per chunk file")
     a = ap.parse_args()
+    if a.chunk <= 0:
+        ap.error("--chunk must be a positive integer")
     t0 = dt.datetime.now(dt.timezone.utc)
     os.makedirs(a.out, exist_ok=True)
     os.makedirs(a.work, exist_ok=True)
@@ -201,6 +263,21 @@ def main():
                         continue
                     if os.path.splitext(fn)[1].lower() in TEXT_EXT + (".docx", ".pdf", ".csv", ".tsv", ".xlsx", ".json"):
                         files[p] = classify_file(p)
+    explicit = explicit_roles(case, bases)
+    for p, r in explicit.items():
+        files[p] = r
+    if any(r == "manuscript" for r in explicit.values()):
+        for p in files:
+            if files[p] == "manuscript" and explicit.get(p) != "manuscript":
+                files[p] = "reference"
+                problems.append(f"{os.path.basename(p)}: treated as reference material (case.json marks another file as the manuscript)")
+    else:
+        ms = [p for p, r in files.items() if r == "manuscript"]
+        if len(ms) > 1 and any(not p.lower().endswith(".pdf") for p in ms):
+            for p in ms:
+                if p.lower().endswith(".pdf"):
+                    files[p] = "reference"
+                    problems.append(f"{os.path.basename(p)}: PDF next to an editable manuscript -> used as reference, not polished (override with --manuscript)")
     if a.manuscript:
         for p in files:
             if files[p] == "manuscript":
@@ -334,6 +411,20 @@ def main():
     chunk_dir, edit_dir = os.path.join(a.work, "chunks"), os.path.join(a.work, "edits")
     os.makedirs(chunk_dir, exist_ok=True)
     os.makedirs(edit_dir, exist_ok=True)
+    ms_sig = [d["sha256"] for d in docs]
+    try:
+        with open(os.path.join(a.work, "state.json"), "r", encoding="utf-8") as fh:
+            prev_state = json.load(fh)
+    except Exception:
+        prev_state = {}
+    if prev_state and prev_state.get("manuscript_sig") and prev_state.get("manuscript_sig") != ms_sig:
+        for d_dir, ext in ((chunk_dir, ".md"), (edit_dir, ".json")):
+            for fn in os.listdir(d_dir):
+                if fn.endswith(ext):
+                    try:
+                        os.remove(os.path.join(d_dir, fn))
+                    except OSError:
+                        pass
     chunks = []
     lint_total = 0
     for ci in range(0, len(sents), a.chunk):
@@ -376,16 +467,17 @@ def main():
         chunks.append({"chunk": n, "sids": [s["sid"] for s in part], "md": os.path.join(chunk_dir, f"chunk_{n:02d}.md"), "edits": ep})
 
     state = {"version": VERSION, "case_id": case_id, "case_path": a.case, "task_path": task_path, "contract": contract, "contract_props": contract_props, "fields": fields,
-             "mode": mode, "genre": genre, "sections": sections, "docs": docs, "segments": segs_all, "chunks": chunks,
+             "mode": mode, "genre": genre, "sections": sections, "docs": docs, "manuscript_sig": ms_sig, "segments": segs_all, "chunks": chunks,
              "files": [{"path": p, "role": r} for p, r in files.items()], "materials": mats, "style_notes": style_notes,
              "problems": problems, "termbase_path": os.path.join(a.work, "termbase.json"), "out": os.path.abspath(a.out),
              "work": os.path.abspath(a.work), "init_at": t0.isoformat()}
     dump_json(state, os.path.join(a.work, "state.json"))
 
     status = "failed" if not docs else "partial"
-    result = {"case_id": case_id, "status": status,
+    result = {**{f: None for f in fields},
+              "case_id": case_id, "status": status,
               "status_reason": "no manuscript text could be read" if not docs else "initialised; no edits applied yet",
-              **{f: None for f in fields}, "mode": mode, "genre": genre,
+              "mode": mode, "genre": genre,
               "sources": [{"name": d["name"], "sha256": d["sha256"], "fmt": d["fmt"], "read_info": d["read_info"]} for d in docs] + [{"name": os.path.basename(m["path"]), "role": m["role"], "sha256": m.get("sha256")} for m in mats],
               "uncertainty": problems, "needs_confirmation": [], "skill": {"name": "academic-polish-ledger", "version": VERSION}}
     dump_json(result, os.path.join(a.out, "result.json"))
@@ -406,7 +498,10 @@ def main():
     print(f"lint hints: {lint_total}   chunks: {len(chunks)} x <= {a.chunk} segments -> {chunk_dir}")
     for p in problems:
         print(f"NOTE: {p}")
-    print(f"next: read {chunks[0]['md'] if chunks else '(no chunks)'}, write edits into {edit_dir}/chunk_NN.json, then run ap_build.py --work {a.work} --out {a.out}")
+    for p, r in sorted(explicit.items()):
+        print(f"explicit role from case.json: {os.path.basename(p)} -> {r}")
+    print(f"next: read {chunks[0]['md'] if chunks else '(no chunks)'} ({len(chunks)} chunk file(s)); write {edit_dir}/chunk_NN.json with the changed sentences and \"status\": \"done\";"
+          f" then run: {sys.executable or 'python3'} {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ap_build.py')} --work {a.work} --out {a.out}")
     return 0 if docs else 2
 
 

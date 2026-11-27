@@ -20,4 +20,4 @@
 
 ## Uncertainty / limits
 
-- draft.docx: run-level formatting not preserved
+- draft.docx: DOCX read as paragraph text; polished.docx keeps the original styles/tables, inline formatting inside an edited paragraph collapses to its first run

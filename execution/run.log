@@ -1,4 +1,4 @@
-# reproduce.py run at 2026-11-25T06:32:33.467737Z
+# reproduce.py run at 2026-11-27T02:28:44.199627Z
 $ python tests/run_eval.py --set all
 {
  "dev": {
@@ -12,20 +12,20 @@ $ python tests/run_eval.py --set all
   "benign_edits": 0,
   "benign_passed": 0,
   "benign_failed": [],
-  "detected_fail": 1.0,
-  "detected_fail_or_warn": 1.0,
-  "sentence_or_doc_failed": 1.0,
+  "detected_fail": 0.9523809523809523,
+  "detected_fail_or_warn": 0.9761904761904762,
+  "sentence_or_doc_failed": 0.9523809523809523,
   "baseline_no_checks": 0.0,
-  "baseline_numbers_citations_only": 0.23809523809523808,
+  "baseline_numbers_citations_only": 0.21428571428571427,
   "baseline_record_coverage_only": 0.07142857142857142,
   "by_kind": {
    "approximator": "3/3",
    "causal": "1/1",
-   "citation": "4/4",
+   "citation": "3/4",
    "condition": "2/2",
    "direction": "2/2",
    "fake_record": "1/1",
-   "hedge": "5/5",
+   "hedge": "4/5",
    "math": "1/1",
    "negation": "3/3",
    "number": "4/4",
@@ -38,7 +38,10 @@ $ python tests/run_eval.py --set all
    "untranslated": "1/1",
    "xref": "4/4"
   },
-  "missed": [],
+  "missed": [
+   "E05 hedge fired=I03:fail,I05:warn",
+   "E06 citation fired=I05:warn"
+  ],
   "clean_units": 27,
   "clean_units_fail_after_review": 0,
   "clean_flags_needing_accept": 5,
@@ -106,7 +109,7 @@ $ python tests/run_eval.py --set all
  "audit_full_rewrite": true,
  "v02_xlsx_schema_mode_units_preview": true
 }
-wall 23.75
+wall 35.62
 
 
 [exit 0]
@@ -122,72 +125,72 @@ rules/style_rules.json: CHANGED after freeze (post-freeze fix)
 
 # 100 script invocations (argv, exit, seconds, stdout tail) are in execution/results/commands.json
 $ python submission\scripts\ap_init.py --case tests\cases\dev_en\input\case.json --out execution\results\cases\dev_en\output --work execution\results\cases\dev_en\work
-<= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks
-next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output
+chunk file(s)); write C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work\edits/chunk_NN.json with the changed sentences and "status": "done"; then run: C:\Users\12117\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\submission\scripts\ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output
 
-[exit 0, 0.135 s]
+[exit 0, 0.235 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_en\work --out execution\results\cases\dev_en\output
 status: success - all segments reviewed, no unresolved fail
 units: 10 edited / 13 in scope; verdicts {'pass': 10}; flags {'accepted': 1, 'warn': 1}
 warn [doc] D03: termbase abbreviation HTL used but never defined as 'hole transport layer (HTL)'
 outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_en\output (12 files)
+DONE: status success - result.json written; no further step required
 
-[exit 0, 0.268 s]
+[exit 0, 0.444 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_grant\input\case.json --out execution\results\cases\dev_grant\output --work execution\results\cases\dev_grant\work
--> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks
-next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output
+e(s)); write C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work\edits/chunk_NN.json with the changed sentences and "status": "done"; then run: C:\Users\12117\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\submission\scripts\ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output
 
-[exit 0, 0.117 s]
+[exit 0, 0.197 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_grant\work --out execution\results\cases\dev_grant\output
 status: success - all segments reviewed, no unresolved fail
 units: 5 edited / 5 in scope; verdicts {'pass': 4, 'warn': 1}; flags {'accepted': 1, 'warn': 1}
 warn [p1.s5] I05: hedge level changed across languages (1 -> 2): ['有望'] -> ['is expected to']
 outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_grant\output (15 files)
+DONE: status success - result.json written; no further step required
 
-[exit 0, 0.236 s]
+[exit 0, 0.382 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_tex\input\case.json --out execution\results\cases\dev_tex\output --work execution\results\cases\dev_tex\work
- segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks
-next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output
+nk file(s)); write C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work\edits/chunk_NN.json with the changed sentences and "status": "done"; then run: C:\Users\12117\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\submission\scripts\ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output
 
-[exit 0, 0.118 s]
+[exit 0, 0.223 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_tex\work --out execution\results\cases\dev_tex\output
 status: success - all segments reviewed, no unresolved fail
 units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'info': 1}
 outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_tex\output (13 files)
+DONE: status success - result.json written; no further step required
 
-[exit 0, 0.238 s]
+[exit 0, 0.477 s]
 
 $ python submission\scripts\ap_init.py --case tests\cases\dev_zh\input\case.json --out execution\results\cases\dev_zh\output --work execution\results\cases\dev_zh\work
-<= 30 segments -> C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks
-next: read C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\chunks\chunk_01.md, write edits into C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\edits/chunk_NN.json, then run ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output
+chunk file(s)); write C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work\edits/chunk_NN.json with the changed sentences and "status": "done"; then run: C:\Users\12117\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\submission\scripts\ap_build.py --work C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\work --out C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output
 
-[exit 0, 0.116 s]
+[exit 0, 0.213 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\cases\dev_zh\work --out execution\results\cases\dev_zh\output
 status: success - all segments reviewed, no unresolved fail
 units: 6 edited / 7 in scope; verdicts {'pass': 6}; flags {'accepted': 3}
 outputs: C:\Users\12117\Desktop\bohrium-pdf-evidence-reader\polish\execution\results\cases\dev_zh\output (13 files)
+DONE: status success - result.json written; no further step required
 
-[exit 0, 0.249 s]
-
-$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
-
-[exit 1, 0.251 s]
+[exit 0, 0.432 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.251 s]
+[exit 0, 0.442 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.245 s]
+[exit 0, 0.439 s]
 
 $ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
 
-[exit 1, 0.246 s]
+[exit 0, 0.451 s]
+
+$ python submission\scripts\ap_build.py --work execution\results\_mut_tmp\work --out execution\results\_mut_tmp\output --quiet
+
+[exit 0, 0.405 s]
 
